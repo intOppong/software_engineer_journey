@@ -1,6 +1,8 @@
 # Frequently Asked Questions
 FAQs from the original Guide
 
+***
+
 ## What are the pre-requisites to begin any of the guides?
 You should understand how to use Git and Github, which you can learn using any of these free resources:
 
