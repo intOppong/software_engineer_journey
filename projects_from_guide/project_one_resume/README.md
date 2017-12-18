@@ -23,7 +23,7 @@
 ### Chanllenges
 ***
 * The biggest challenge i faced was calculating percentage values for child elements. I mostly wanted to understand how layouts work & it took me a while to understand how to find the right percentage values.
-* I couldn’t come up with a way to implement the circular progress bar so i used the implementation by [jumpifzero](https://www.cssscript.com/circular-progress-bar-plain-html-css). Also it’s not really a crucial topic to learn based on my [goals]().
+* I couldn’t come up with a way to implement the circular progress bar so i used the implementation by [jumpifzero](https://www.cssscript.com/circular-progress-bar-plain-html-css). Also it’s not really a crucial topic to learn based on my [goals](https://github.com/intOppong/software_engineer_journey/blob/master/README.md#my-goal).
 
 ### What I Learnt
 ***
