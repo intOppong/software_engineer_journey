@@ -2,8 +2,8 @@
 
 ## Content
 * [The Guide](#the-guide)
-* [My Goal](#my-goal-(overall))
-* [How I'll Use the Guide](#how-i'll-use-the-guide) 
+* [My Goal](#my-goal)
+* [How I'll Use the Guide](#how-ill-use-the-guide)
 
 ## The Guide
 I’m using P1xt’s [Computer Science & Web Development Guide](https://github.com/P1xt/p1xt-guides#computer-science-and-web-development---comprehensive). My goal is to be a software engineer with good web development skills. So this guide is well suited for my needs. I’m grateful to P1xt for curating such an overarching project oriented guide. Your work, to us aspiring Developers is truly invaluable. God Bless You.
@@ -13,7 +13,7 @@ I know there’s a lot of aspiring [developers](https://forum.freecodecamp.org/t
 
 ***
 
-## My Goal (Overall)
+## My Goal
 As stated above, I want to be an elite software engineer with good web dev skills. I define a Software engineer as a programmer with the ability to architect & create Libraries that will assists other programmers in building their apps & Platforms that other programmers can build apps on top of.
 * Result Oriented: *the outcome. what to get out of it*
   * Front-End: My goal for front-End is to understand the crucial topics & concepts & leave the specifics to designers. With that in mind my goals for studying the various technologies are as follows.
