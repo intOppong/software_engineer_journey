@@ -3,7 +3,6 @@
 ## Content
 * [The Guide](#the-guide)
 * [My Goal](#my-goal)
-* [How I'll Use the Guide](#how-ill-use-the-guide)
 
 ## The Guide
 I’m using P1xt’s [Computer Science & Web Development Guide](https://github.com/P1xt/p1xt-guides#computer-science-and-web-development---comprehensive). My goal is to be a software engineer with good web development skills. So this guide is well suited for my needs. I’m grateful to P1xt for curating such an overarching project oriented guide. Your work, to us aspiring Developers is truly invaluable. God Bless You.
@@ -29,5 +28,4 @@ As stated above, I want to be an elite software engineer with good web dev skill
 
 NOTE: *Pomodoro settings is 30mins work, max of 10mins break.*
 
-## How I'll Use the Guide
 
