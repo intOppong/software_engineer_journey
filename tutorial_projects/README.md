@@ -8,7 +8,7 @@ Below is a list of Tutorial Projects i used as practice before doing the actual 
 
 | Tutorial Projects  | Guide | Guide/Course |
 | --- | --- | --- |
-| [Personal Resume](https://www.youtube.com/watch?v=jJuHQNULXGs&list=PLsIkqR8inizt8SpD6utVTPhy8gFQzQNug)  | [Project: Clone this online resume template](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot3)  | - |
+| [Resume](https://www.youtube.com/watch?v=jJuHQNULXGs&list=PLsIkqR8inizt8SpD6utVTPhy8gFQzQNug)  | [Project: Clone this online resume template](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot3)  | - |
 
 
 
