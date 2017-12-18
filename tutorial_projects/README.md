@@ -1,6 +1,6 @@
 # Tutorials Projects
 
-Below is a list of Tutorial Projects i used as practice before doing the actual Project from the [guide](https://github.com/P1xt/p1xt-guides/blob/master/cs-wd.md).
+Below is a list of Tutorial Projects I used as practice before doing the actual Project from the [guide](https://github.com/P1xt/p1xt-guides/blob/master/cs-wd.md).
 
 **NOTE** 
 * I based the selection of Tutorial Projects on the projects in the guide.
@@ -8,7 +8,7 @@ Below is a list of Tutorial Projects i used as practice before doing the actual 
 
 | Tutorial Projects  | Guide | Guide/Course |
 | --- | --- | --- |
-| [Resume](https://www.youtube.com/watch?v=jJuHQNULXGs&list=PLsIkqR8inizt8SpD6utVTPhy8gFQzQNug)  | [Project: Clone this online resume template](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot3)  | - |
+| [Resume](https://www.youtube.com/watch?v=jJuHQNULXGs&list=PLsIkqR8inizt8SpD6utVTPhy8gFQzQNug)  | [Project One: Clone this online resume template](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot3)  | - |
 
 
 
