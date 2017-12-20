@@ -48,8 +48,11 @@ body {
 .clearfix:after {
     clear: both;
 }
+.clearfix {
+  *zoom: 1;
+}
 .row {
-  width: 960px;
+  min-width: 960px;
   padding: 0 6%;
 }
 .col {
@@ -520,25 +523,25 @@ th {
   height: 100%;
 }
 #project_post_it div.col-7 {
-  background: url(../images/background/glenn-carstens-peters.jpg) no-repeat center / cover;
+  background: url(../images/background/Dark-Blue.jpg) no-repeat center / cover;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
 }
 #project_todo_list div.col-7 {
-  background: url(../images/background/emile-perron-190221.jpg) no-repeat center / cover;
+  background: url(../images/background/ligth-blue.jpg) no-repeat center / cover;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
 }
 #project_tic_tac_toe div.col-7 {
-  background: url(../images/background/domenico-loia-310197.jpg) no-repeat center / cover;
+  background: url(../images/background/City_Landscape.jpg) no-repeat center / cover;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
 }
 #project_forensics div.col-7 {
-  background: url(../images/background/igor-miske-174209.jpg) no-repeat center / cover;
+  background: url(../images/background/Alien_Ink.jpg) no-repeat center / cover;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
