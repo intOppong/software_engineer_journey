@@ -63,8 +63,3 @@
 ***
 I’d like to acknowledge the following for providing free, amazing & useful tools to the community. I used the these tools in this project
 * Google's Free web Fonts contributor [Łukasz Dziedzic for the Lato](https://fonts.google.com/specimen/Lato) font
-* Unsplash.com's contributors for these awesome images.
-	* [Glenn Carstens-Peters](https://unsplash.com/photos/npxXWgQ33ZQ)
-	* [Émile Perron](https://unsplash.com/photos/xrVDYZRGdw4)
-	* [Domenico Loia](https://unsplash.com/photos/hGV2TfOh0ns)
-	* [Igor Miske](https://unsplash.com/photos/JVSgcV8_vb4)
