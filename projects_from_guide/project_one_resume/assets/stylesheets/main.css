@@ -2,20 +2,25 @@
   ========================================
   Table of Content
   ========================================
-  - General Styles
-  - Grid
-  - Main header
-  - Navigation
-  - Introduciton
-  - Resume
-  - Footer
-  - Cover Letter
-  - Portfolio
+  - Base
+    - Grid
+    - Typography
+  - Components
+    - Navigation
+    - tables
+  - Modules
+    - Header
+    - Footer
+  - Homepage
+  - Cover Letter Page
+  - Portfolio Page
+
 */
+
 
 /*
   ========================================
-  General styles
+  BASE
   ========================================
 */
 
@@ -27,12 +32,6 @@ body {
 .outline{
   display: none;
 }
-/*
-  ========================================
-  Grid
-  ========================================
-*/
-
 *,
 *:before,
 *:after {
@@ -51,8 +50,11 @@ body {
 .clearfix {
   *zoom: 1;
 }
+
+/* ========== Grid ========== */
+
 .row {
-  min-width: 960px;
+  min-width: 780px;
   padding: 0 6%;
 }
 .col {
@@ -96,47 +98,19 @@ body {
     width: 100%;
 }
 
+/* ========== Typography ========== */
+
+
+
 
 /*
   ========================================
-  Main header
+  COMPONENTS
   ========================================
 */
-#main-header {
-  background: #03A9F4;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  position: relative;
-  z-index: 1;
-  box-shadow: -1px 5px 5px #494949;
-}
-h1 {
-  letter-spacing: 1px;
-  font-weight: 100;
-  font-size: 2em;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-#main-header a:hover {
-  font-weight: 300;
-}
-#tagline {
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 100;
-  font-size: 18px;
-}
-#main-header img {
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  float: right;
-}
 
-/*
-  ========================================
-  Navigation
-  ========================================
-*/
+/* ========== Navigation ========== */
+
 .nav {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -156,31 +130,120 @@ nav a {
   vertical-align: top;
   letter-spacing: .5px;
   text-transform: uppercase;
-
-
 }
 nav a:hover {
   border-bottom: 2px solid #fff;
 }
 
+/* ========== Tables ========== */
+table {
+  width: 100%
+}
+th, td {
+  vertical-align: top;
+}
+th {
+  text-align: left;
+}
+
 /*
   ========================================
-  Introduction
+  MODULES
   ========================================
 */
-.intro {
+
+/* ========== Header ========== */
+h1 {
+  letter-spacing: 1px;
+  font-weight: 100;
+  font-size: 2em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#main-header {
+  background: #03A9F4;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  box-shadow: -1px 5px 5px #494949;
+}
+#main-header img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  float: right;
+}
+#main-header a:hover {
+  font-weight: 300;
+}
+#tagline {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 100;
+  font-size: 18px;
+}
+
+/* ========== Footer ========== */
+
+#mainFooter .row:first-child {
+  background: #03A9F4;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#mainFooter .row:last-child {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+#mainFooter .icon-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #2196F3;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+#mainFooter .fa {
+  font-size: 25px;
+  display: inline-block;
+  margin-top: 12.5px; /* icon height / 2 */
+}
+#mainFooter .fa-facebook{
+   margin-left: 17.85px; /* middle of container - half of icon width */
+}
+#mainFooter .fa-twitter{
+   margin-left: 13.39px; /* middle of container - half of icon width */
+}
+#mainFooter .fa-github{
+   margin-left: 14.28px; /* middle of container - half of icon width */
+}
+#mainFooter p {
+  font-size: 12px;
+  text-align: center;
+}
+
+#website {
+  float: right;
+}
+
+
+/*
+  ========================================
+  HOMEPAGE
+  ========================================
+*/
+
+/* ========== Main Header ========== */
+
+/* ========== Introduction ========== */
+#intro {
   background: #757575;
   color: rgba(255, 255, 255, 0.9);
   padding-top: 25px;
   padding-bottom: 20px;
 }
 
-
-/*
-  ========================================
-  Resume
-  ========================================
-*/
+/* ========== Resume ========== */
 #resume {
   background: #fff;
   color: black;
@@ -188,11 +251,11 @@ nav a:hover {
   padding-right: 0;
   overflow: hidden;
 }
-#resume > div.col-4, #resume > div.col8 {
+#resume > .col-4, #resume > .col8 {
   padding-bottom: 1000em;
   margin-bottom: -1000em;
 }
-#resume > div.col-4 {
+#resume > .col-4 {
   padding-right: 3.6%;
   box-shadow: 5px -1px 10px rgba(158,158,158,.4);
   z-index: 1;
@@ -216,17 +279,8 @@ nav a:hover {
   font-weight: 700;
   color: rgba(3,169,244, .8);
 }
+    /* ========== Resume - Section One ========== */
 
-/****** Resume - Section one *****/
-table {
-  width: 100%
-}
-th, td {
-  vertical-align: top;
-}
-th {
-  text-align: left;
-}
     /***** Personal *****/
 #personal tr {
   border-bottom: 1px solid #ccc;
@@ -250,7 +304,7 @@ th {
 #skills td {
   padding-left: 6.2%;
 }
-#skills td>div  {
+#skills td > div  {
   width: 100%;
   height: 10px;
   margin-top:6px;
@@ -282,19 +336,19 @@ th {
   text-align: center;
 }
 
-/****** Resume - Section Two *****/
+    /* ========== Resume - Section Two ========== */
 
-    /***** Work & education *****/
+        /***** Work & education *****/
 .blt {
   width: 5.67%;  /* width calculates to 30px */
   margin-right: 3.78%;
   float: left;
   position: relative;
 }
-#work div.blt {
+#work .blt {
   height: 212px;  /* used to google inspect tool to calculate*/
 }
-#education div.blt {
+#education .blt {
   height: 138px;  /* used to google inspect tool to calculate*/
 }
 .blt-line {
@@ -303,10 +357,10 @@ th {
   border: 1px solid rgba(3,169,244, .4);
   margin-top: 22.5px; /* inner-cirlce height + outer cicle padding-top */
 }
-#work div.blt-line {
+#work .blt-line {
   height: 189.5px;  /* parent height - margin-top */
 }
-#education div.blt-line {
+#education .blt-line {
   height: 115.5px;  /* parent height - margin-top */
 }
 .blt-outer-circle {
@@ -353,7 +407,7 @@ th {
   right: 0;
 }
 
-/***** Progress Bar *****/
+    /***** Progress Bar *****/
 .progress-circle {
   width: 13.24%;  /* width calculates to 70px */
   height: 70px;
@@ -366,60 +420,12 @@ th {
   margin-right: 0;
 }
 
-
 /*
   ========================================
-  Footer
+  COVER-LETTER PAGE
   ========================================
 */
-#mainFooter .row:first-child {
-  background: #03A9F4;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-#mainFooter .row:last-child {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 14px;
-}
-#mainFooter .icon-container {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #2196F3;
-  margin: 0 auto;
-  margin-bottom: 10px;
-}
-#mainFooter .fa {
-  font-size: 25px;
-  display: inline-block;
-  margin-top: 12.5px; /* icon height / 2 */
-}
-#mainFooter .fa-facebook{
-   margin-left: 17.85px; /* middle of container - half of icon width */
-}
-#mainFooter .fa-twitter{
-   margin-left: 13.39px; /* middle of container - half of icon width */
-}
-#mainFooter .fa-github{
-   margin-left: 14.28px; /* middle of container - half of icon width */
-}
-#mainFooter p {
-  font-size: 12px;
-  text-align: center;
-}
 
-/***** Address *****/
-#website {
-  float: right;
-}
-
-
-/*
-  ========================================
-  Cover-Letter
-  ========================================
-*/
 .cl-header {
   box-shadow: 0 5px 5px #bbb;
 }
@@ -444,7 +450,8 @@ th {
   padding-top: 30px;
   box-shadow: -5px 0 10px rgba(158,158,158,.4);
 }
-    /***** Handler section *****/
+
+    /* ========== Handler section ========== */
 .cl-handler {
   padding-bottom: 20px;
   padding-top: 30px;
@@ -462,7 +469,8 @@ th {
   font-weight: 400;
   color: rgba(3,169,244, .8);
 }
-  /***** Letter Section *****/
+
+    /* ========== Letter section ========== */
 #main-letter p {
   padding-bottom: 20px;
   text-align: justify;
@@ -477,14 +485,13 @@ th {
   margin-bottom: 75px;
 }
 
-
-
 /*
   ========================================
-  Portfolio
+  PORTFOLIO PAGE
   ========================================
 */
-#portfolio > section.row {
+
+#portfolio > .row {
   background: #fff;
   color: black;
   padding: 0;
@@ -512,37 +519,56 @@ th {
   font-size: 14px;
   margin-bottom: 10px;
 }
-#portfolio div.col-5 a {
+#portfolio .col-5 a {
   display: inline-block;
   font-size: 14px;
   color: rgba(3,169,244, .8);
   font-weight: 400;
   padding-bottom: 32px;
 }
-#portfolio div.col-7 {
+#portfolio .col-7 {
   height: 100%;
 }
-#project_post_it div.col-7 {
+#project_post_it .col-7 {
   background: url(../images/background/Dark-Blue.jpg) no-repeat center / cover;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
 }
-#project_todo_list div.col-7 {
+#project_todo_list .col-7 {
   background: url(../images/background/ligth-blue.jpg) no-repeat center / cover;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
 }
-#project_tic_tac_toe div.col-7 {
+#project_tic_tac_toe .col-7 {
   background: url(../images/background/City_Landscape.jpg) no-repeat center / cover;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
 }
-#project_forensics div.col-7 {
+#project_forensics .col-7 {
   background: url(../images/background/Alien_Ink.jpg) no-repeat center / cover;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
+}
+
+
+/*
+  ========================================
+  
+  ========================================
+*/
+@media all and (min-width: 1024px) {
+  .row {
+    width: 1024px;
+    margin: 0 auto;
+  }
+  body {
+    background: #424242;
+  }
+  nav, footer div:last-child {
+    background: #2196F3;
+  }
 }
