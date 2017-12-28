@@ -328,26 +328,31 @@ a {
 
 #portfolio .col {
   height: 240px;             /* same as width */
-  background: red;
-  border: 1px solid black;
+  background: #f2849e;
   border-radius: 4px;
 }
 
 
-#portfolio a {
+.project {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: green;
+  right:0;
+  bottom: 0;
+  line-height: 240px;		/* As tall as the element: required to vertically center children*/
+  text-align: center;
 }
 
-.content {
-  visibility: hidden;
+.project_content {
+  display: inline-block;
+	vertical-align:middle;
+	line-height: normal;
+}
+.project_desc {
+  display: none;
 }
 
-#portfolio a:hover .content {
-  visibility: visible;
+#portfolio a:hover .project_desc {
+  display:inherit;
 }
