@@ -310,6 +310,7 @@ a {
    * Single col = 100% - 11 margins / 12 = 100% - 22% / 12 = 5.5833%
    */
 
+
 #portfolio > a {
   display: block;
 }
@@ -328,8 +329,25 @@ a {
 
 #portfolio .col {
   height: 240px;             /* same as width */
-  background: #f2849e;
   border-radius: 4px;
+}
+
+.bgcol1 {
+  background: radial-gradient(#f7b5c4, #f2849e); /* default: #f2849e, LIGHT...inner: 5, outer: 1 */
+} #portfolio a:hover.bgcol1{
+  background: radial-gradient(#c1697e, #79424f); /* default: #f2849e, DEEP...inner: 3, outer: 6 */
+}
+
+.bgcol2 {
+  background: radial-gradient(#b1dff9, #7ecaf6); /* default: #7ecaf6, LIGHT...inner: 5, outer: 1 */
+} #portfolio a:hover.bgcol2{
+  background: radial-gradient(#64a1c4, #3f657b); /* default: #7ecaf6, DEEP...inner: 3, outer: 6 */
+}
+
+.bgcol3 {
+  background: radial-gradient(#afe2d9, #7bd0c1); /* default: #7bd0c1, LIGHT...inner: 5, outer: 1 */
+} #portfolio a:hover.bgcol3{
+  background: radial-gradient(#62a69a, #3d6860); /* default: #7bd0c1, DEEP...inner: 3, outer: 6 */
 }
 
 
