@@ -61,3 +61,4 @@
 ***
 I’d like to acknowledge the following for providing free, amazing & useful tools to the community. I used the these tools in this project
 * Google's Free web Fonts contributor [Łukasz Dziedzic for the Lato](https://fonts.google.com/specimen/Lato) font
+* [Font-awesome](http://fontawesome.io/)
