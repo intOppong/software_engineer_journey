@@ -1,9 +1,6 @@
 # Project One: Clone [this](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot2) Online Resume
 
-***
-
 ## Content
-***
 * Overview
 * What I learnt
 * Challenges
