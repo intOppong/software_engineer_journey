@@ -15,17 +15,21 @@ I know there’s a lot of aspiring [developers](https://forum.freecodecamp.org/t
 ## My Goal
 As stated above, I want to be an elite software engineer with good web dev skills. I define a Software engineer as a programmer with the ability to architect & create Libraries that will assists other programmers in building their apps & Platforms that other programmers can build apps on top of.
 * Result Oriented: *the outcome. what to get out of it*
-  * Front-End: My goal for front-End is to understand the crucial topics & concepts & leave the specifics to designers. With that in mind my goals for studying the various technologies are as follows.
-    * HTML: understand how to create a fully Semantic complaint HTML code
-    * CSS: understand how measurements work. Page Layouts, Grids, Responsive Design and their likes.
-    * Javascript for Frontend: TBD
-  * Backend: TBD
-  * Algorithm: TBD
-  * System Design: TBD
+    * Finish the Guide in 18 months - Dec 2017 -> May 2019
+        * Outstretched: Finish the Guide in a Year - Dec 2017 -> Nov 2018
+    * Front-End: My goal for front-End is to understand the crucial topics & concepts & leave the specifics to designers. With that in mind my goals for studying the various technologies are as follows.
+        * HTML: understand how to create a fully Semantic complaint HTML code
+        * CSS: understand how measurements work. Page Layouts, Grids, Responsive Design and their likes.
+        * Javascript for Frontend: TBD
+    * Backend: TBD
+    * Algorithm: TBD
+    * System Design: TBD
 * Process Oriented: *how the results should occurs. how to go about it*
-  * Work Monday-Friday, averaging 10 Pomodoros. *on days where life duty calls. i expect to put in at least 5 Pomodoros.*
-  * Stay Disciplined, Stay Focused, Stay Calm.
-
-NOTE: *Pomodoro settings is 30mins work, max of 10mins break.*
-
-
+    * Work Everyday averaging 10 Pomodoros a day & at least 5 Pomodoros on days where life duties call (eg: going to the hospital, helping family with work etc). *hopefully those days are close to 1 per month*
+        * *Pomodoro settings is 30mins work, max of 10mins break.*
+    * Stay Disciplined, Stay Focused, Stay Calm.
+* What’s Important
+    * Build all the projects in the guide.
+    * Deeply Understand Concepts.
+    * Helping Others on Forums (FCC, cohort)
+    * Writing about my journey
