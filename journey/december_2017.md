@@ -17,6 +17,9 @@
 * Little bit of inconsistencies at the beginning of the month.
 * I overlooked other stuff like writing & keeping the Github repo updated. *it's time consuming but fun*
 * Overall it was a good start.
+* What to Improve upon
+	* Focus exclusively on what's important.
+	* Consistency. work everyday. this is key.
 
 ## December 2017 Goals
 **December 2017 run from 19th November 2017 to 30th December 2017. 
