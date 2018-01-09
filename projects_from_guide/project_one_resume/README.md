@@ -1,10 +1,11 @@
 # Project One: Clone [this](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot2) Online Resume
 
 ## Content
-* Overview
-* What I learnt
-* Challenges
-* My Thoughts / Takeaways
+* [Overview](#overview)
+* [Dev Env](#dev-env)
+* [What I Learnt](#what-i-learnt)
+* [Challenges](#challenges)
+* [My Thoughts](#my-thoughts)
 
 ### Overview
 ***
@@ -12,15 +13,10 @@
 * I completed the project in 7 working days
 * Overall it was an exciting experience having to plan the details of the layout & bringing it to life with CSS.
 
-### Developement Environment
+### Dev Env
 ***
 * Atom
 * Google Chrome Browser
-
-### Chanllenges
-***
-* The biggest challenge i faced was calculating percentage values for child elements. I mostly wanted to understand how layouts work & it took me a while to understand how to find the right percentage values.
-* I couldn’t come up with a way to implement the circular progress bar so i used the implementation by [jumpifzero](https://www.cssscript.com/circular-progress-bar-plain-html-css). Also it’s not really a crucial topic to learn based on my [goals](https://github.com/intOppong/software_engineer_journey/blob/master/README.md#my-goal).
 
 ### What I Learnt
 ***
@@ -46,7 +42,12 @@
 	* Set the parent element to hide overflow
 * One thing to note when using a property shorthand is, every value that’s not explicitly set keeps it's default value.
 
-### My Thoughts / Takeaways
+### Challenges
+***
+* The biggest challenge i faced was calculating percentage values for child elements. I mostly wanted to understand how layouts work & it took me a while to understand how to find the right percentage values.
+* I couldn’t come up with a way to implement the circular progress bar so i used the implementation by [jumpifzero](https://www.cssscript.com/circular-progress-bar-plain-html-css). Also it’s not really a crucial topic to learn based on my [goals](https://github.com/intOppong/software_engineer_journey/blob/master/README.md#my-goal).
+
+### My Thoughts
 ***
 * You gotta plan EVERYTHING. At the onset, it was difficult having to do everything on my own without a tutorial, especially the CSS.
 * It’s better to prototype your layouts on paper with known measurements else you’ll waste more time when coding the css.
