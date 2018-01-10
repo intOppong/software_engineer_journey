@@ -7,10 +7,15 @@
     - Typography
   - Components
     - Navigation
+    - Links
   - Modules
     - Header
     - Footer
   - Homepage
+    - Header
+    - Portfolio
+    - Contact
+    - Footer
   - Cover Letter Page
   - Portfolio Page
 
@@ -50,7 +55,8 @@
 /* ========== Grid ========== */
 
 .row {
-  max-width: 960px;
+  max-width: 1080px;
+  padding: 0 1.85185185%; /* 20px*/
   margin: 0 auto;
 }
 .row:after, .row:before {
@@ -117,7 +123,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 
 h3 {
@@ -255,6 +261,10 @@ a {
   text-decoration: none;
 }
 
+/* ========== Buttons ========== */
+
+
+
 /*
   ========================================
   MODULES
@@ -307,23 +317,23 @@ a {
   /*
    * Grid with margins
    * 1 margin = 3%
-   * Single col = 100% - 11 margins / 12 = 100% - 22% / 12 = 5.5833%
+   * 1 col = 100% - 11 margins / 12 = 100% - 22% / 12 = 5.5833%
+   * Eg: width of 4 columns = 4 * 1col + 4-1 margins.
    */
-
 
 #portfolio > a {
   display: block;
 }
 
 #portfolio .row {
-  margin-bottom: 28.79px;    /* same as margin right */
+  margin-bottom: 28.79px;    /* same as margin left */
 }
 
 #portfolio .col + .col {
  margin-left: 3%;
 }
 
-#portfolio .col-4 {
+#portfolio .col-width {
  width: 31.33%;              /* 4cols + 3 margins */
 }
 
@@ -374,3 +384,144 @@ a {
 #portfolio a:hover .project_desc {
   display:inherit;
 }
+
+/* ========== Footer ========== */
+
+#main_footer {
+  margin-bottom: 30px;
+}
+
+#main_footer h2 {
+  margin-bottom: 30px;
+}
+
+#main_footer .row:first-child {
+  margin-bottom: 50px;
+}
+
+    /* ========== Contact ========== */
+#contact-me {
+  padding-right: 3%;
+}
+
+form > .col {
+  margin: 0 0 30px 0;
+  vertical-align: top;
+}
+
+form > .col:nth-child(3) {
+  margin-bottom: 50px ;
+}
+
+form > .col:first-child {
+  padding-right: 3%;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+  background-color:transparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1.5px solid #c9c9c9;
+  outline: none;
+  padding: 0;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  font-size: 16px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+ height: 70px;
+}
+
+textarea {
+  min-height: 70px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  border-bottom-color: #f2849e;
+}
+
+form *::placeholder {
+  color: inherit;
+}
+
+input[type="submit"] {
+  background-color: #585858;
+  color: white;
+  border-radius: 4px;
+  border: 0;
+  padding: 10px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #f2849e;
+}
+
+input[type="submit"]:active {
+  background-color: #ee5f81;
+}
+
+    /* ========== Follow ========== */
+
+.icon {
+  width: 50px;
+  height: 50px;
+  color: inherit;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  float: left;
+  margin-right: 5%;
+  margin-bottom: 16px; /* same as margin-right */
+}
+
+.icon-label {
+  display: none;
+}
+
+.icon:before {
+  line-height: 50px;
+  font-size: 18px;
+}
+
+/* ========== Responsive layout ========== */
+@media screen and (max-width: 736px) {
+
+}
+
+
+/*
+ * Grid with margins
+ * 1 margin = 3%
+ * 1 col = 100% - 11 margins / 12 = 100% - 22% / 12 = 5.58333333%
+ * Eg: width of 4 columns = 4 * 1col + 4-1 margins.
+ */
+/*
+ @media screen and (max-width: 736px) {
+
+   #portfolio .col-width {
+    width: 48.49999998%;              /* 6cols + 5 margins */
+   /*}
+
+ }
