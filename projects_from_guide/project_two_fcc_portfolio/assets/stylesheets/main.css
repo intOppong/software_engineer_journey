@@ -59,7 +59,8 @@
   padding: 0 1.85185185%; /* 20px*/
   margin: 0 auto;
 }
-.row:after, .row:before {
+.row:before,
+.row:after {
   content: '';
   display: table;
 }
@@ -223,12 +224,13 @@ body {
 */
 
 /* ========== Navigation ========== */
+#main_nav {
+  position: fixed;
+}
 
 #main_nav ul {
   padding: 5px 0;
-  border-bottom: 1px solid black;    /* temp */
-  position: fixed;
-  max-width: 960px;
+
   z-index: 1;
 }
 
@@ -273,9 +275,13 @@ a {
 
 /* ========== Header ========== */
 
+.container {
+  padding-bottom: 50px;
+}
+
 #main_header {
   padding-top: 50px;
-  padding-bottom: 50px;
+
 }
 
 .tagline {
@@ -309,9 +315,20 @@ a {
   border-radius: 50%;
   width: 235px;          /* width of nav element */
   height: 235px;         /* same as width */
-  float: right;
 }
 
+#main_header .col-width:first-child {
+  width: 66.6666666664%;  /* 8 cols */
+}
+
+#main_header .col-width:last-child {
+  width: 33.3333333332%;  /* 4 cols */
+}
+
+#profile-pic {
+  width: 235px; /* same as image */
+  float: right;
+}
 
 /* ========== Portfolio ========== */
   /*
@@ -321,47 +338,27 @@ a {
    * Eg: width of 4 columns = 4 * 1col + 4-1 margins.
    */
 
-#portfolio > a {
-  display: block;
-}
-
 #portfolio .row {
   margin-bottom: 28.79px;    /* same as margin left */
-}
-
-#portfolio .col + .col {
- margin-left: 3%;
 }
 
 #portfolio .col-width {
  width: 31.33%;              /* 4cols + 3 margins */
 }
 
-#portfolio .col {
+.project {
+  margin-left: 3%;
+} .project:nth-child(3n+1){
+  margin-left: 0;
+}
+
+.project {
+  margin-bottom: 20px;
   height: 240px;             /* same as width */
   border-radius: 4px;
 }
 
-.bgcol1 {
-  background: radial-gradient(#f7b5c4, #f2849e); /* default: #f2849e, LIGHT...inner: 5, outer: 1 */
-} #portfolio a:hover.bgcol1{
-  background: radial-gradient(#c1697e, #79424f); /* default: #f2849e, DEEP...inner: 3, outer: 6 */
-}
-
-.bgcol2 {
-  background: radial-gradient(#b1dff9, #7ecaf6); /* default: #7ecaf6, LIGHT...inner: 5, outer: 1 */
-} #portfolio a:hover.bgcol2{
-  background: radial-gradient(#64a1c4, #3f657b); /* default: #7ecaf6, DEEP...inner: 3, outer: 6 */
-}
-
-.bgcol3 {
-  background: radial-gradient(#afe2d9, #7bd0c1); /* default: #7bd0c1, LIGHT...inner: 5, outer: 1 */
-} #portfolio a:hover.bgcol3{
-  background: radial-gradient(#62a69a, #3d6860); /* default: #7bd0c1, DEEP...inner: 3, outer: 6 */
-}
-
-
-.project {
+.project a {
   display: block;
   position: absolute;
   top: 0;
@@ -381,9 +378,35 @@ a {
   display: none;
 }
 
-#portfolio a:hover .project_desc {
+.project a:hover .project_desc {
   display:inherit;
 }
+
+.project {
+  background: radial-gradient(#f7b5c4, #f2849e); /* default: #f2849e, LIGHT...inner: 5, outer: 1 */
+} .project a:hover{
+  background: radial-gradient(#c1697e, #79424f); /* default: #f2849e, DEEP...inner: 3, outer: 6 */
+}
+
+.project:nth-child(2n) {
+  background: radial-gradient(#afe2d9, #7bd0c1); /* default: #7bd0c1, LIGHT...inner: 5, outer: 1 */
+} .project:nth-child(2n) a:hover{
+  background: radial-gradient(#62a69a, #3d6860); /* default: #7bd0c1, DEEP...inner: 3, outer: 6 */
+}
+
+.project:nth-child(4n-1) {
+  background: radial-gradient(#b1dff9, #7ecaf6); /* default: #7ecaf6, LIGHT...inner: 5, outer: 1 */
+} .project:nth-child(4n-1) a:hover{
+  background: radial-gradient(#64a1c4, #3f657b); /* default: #7ecaf6, DEEP...inner: 3, outer: 6 */
+}
+
+.project:nth-child(5n+1) {
+  background: radial-gradient(#ceb5df, #ae85ca); /* default: #7ecaf6, LIGHT...inner: 5, outer: 1 */
+} .project:nth-child(5n+1) a:hover{
+  background: radial-gradient(#8b6aa1, #574265); /* default: #7ecaf6, DEEP...inner: 3, outer: 6 */
+}
+
+
 
 /* ========== Footer ========== */
 
@@ -391,8 +414,20 @@ a {
   margin-bottom: 30px;
 }
 
-#main_footer h2 {
+#contact-me h2 {
+  margin-bottom: 10px;
+}
+
+#follow-me h2 {
   margin-bottom: 30px;
+}
+
+#main_footer .col-width:first-child {
+  width: 66.6666666664%;
+}
+
+#main_footer .col-width:last-child {
+  width: 33.3333333332%;
 }
 
 #main_footer .row:first-child {
@@ -484,8 +519,8 @@ input[type="submit"]:active {
     /* ========== Follow ========== */
 
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   color: inherit;
   text-align: center;
   display: inline-block;
@@ -501,8 +536,18 @@ input[type="submit"]:active {
 }
 
 .icon:before {
-  line-height: 50px;
+  line-height: 40px;
   font-size: 18px;
+}
+
+.icon:hover {
+  color: #f2849e;
+  border-color: #f2849e;
+}
+
+    /* ========== Copyright ========== */
+#copyright p {
+  text-align: center;
 }
 
 /* ========== Responsive layout ========== */
@@ -517,11 +562,86 @@ input[type="submit"]:active {
  * 1 col = 100% - 11 margins / 12 = 100% - 22% / 12 = 5.58333333%
  * Eg: width of 4 columns = 4 * 1col + 4-1 margins.
  */
-/*
+
  @media screen and (max-width: 736px) {
 
-   #portfolio .col-width {
+  #main_header .col-width:first-child {
+    width: 100%;  /* 12 cols */
+  }
+
+  #main_header div:first-child {
+    margin-bottom: 50px;
+  }
+
+  #main_header .col-width:last-child {
+    width: 100%;  /* 12 cols */
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  hr {
+    display: none;
+  }
+
+  #profile-pic {
+    margin: 0 auto;
+    float: none;
+  }
+
+
+
+  #portfolio .col-width {
     width: 48.49999998%;              /* 6cols + 5 margins */
-   /*}
+  }
+
+  .project {
+    margin-left: 0;
+  } .project:nth-child(2n){
+    margin-left: 3%;
+  }
+
+
+
+  #main_footer .col-width:first-child {
+    width: 100%;
+
+  }
+
+  #main_footer div:first-child {
+    margin-bottom: 50px;
+  }
+
+  #main_footer .col-width:last-child {
+    width: 100%;
+  }
+
+  .icon {
+    margin-right: 2.5%;
+  }
 
  }
+
+ @media screen and (max-width: 480px) {
+
+   #portfolio .col-width {
+     width: 100%;              /* 6cols + 5 margins */
+   }
+
+   .project {
+     margin-left: 0;
+   } .project:nth-child(n){
+     margin-left: 0;
+   }
+
+
+}
+
+@media screen and (min-width: 1080px) {
+
+  .container {
+    min-width: 100%;
+    background: #EEEEEE;
+  }
+}
