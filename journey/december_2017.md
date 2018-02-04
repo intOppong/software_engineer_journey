@@ -29,23 +29,21 @@ In total there were *"6 weeks"* in December 2017.**
     * Get Comfortable with git :white_check_mark:
     * Complete Project: clone online resume template :white_check_mark:
     * Begin Project: FCC Portfolio :white_check_mark:
-    * Outstretched Goal: Complete FCC Portfolio
+    * **Outstretched Goal**: Complete FCC Portfolio
 * Process Oriented Goals:
 Work Everyday averaging 10 Pomodoros a day & at least 5 Pomodoros on days where life duties call (eg: going to the hospital, helping family with work etc). *data based on last 2 weeks of December.*
 
-    | | No. of Days | Pomodoro Average
+    | | No. of Working Days | Pomodoro Average
     | --- | --- | --- |
     | Work Everyday |  9 out of 10 days | 7.8 |
-    | Full Days | 5 out of 5 days | 11.6 |
-    | not Full Days | 4 out of 5 days | 4 |
+    | Full Days | 5 out of 9 days | 11.6 |
+    | not Full Days | 4 out of 9 days | 4 |
 * Once per month: do two or more of the following [as per the guide](https://github.com/intOppong/software_engineer_journey/blob/master/faq.md)
-    * Write up a comprehensive blog post or markdown entry in a repository detailing the high points of what you learned that month. :white_check_mark:
-    * Livestream what you're working on for an hour. Or, lend a hand to someone who needs help by screen-sharing and walking them through it. :x:
-        * ***i scheduled for it but i honestly forgot & used the time to work on my project.***
-    * Watch [this video](https://www.youtube.com/watch?v=4NIb9l3imAo) and [this video](https://www.youtube.com/watch?v=Eg5-tdAwclo) - on interviewing
-        * ***watched one of them***
-    * Read this - on crafting a resume :x:
-    * Do one lesson from [CUST104: Business Communications](https://learn.saylor.org/course/view.php?id=345) :x:
+	* Write up a comprehensive blog post or markdown entry in a repository detailing the high points of what you learned that month. :white_check_mark:
+	* Livestream what you're working on for an hour. Or, lend a hand to someone who needs help by screen-sharing and walking them through it. :x: *i scheduled for it but i honestly forgot & used the time to work on my project.*
+	* Watch [this video](https://www.youtube.com/watch?v=4NIb9l3imAo) and [this video](https://www.youtube.com/watch?v=Eg5-tdAwclo) - on interviewing :white_check_mark: *watched one of them*
+	* Read this - on crafting a resume :x: 
+	* Do one lesson from [CUST104: Business Communications](https://learn.saylor.org/course/view.php?id=345) :x:
 
 ### Week One
 ***
