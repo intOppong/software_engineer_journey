@@ -103,8 +103,11 @@ should have the ```.col-4``` class when width is 960px && it should be ```.col-6
 * I'll need a way (through js i think) to change the class of an element depending on various factors. eg: Class A applies 
 when width is 960px & Class B applies in 760px. 
 
-### Tools i used
+### Attribution
 ***
 I’d like to acknowledge the following for providing free, amazing & useful tools to the community. I used the these tools in this project
 * Google's Free web Fonts contributor [Łukasz Dziedzic for the Lato](https://fonts.google.com/specimen/Lato) font
 * [Font-awesome](http://fontawesome.io/)
+* Design Inspiration
+	* html5up's Phamtom [template](https://html5up.net/phantom).
+	* Justin Sane's [FCC Personal Portfolio Page](https://codepen.io/freeCodeCamp/full/YqLyXB).
