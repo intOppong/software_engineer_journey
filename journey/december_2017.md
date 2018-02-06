@@ -147,8 +147,6 @@ Work Everyday averaging 10 Pomodoros a day & at least 5 Pomodoros on days where 
 ***
 * What I Did
     * Continue working on project two: css for the portfolio section.
-        * I used a 12 col grid without defined margins for the site as a whole, but I turned to a 12 col grid with defined margins for the portfolio section. i.e. col-4 is 32%, but for the portfolio section col-4 is 31.33%, the rest is taken up by margin. 
-        * found great techniques to [vertically center text/box](https://stackoverflow.com/questions/8865458/how-do-i-vertically-center-text-with-css) in another element
 * What I Learnt & Challenges I Faced
     * I've detailed it in the project's [readme](https://github.com/intOppong/software_engineer_journey/tree/master/projects_from_guide/project_two_fcc_portfolio) file
     
