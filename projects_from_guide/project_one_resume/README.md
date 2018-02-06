@@ -25,7 +25,7 @@
 * z-index lets you control the stacking order of positioned elements (absolute or relative).
 * when using box shadow, you have to look out for the stacking order. It determines whether or not the box shadow appears on top or behind other elements.
 	* Child elements stack on top of parent element.
-	* For child elements on same level as with the illustration below, the box shadow of the lower element appears above the upper element. the box shadow of the div with class of two appear above the div with class of one. You can use z-index to explicitly control the stacking order.
+	* For child elements on same level, lower elements stack on top of upper elements. Hence the box shadow of the lower element appears above the upper element. i.e. The box shadow of ```div class=“two”``` appear above ```div class=“one”```. You can use z-index to explicitly control the stacking order.
 		```html
 		<section>
 			<div class=“one”></div>
