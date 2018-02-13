@@ -422,7 +422,8 @@ input[type="submit"]:active {
 }
 
 #portfolio .col-width {
- width: 31.33%;              /* 4cols + 3 margins */
+  width: 31.33%;              /* 4cols + 3 margins */
+  padding: 15.665%;          /* equal width & height */
 }
 
 .project {
@@ -433,7 +434,6 @@ input[type="submit"]:active {
 
 .project {
   margin-bottom: 3%;      /* same as margin left */
-  height: 240px;             /* same as width */
   border-radius: 4px;
 }
 
@@ -444,7 +444,6 @@ input[type="submit"]:active {
   left: 0;
   right:0;
   bottom: 0;
-  line-height: 240px;		/* As tall as the element: required to vertically center children*/
   text-align: center;
   color: #5b5b5b;
 }
@@ -453,26 +452,34 @@ input[type="submit"]:active {
   color: #fff;
 }
 
-.project a:hover .project_desc {
+.project_desc {
+  display: none;
+} .project a:hover .project_desc {
   display:inherit;
+}
+
+.project a:hover .project_name {
+  font-weight: 600;
 }
 
 .project_content {
   display: inline-block;
-	vertical-align:middle;
-	line-height: normal;
-  width: 70%;
-  margin: 0 auto;
+  width: 80%;
+  height: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
 }
 
 .project_name {
   font-size: 1.3em;
 }
 
-.project_desc {
-  display: none;
-  padding-top: 0.62em;
-}
+
 
 /*
  * COLORS FOR RADIAL GRADIENT
@@ -622,6 +629,7 @@ form > .col:first-child {
 
   #portfolio .col-width {
     width: 48.49999998%;              /* 6cols + 5 margins */
+    padding: 24.25%;                  /* equal width & height */
   }
 
   .project {
@@ -656,13 +664,13 @@ form > .col:first-child {
   /* ========== Portfolio ========== */
 
    #portfolio .col-width {
-     width: 100%;              /* 6cols + 5 margins */
+    width: 100%;              /* 6cols + 5 margins */
+    padding-top: 32%;
+    padding-bottom: 32%;
    }
 
-   .project {
-     margin-left: 0;
-   } .project:nth-child(n){
-     margin-left: 0;
-   }
+  .project:nth-child(n){
+    margin-left: 0;
+  }
 
 }
