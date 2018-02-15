@@ -16,7 +16,7 @@ Below is a list of Tutorial Projects I used as practice before doing the actual 
 | Tutorial Projects  | Guide | Skills Required |
 | --- | --- | --- |
 | [Resume](https://www.youtube.com/watch?v=jJuHQNULXGs&list=PLsIkqR8inizt8SpD6utVTPhy8gFQzQNug) | [Project One: Clone this online resume template](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot3) | Basic HTML & CSS |
-| [Snake Game](https://www.youtube.com/watch?v=XccOs0tWngg&index=18&list=PLDmvslp_VR0wkiclky6vj6SSDx-N2QE9z) | [Project Three: Tower of Hanoi Solver]() | HTML Canvas, Programming Concepts with Javascripts, Javascript & HTML/CSS |
+| [Snake Game](https://www.youtube.com/watch?v=XccOs0tWngg&index=18&list=PLDmvslp_VR0wkiclky6vj6SSDx-N2QE9z) | [Project Three: Tower of Hanoi Solver]() |<ul><li> HTML Canvas</li><li>Programming Concepts with Javascripts</li><li>Javascript & HTML/CSS</li> |
 
 
 
