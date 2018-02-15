@@ -40,7 +40,7 @@ With that said I came up with a strategy that i think best suits my preference &
 
 1. Identify the next project listed in the guide.
    1. List the Skills required to do that project. *if you already know the skill, Skip to 5) & do the project*
-2. Find a **Tutorial Project** of similar difficulty to the given project. That is, find a tutorial project that involves/focuses-on the skills required. ***do easy stuff first.***
+2. Find a **[Tutorial Project](https://github.com/intOppong/software_engineer_journey/tree/master/tutorial_projects)** of similar difficulty to the given project. That is, find a tutorial project that involves/focuses-on the skills required. ***do easy stuff first.***
    * a Tutorial Project: is just a project based tutorial like *"Create Tic Tac Toe with HTML, CSS & Javascript"*
 3. Follow the Tutorial Project (& simultaneously...go to next)
    * *Focus on how the required skill is applied.*
