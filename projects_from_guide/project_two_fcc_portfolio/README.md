@@ -23,8 +23,8 @@ was a bad month.
 * Single page website with Nav, Header, Portfolio Section, Footer.
   * Nav: page navigation buttons.
   * Header: contains information about the portfolio creator
-	*	Portfolio Section: contains thumbnail images of different projects developed by the portfolio creator
-	*	Footer: contains links to creator’s social media pages 
+  * Portfolio Section: contains thumbnail images of different projects developed by the portfolio creator
+  * Footer: contains links to creator’s social media pages 
 * Dev Environment
   * Atom
   * Google Chrome Browser
