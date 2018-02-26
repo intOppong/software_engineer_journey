@@ -19,11 +19,18 @@ was a bad month.
 
 ### minified Documentation
 ***
-* Single page website with Nav, Header, Portfolio Section, Footer.
-  * Nav: page navigation buttons.
-  * Header: contains information about the portfolio creator
-  * Portfolio Section: contains thumbnail images of different projects developed by the portfolio creator
-  * Footer: contains links to creator’s social media pages 
+* Objectives
+	* Build a Personal Portfolio Website that fufills the following user stories
+		* I can access all of the portfolio webpage's content just by scrolling.
+		* I can click different buttons that will take me to the portfolio creator's different social media pages.
+		*  I can see thumbnail images of different projects the portfolio creator has built (if you haven't built any websites before, use placeholders.)
+		*  I navigate to different sections of the webpage by clicking buttons in the navigation.
+* Project Summary
+	* It's a Single page website with Nav, Header, Portfolio Section, Footer.
+		* Nav: page navigation buttons.
+		* Header: contains information about the portfolio creator
+		* Portfolio Section: contains thumbnail images of different projects developed by the portfolio creator
+		* Footer: contains links to creator’s social media pages 
 * Dev Environment
   * Atom
   * Google Chrome Browser
