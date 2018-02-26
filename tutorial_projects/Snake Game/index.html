@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta charset="UTF=8">
+	<title>Snake</title>
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <!-- Display Game -->
+
+  <div class="container">
+
+    <!-- Game Summary / Restart -->
+
+    <div id="overlay">
+
+      Your Final Score: <span id="final_score"></span>
+      <br>
+      <a onClick="window.location.reload()" href="#">Click To Play Again</a>
+
+    </div>
+
+    <!-- Canvas -->
+
+    <canvas id="canvas" width="600" height="450">
+      Sorry, this browser does not support the canvas element
+    </canvas>
+
+    <!-- Stats -->
+
+    <div id="stats">
+      <div id="game_score" class="score"></div>
+      <div id="high_score" class="score"></div>
+      <button onclick="resetHighScore()" id="reset_high_score">Reset High Score</button>
+    </div>
+
+  </div>
+
+
+<!-- Footer -->
+
+  <!-- JQuery -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Main JS -->
+
+  <script src="assets/scripts/script.js"></script>
+
+</body>
+</html>

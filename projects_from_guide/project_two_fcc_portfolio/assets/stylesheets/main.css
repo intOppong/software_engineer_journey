@@ -528,7 +528,7 @@ input[type="submit"]:active {
   width: 33.3333333332%;
 }
 
-    /* ========== Contact ========== */
+    /* ========== Contact Me ========== */
 
 #contact-me h2 {
   margin-bottom: 0.62em;
@@ -551,7 +551,7 @@ form > .col:first-child {
   padding-right: 3%;
 }
 
-    /* ========== Follow ========== */
+    /* ========== Follow Me ========== */
 
 #follow-me h2 {
   margin-bottom: 1.87em;
@@ -596,6 +596,7 @@ form > .col:first-child {
   ========================================
 */
 
+  /* TABLETS */
  @media screen and (max-width: 736px) {
 
   /* ========== Header ========== */
@@ -658,6 +659,9 @@ form > .col:first-child {
   }
 
  }
+
+
+  /* MOBILE PHONES */
 
  @media screen and (max-width: 480px) {
 
