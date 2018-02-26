@@ -16,7 +16,6 @@
 flowed consistently.  [January](https://github.com/intOppong/software_engineer_journey/blob/master/journey/january_2018.md) 
 was a bad month.
 * This project gave me more confidence in my process for creating websites.
-* Relevant Decisions on the Project
 
 ### minified Documentation
 ***
