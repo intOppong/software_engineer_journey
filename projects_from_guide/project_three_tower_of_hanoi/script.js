@@ -1,169 +1,386 @@
 
-// Variables
-var peg = {
-	one: {
-		discArray: [1, 2, 3, 4, 5, 6, 7, 8],
+/*
+  ========================================
+  VARIABLES
+  ========================================
+*/
+
+var pegs = [
+	{
+		discs: [1, 2, 3, 4, 5, 6, 7, 8],
 		pos: 1,
 		sortPeg: false,
+		initialPeg: true,
 	},
-	two: {
-		discArray: [],
+	{
+		discs: [],
 		pos: 2,
 		sortPeg: false,
+		initialPeg: false,
 	},
-	three: {
-		discArray: [],
+	{
+		discs: [],
 		pos: 3,
 		sortPeg: false,
+		initialPeg: false,
 	},
+];
+
+
+var Disc = {
+	init: function() {
+		this.num = null;
+		this.currentPeg = undefined;
+		this.destinationPeg = undefined;
+	}
+}
+
+var baseDisc = Object.create(Disc);
+baseDisc.initialize = function() {
+	this.init();
+}
+baseDisc.initialize();
+/*
+As Oppossed To:
+
+var baseDisc = {
+	num: null,
+	currentPeg: undefined,
+	destinationPeg: undefined,
 };
+*/
 
-var baseDisc;
-var move = [];
 var sortPeg;
-var temp = [];
+var smallerDiscs = [];
+var pegPositions = [];
+var numberOfDiscs;
 
-baseDisc = {
-	num: peg.one.discArray[0],
-	peg: peg.one.pos,
-}
+/*
+  ========================================
+  FUNCTIONS
+  ========================================
+*/
 
-if (baseDisc.num % 2) {
-	peg.three.sortPeg = true;
-} else {
-	peg.two.sortPeg = true;
-}
-
-// Move baseDisc to SortPeg
-for (let key in peg) {
-  if (peg[key].sortPeg == true) {
-		peg[key].discArray[0] = baseDisc.num;
-		baseDisc.peg = peg[key].pos;
+function setBaseDisc(peg) {
+	if (peg === null) {
+		return console.log('Error'); // TODO: error
 	}
+	baseDisc.num = peg.discs[0];
+	baseDisc.currentPeg = peg.pos;
+	baseDisc.destinationPeg = undefined;
+	return 1;
 }
 
-// delete baseDisc from old Peg.
-for (let key in peg) {
-	let indexOfDisc = peg[key].discArray.indexOf(baseDisc.num);
-	if (peg[key].sortPeg == false && indexOfDisc !== -1) {
-		peg[key].discArray.splice(indexOfDisc, 1);
+function getInitialPeg() {
+	for (let peg of pegs) {
+		if (peg.initialPeg === true) {
+			return peg;
+		}
 	}
+	return null;
 }
 
-
-// create initial move array
-if (baseDisc.num > 1) {
-	createMoveArray();
+function getLengthOfInitialPeg() {
+	for (let peg of pegs) {
+		if (peg.hasOwnProperty('initialPeg')) {
+			return peg.discs.length;
+		}
+	}
+	console.log('Error'); debugger;// TODO: error
 }
 
-assignDestinationPegs();
-
-// move discs to Destination Pegs
-for (let i = 0; i < move.length; i++) {
-	// find the CP of the disc
-	for (let key in peg) {
-		if (peg[key].pos === move[i].currentPeg) {
-			// is the disc the lowest in that peg
-			if (peg[key].disc[0] === move[i].disc) {
-				// find the DP of the disc
-				if (peg.[key].pos === move[i].destinationPeg) {
-					// is the disc, the lowest in the DP
-					if (peg[key].disc[0] === move[i].disc) {
-						peg[key].disc.splice(0, 0, move[i].disc);
-						move[i].currentPeg = peg[key].pos;
-						move[i].destinationPeg = null;
-						//if disc assigned is the highest in move array, delete it & reassign DPs
-					}
-				}
+function setSortPeg() {
+	for (let peg of pegs) {
+		if (peg.sortPeg === true) {
+			peg.sortPeg = false;
+		}
+	}
+	for (let peg of pegs) {
+		if (peg.pos != baseDisc.currentPeg) {
+			if (baseDisc.num % 2 == peg.pos % 2) {
+					peg.sortPeg = true;
+					return 1;
 			}
 		}
 	}
+	console.log('Error'); debugger;// TODO: error
 }
 
+function setBaseDiscDestinationPeg() {
+	for(let peg of pegs) {
+		if (peg.sortPeg === true) {
+			baseDisc.destinationPeg = peg.pos;
+			return 1;
+		}
+	}
+	console.log('Error'); debugger;// TODO: error
+}
 
-
-
-
+function moveDisc(disc) {
+	addDiscToNewPeg(disc);
+	deleteDiscFromOldPeg(disc);
+	updateCurrentPeg(disc);
+	deleteDestinationPeg(disc);
+}
 
 function createMoveArray() {
-	for (let key in peg) {
-		if (peg[key].sortPeg !== true) {
-			if (baseDisc.num > peg[key].discArray[0]) {
-				// assign peg members to move array
-				for(let i = 0; i < peg[key].discArray.length; i++) {
-					move[i] = {
-						disc: peg[key].discArray[i],
-						currentPeg: peg[key].pos,
+	for (let peg of pegs) {
+		if (!peg.sortPeg) {
+			if (baseDisc.num > peg.discs[0]) {
+				for(let i = 0; i < peg.discs.length; i++) {
+					smallerDiscs[i] = Object.create(Disc);
+					smallerDiscs[i].initialize = function() {
+						this.init();
 					}
+					smallerDiscs[i].initialize();
+					smallerDiscs[i].num = peg.discs[i];
+					smallerDiscs[i].currentPeg = peg.pos;
+					/*
+					As Oppossed To:
+						smallerDiscs[i] = {
+							num: peg.discs[i],
+							currentPeg: peg.pos,
+							destinationPeg: undefined,
+						}
+					*/
 				}
 			}
 		}
 	}
 }
 
-// Assign Destination Pegs: DP
-function assignDestinationPegs() {
-		// Assign DP to the last element (largest disc)
-	if (move.length != 0) {
-		for (let key in peg) {
-			if (peg[key].sortPeg === true) {
-				move[move.length - 1].destinationPeg = peg[key].pos;
-			}
-		}
-	}
+function setDestinationPegs() {
 
-		// Assign DP to the other elements backwards
-	for (let i = move.length - 2; i >= 0; i--) {
-		createPegPosition();
-		// not disc's CP
-		let cp = temp.indexOf(move[i].currentPeg);
-		if (cp !== -1 ) {
-			temp.splice(cp, 1);
-		}
-		// not higher disc's DP or CP
-		cp = temp.indexOf(move[i+1].currentPeg);
-		let dp = temp.indexOf(move[i+1].destinationPeg);
-		if (cp !== -1) {
-			temp.splice(cp, 1);
-		} else if (dp !== -1) {
-			temp.splice(dp, 1);
-		}
-		// assign dp to disc
-		if (temp.length == 1) {
-			move[i].destinationPeg = temp[0];
+	setLargestDiscDestinationPeg();
+	setRemainderDiscsDestinationPeg();
+}
+
+function movement(disc) {
+	let flag = 1;
+	while (flag) {
+		let lower = LowestDiscInCurrentPeg(disc);
+		if (lower === disc) {
+			lower = LowestDiscInDestinationPeg(disc);
+			if (lower === disc) {
+				moveDisc(lower);
+				flag = 0;
+			} else {
+				updateLowerDiscDestinationPeg(lower, disc);
+				movement(lower);
+			}
+		} else {
+			updateLowerDiscDestinationPeg(lower, disc);
+			movement(lower);
 		}
 	}
 }
 
-function createPegPosition() {
+function LowestDiscInCurrentPeg(disc) {
+	let lower;
+	let peg = getCurrentPeg(disc);
+	for (let i in peg.discs) {
+		if (peg.discs[i] === disc.num) {
+			lower = peg.discs[i-1];
+			if (lower != undefined) {
+				return getLowerDisc(lower);
+			} else {
+				return disc;
+			}
+		}
+	}
+}
+
+function LowestDiscInDestinationPeg(disc) {
+	let peg = getDestinationPeg(disc);
+	let lengthOfPeg = peg.discs.length;
+	for (let i = lengthOfPeg - 1; i >= 0; ) {
+		if (peg.discs[i] > disc.num) {
+			i--;
+		} else {
+			return getLowerDisc(peg.discs[i])
+		}
+	}
+	return disc;
+}
+
+function updateLowerDiscDestinationPeg(lowerDisc, higherMovingDisc) {
+	getPegPositions();
+	eliminateDiscCP(lowerDisc);
+	eliminateHigherDiscCurrentPeg(higherMovingDisc);
+	eliminateHigherDiscDestinationPeg(higherMovingDisc);
+	assignDestinationPeg(lowerDisc);
+}
+
+
+/*
+  ========================================
+  HELPER FUNCTIONS
+  ========================================
+*/
+
+
+function addDiscToNewPeg(disc) {
+	for (let peg of pegs) {
+		if (peg.pos === disc.destinationPeg) {
+			peg.discs.splice(0, 0, disc.num);
+			return 1;
+		}
+	}
+	console.log('Error'); debugger;// TODO: error
+}
+
+function deleteDiscFromOldPeg(disc) {
+	for (let peg of pegs) {
+		if (peg.pos === disc.currentPeg) {
+			peg.discs.splice(0, 1);
+			return 1;
+		}
+	}
+	console.log('Error'); debugger;// TODO: error
+}
+
+function updateCurrentPeg(disc) {
+	for (let peg of pegs) {
+		if (peg.pos === disc.destinationPeg) {
+			disc.currentPeg = disc.destinationPeg;
+			return 1;
+		}
+	}
+	console.log('Error'); debugger;// TODO: error
+}
+
+function deleteDestinationPeg(disc) {
+	disc.destinationPeg = null;
+	return 1;
+}
+
+function setLargestDiscDestinationPeg() {
+	let peg = getSortPeg();
+	smallerDiscs[smallerDiscs.length - 1].destinationPeg = peg.pos;
+}
+
+function setRemainderDiscsDestinationPeg() {
+	for (let i = smallerDiscs.length - 2; i >= 0; i--) {
+		getPegPositions();
+		// not disc's CP
+		eliminateDiscCP(smallerDiscs[i]);
+		// not higher disc's DP or CP
+		eliminateHigherDiscCurrentPeg(smallerDiscs[i+1]);
+		eliminateHigherDiscDestinationPeg(smallerDiscs[i+1]);
+		// assign remainder pegPosition as dp of disc
+		assignDestinationPeg(smallerDiscs[i]);
+	}
+}
+
+function getCurrentPeg(disc) {
+	for (let peg of pegs) {
+		if (peg.pos === disc.currentPeg) {
+			return peg;
+		}
+	}
+	console.log('Error'); debugger;// TODO: error
+}
+
+function getDestinationPeg(disc) {
+	for (let peg of pegs) {
+		if (peg.pos === disc.destinationPeg) {
+			return peg;
+		}
+	}
+	console.log('Error'); debugger;// TODO: error
+}
+
+function getSortPeg() {
+	for (let peg of pegs) {
+		if (peg.sortPeg === true) {
+			return peg;
+		}
+	}
+	console.log('Error'); debugger;// TODO: error
+}
+
+function getLowerDisc(lower) {
+	for (let lowerDisc of smallerDiscs) {
+		if (lowerDisc.num == lower) {
+			return lowerDisc;
+		}
+	}
+	console.log('Error'); debugger;// TODO: error
+}
+
+
+function eliminateDiscCP(disc) {
+	let currentPeg = pegPositions.indexOf(disc.currentPeg);
+	if (currentPeg !== -1 ) {
+		reducePegPositions(currentPeg);
+	}
+}
+
+function eliminateHigherDiscCurrentPeg(disc) {
+	let currentPeg = pegPositions.indexOf(disc.currentPeg);
+	if (currentPeg !== -1) {
+		reducePegPositions(currentPeg);
+	}
+}
+
+function eliminateHigherDiscDestinationPeg(disc) {
+	let destinationPeg = pegPositions.indexOf(disc.destinationPeg);
+	if (destinationPeg !== -1) {
+		reducePegPositions(destinationPeg);
+	}
+}
+
+function assignDestinationPeg(disc) {
+	if (pegPositions.length == 1) {
+		disc.destinationPeg = pegPositions[0];
+	} else {
+		console.log('Error'); debugger;// TODO: error
+	}
+}
+
+function reducePegPositions(pos) {
+	pegPositions.splice(pos, 1);
+}
+
+function getPegPositions() {
 	var i = 0;
-	for (let key in peg) {
-		temp[i] = peg[key].pos;
+	for (let peg of pegs) {
+		pegPositions[i] = peg.pos;
 		i++;
 	}
 }
 
 
-console.log(move);
-
-
 /*
-for (let i = move.length - 2; i <= 0; i++) {
-	for (let j = 0; j < destinationPeg.length; j++) {
-		let peg = destinationPeg.indexOf(move[i].currentPeg);
-		if ( peg !== -1) {
-			destinationPeg.splice(peg, 1);
+  ========================================
+  BEGIN HERE
+  ========================================
+*/
+
+
+setBaseDisc(getInitialPeg());
+numberOfDiscs = getLengthOfInitialPeg();
+
+while(numberOfDiscs) {
+	setSortPeg();
+	setBaseDiscDestinationPeg();
+	moveDisc(baseDisc);
+
+	if (baseDisc.num > 1) {
+		createMoveArray();
+
+		while (smallerDiscs.length != 0 ) {
+			setDestinationPegs();
+			for (let i = 0; i < smallerDiscs.length; i++) {
+				movement(smallerDiscs[i]);
+			}
+			smallerDiscs.splice(smallerDiscs.length - 1, 1);
 		}
+	} else {
+		setBaseDisc(getInitialPeg());
 	}
+
+	numberOfDiscs--;
+	setBaseDisc(getInitialPeg());
 }
-*/
-
-
-
-/*
-for (let i = 0; i < peg.one.disc.length; i++) {
-	move[i] = {
-		disc: peg.one.disc[i];
-		currentPeg: peg.one.pos;
-	}
-*/
+console.log("RESULTS");console.log(pegs);
