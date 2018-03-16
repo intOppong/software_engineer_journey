@@ -1,59 +1,4 @@
 
-/*
-  ========================================
-  VARIABLES
-  ========================================
-*/
-
-var pegs = [
-	{
-		discs: [1, 2, 3, 4, 5, 6, 7, 8],
-		pos: 1,
-		sortPeg: false,
-		initialPeg: true,
-	},
-	{
-		discs: [],
-		pos: 2,
-		sortPeg: false,
-		initialPeg: false,
-	},
-	{
-		discs: [],
-		pos: 3,
-		sortPeg: false,
-		initialPeg: false,
-	},
-];
-
-
-var Disc = {
-	init: function() {
-		this.num = null;
-		this.currentPeg = undefined;
-		this.destinationPeg = undefined;
-	}
-}
-
-var baseDisc = Object.create(Disc);
-baseDisc.initialize = function() {
-	this.init();
-}
-baseDisc.initialize();
-/*
-As Oppossed To:
-
-var baseDisc = {
-	num: null,
-	currentPeg: undefined,
-	destinationPeg: undefined,
-};
-*/
-
-var sortPeg;
-var smallerDiscs = [];
-var pegPositions = [];
-var numberOfDiscs;
 
 /*
   ========================================
@@ -67,7 +12,7 @@ function setBaseDisc(peg) {
 	}
 	baseDisc.num = peg.discs[0];
 	baseDisc.currentPeg = peg.pos;
-	baseDisc.destinationPeg = undefined;
+	baseDisc.destinationPeg = setBaseDiscDestinationPeg();
 	return 1;
 }
 
@@ -82,7 +27,7 @@ function getInitialPeg() {
 
 function getLengthOfInitialPeg() {
 	for (let peg of pegs) {
-		if (peg.hasOwnProperty('initialPeg')) {
+		if (peg.initialPeg) {
 			return peg.discs.length;
 		}
 	}
@@ -95,13 +40,42 @@ function setSortPeg() {
 			peg.sortPeg = false;
 		}
 	}
-	for (let peg of pegs) {
-		if (peg.pos != baseDisc.currentPeg) {
-			if (baseDisc.num % 2 == peg.pos % 2) {
+
+	if (!LargestDiscNumberType) {
+		if (!(getInitialPeg().discs[0] % 2)) {
+			for (peg of pegs) {
+				if (peg.finalPeg & !peg.initialPeg) {
 					peg.sortPeg = true;
 					return 1;
+				}
+			}
+		} else {
+			for (peg of pegs) {
+				if (!peg.finalPeg & !peg.initialPeg) {
+					peg.sortPeg = true;
+					return 1;
+				}
 			}
 		}
+		console.log('Error'); debugger;// TODO: error\
+	}
+	else {
+		if (baseDisc.num % 2) {
+			for (peg of pegs) {
+				if (peg.finalPeg & !peg.initialPeg) {
+					peg.sortPeg = true;
+					return 1;
+				}
+			}
+		} else {
+			for (peg of pegs) {
+				if (!peg.finalPeg & !peg.initialPeg) {
+					peg.sortPeg = true;
+					return 1;
+				}
+			}
+		}
+		console.log('Error'); debugger;// TODO: error
 	}
 	console.log('Error'); debugger;// TODO: error
 }
@@ -109,8 +83,7 @@ function setSortPeg() {
 function setBaseDiscDestinationPeg() {
 	for(let peg of pegs) {
 		if (peg.sortPeg === true) {
-			baseDisc.destinationPeg = peg.pos;
-			return 1;
+			return peg.pos;
 		}
 	}
 	console.log('Error'); debugger;// TODO: error
@@ -211,6 +184,64 @@ function updateLowerDiscDestinationPeg(lowerDisc, higherMovingDisc) {
 	assignDestinationPeg(lowerDisc);
 }
 
+			/*
+			  ========================================
+			  USER INTERACTION
+			  ========================================
+			*/
+
+function setInitialPeg(pos) {
+	if (initialPegExists()) {
+		console.log("ERROR - initialPeg already set");debugger;
+	}
+
+	for (let peg of pegs) {
+		if (peg.pos === pos) {
+			peg.initialPeg = true;
+			showPossibleFinalPegOptions(peg.pos);
+		}
+	}
+
+	console.log(pegs);
+}
+
+function setFinalPeg(pos) {
+	if (initialPegExists()) {
+		if (!finalPegExists()) {
+			for (let peg of pegs) {
+				peg.finalPeg = false;
+			}
+			for (let peg of pegs) {
+				if (!peg.initialPeg && peg.pos === pos) {
+					peg.finalPeg = true;
+					console.log(pegs);
+					return 1;
+				}
+			}
+			console.log('Error - Initial Peg cannot be the Final Peg');debugger; // TODO: error
+		} else {
+			console.log('Error - final Peg already set');debugger; // TODO: error
+		}
+	} else {
+		console.log('Error - set Initial Peg first');debugger; // TODO: error
+	}
+}
+
+function setPegDiscs() {
+	let numberOfDiscs = document.getElementById("numberOfDiscs").selectedIndex;
+	for (let peg of pegs) {
+		if (peg.initialPeg) {
+			for (let i = 0; i < numberOfDiscs; i++) {
+				peg.discs[i] = i+1;
+			}
+			for (let peg of pegs) {
+				console.log(peg.discs);
+			}
+			return 1;
+		}
+	}
+	console.log('Error'); // TODO: error
+}
 
 /*
   ========================================
@@ -343,10 +374,73 @@ function reducePegPositions(pos) {
 }
 
 function getPegPositions() {
-	var i = 0;
+	let i = 0;
 	for (let peg of pegs) {
 		pegPositions[i] = peg.pos;
 		i++;
+	}
+}
+
+
+function initialPegExists() {
+	for (let peg of pegs) {
+		if (peg.initialPeg) {
+			return 1;
+		}
+	}
+	return 0;
+}
+
+function finalPegExists() {
+	for (let peg of pegs) {
+		if (peg.finalPeg) {
+			return 1;
+		}
+	}
+	return 0;
+}
+
+
+function checkPegState() {
+	let allSet = 0;
+	for (let peg of pegs) {
+		if (peg.initialPeg & !peg.finalPeg) {
+			allSet++;
+			console.log("initialPeg is set at Peg" + peg.pos);
+			if (peg.discs.length === getLengthOfInitialPeg()) {
+				allSet++;
+				console.log("Discs are at initialPeg" + peg.pos);
+			}
+		}
+		if (peg.finalPeg & !peg.initialPeg) {
+			allSet++;
+			console.log("finalPeg is set at Peg" + peg.pos);
+		}
+	}
+	return allSet;
+}
+
+			/*
+			  ========================================
+			  HTML VISUAL UPDATE
+			  ========================================
+			*/
+
+function showPossibleFinalPegOptions(initialPegPos) {
+	if(initialPegPos == 1) {
+		document.getElementById("finalPeg").innerHTML = "<p>Final Peg</p>"+
+			"<button onclick=\"setFinalPeg(2);\" value=\"2\">Peg Two</button>"+
+			"<button onclick=\"setFinalPeg(3);\" value=\"3\">Peg Three</button>";
+	}
+	if(initialPegPos == 2) {
+		document.getElementById("finalPeg").innerHTML = "<p>Final Peg</p>"+
+			"<button onclick=\"setFinalPeg(1);\" value=\"1\">Peg One</button>"+
+			"<button onclick=\"setFinalPeg(3);\" value=\"3\">Peg Three</button>";
+	}
+	if(initialPegPos == 3) {
+		document.getElementById("finalPeg").innerHTML = "<p>Final Peg</p>"+
+			"<button onclick=\"setFinalPeg(1);\" value=\"1\">Peg One</button>"+
+			"<button onclick=\"setFinalPeg(2);\" value=\"2\">Peg Two</button>";
 	}
 }
 
@@ -357,30 +451,31 @@ function getPegPositions() {
   ========================================
 */
 
-
-setBaseDisc(getInitialPeg());
-numberOfDiscs = getLengthOfInitialPeg();
-
-while(numberOfDiscs) {
-	setSortPeg();
-	setBaseDiscDestinationPeg();
-	moveDisc(baseDisc);
-
-	if (baseDisc.num > 1) {
-		createMoveArray();
-
-		while (smallerDiscs.length != 0 ) {
-			setDestinationPegs();
-			for (let i = 0; i < smallerDiscs.length; i++) {
-				movement(smallerDiscs[i]);
-			}
-			smallerDiscs.splice(smallerDiscs.length - 1, 1);
-		}
-	} else {
-		setBaseDisc(getInitialPeg());
+function begin() {
+	setPegDiscs();
+	if (checkPegState() != 3) {
+		console.log('Error'); debugger; // TODO: error
 	}
 
-	numberOfDiscs--;
+	numberOfDiscs = getLengthOfInitialPeg();
+	LargestDiscNumberType = numberOfDiscs % 2;
+	setSortPeg();
 	setBaseDisc(getInitialPeg());
+
+	while(getLengthOfInitialPeg()) {
+		moveDisc(baseDisc);
+		if (baseDisc.num > 1) {
+			createMoveArray();
+			while (smallerDiscs.length != 0 ) {
+				setDestinationPegs();
+				for (let i = 0; i < smallerDiscs.length; i++) {
+					movement(smallerDiscs[i]);
+				}
+				smallerDiscs.splice(smallerDiscs.length - 1, 1);
+			}
+		}
+		setSortPeg();
+		setBaseDisc(getInitialPeg());
+	}
+	console.log("RESULTS");console.log(pegs);
 }
-console.log("RESULTS");console.log(pegs);

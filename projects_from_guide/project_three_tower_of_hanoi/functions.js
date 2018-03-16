@@ -1,5 +1,4 @@
 
-
 /*
   ========================================
   FUNCTIONS
@@ -60,7 +59,7 @@ function setSortPeg() {
 		console.log('Error'); debugger;// TODO: error\
 	}
 	else {
-		if (baseDisc.num % 2) {
+		if (getInitialPeg().discs[0] % 2) {
 			for (peg of pegs) {
 				if (peg.finalPeg & !peg.initialPeg) {
 					peg.sortPeg = true;
@@ -76,15 +75,6 @@ function setSortPeg() {
 			}
 		}
 		console.log('Error'); debugger;// TODO: error
-	}
-	console.log('Error'); debugger;// TODO: error
-}
-
-function setBaseDiscDestinationPeg() {
-	for(let peg of pegs) {
-		if (peg.sortPeg === true) {
-			return peg.pos;
-		}
 	}
 	console.log('Error'); debugger;// TODO: error
 }
@@ -249,6 +239,14 @@ function setPegDiscs() {
   ========================================
 */
 
+function setBaseDiscDestinationPeg() {
+	for(let peg of pegs) {
+		if (peg.sortPeg === true) {
+			return peg.pos;
+		}
+	}
+	console.log('Error'); debugger;// TODO: error
+}
 
 function addDiscToNewPeg(disc) {
 	for (let peg of pegs) {
@@ -442,50 +440,4 @@ function showPossibleFinalPegOptions(initialPegPos) {
 			"<button onclick=\"setFinalPeg(1);\" value=\"1\">Peg One</button>"+
 			"<button onclick=\"setFinalPeg(2);\" value=\"2\">Peg Two</button>";
 	}
-}
-
-
-/*
-  ========================================
-  BEGIN HERE
-  ========================================
-*/
-
-function begin() {
-
-	setPegDiscs();
-
-	if (checkPegState() != 3) {
-		console.log('Error'); debugger; // TODO: error
-	}
-
-
-	numberOfDiscs = getLengthOfInitialPeg();
-	LargestDiscNumberType = numberOfDiscs % 2;
-	setSortPeg();
-	setBaseDisc(getInitialPeg());
-
-
-	while(getLengthOfInitialPeg()) {
-		moveDisc(baseDisc);
-
-		if (baseDisc.num > 1) {
-			createMoveArray();
-
-			while (smallerDiscs.length != 0 ) {
-				setDestinationPegs();
-				for (let i = 0; i < smallerDiscs.length; i++) {
-					movement(smallerDiscs[i]);
-				}
-				smallerDiscs.splice(smallerDiscs.length - 1, 1);
-			}
-		} else {
-			setSortPeg();
-			setBaseDisc(getInitialPeg());
-		}
-		setSortPeg();
-		setBaseDisc(getInitialPeg());
-	}
-	console.log("RESULTS");console.log(pegs);
-
 }
