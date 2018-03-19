@@ -1,15 +1,34 @@
 
+
 /*
   ========================================
   FUNCTIONS
   ========================================
 */
+function createDiscs(peg) {
+	if (peg === null) {
+		return console.log('Error'); // TODO: error
+	}
+
+	numOfDiscs = document.getElementById("numOfDiscs").selectedIndex;
+	let xPos = 100;
+	let yPos = 150;
+	let width = 10;
+	let height = 250;
+
+	for (let i = 0; i < numOfDiscs; i++) {
+		peg.discs[i] = Object.create(Disc);
+		peg.discs[i].init(i+1, xPos, yPos, width, height);
+	}
+	return 1;
+}
+
 
 function setBaseDisc(peg) {
 	if (peg === null) {
 		return console.log('Error'); // TODO: error
 	}
-	baseDisc.num = peg.discs[0];
+	baseDisc = peg.discs[0];
 	baseDisc.currentPeg = peg.pos;
 	baseDisc.destinationPeg = setBaseDiscDestinationPeg();
 	return 1;
@@ -40,8 +59,9 @@ function setSortPeg() {
 		}
 	}
 
+	let LargestDiscNumberType = numOfDiscs % 2;
 	if (!LargestDiscNumberType) {
-		if (!(getInitialPeg().discs[0] % 2)) {
+		if (!(getInitialPeg().discs[0].num % 2)) {
 			for (peg of pegs) {
 				if (peg.finalPeg & !peg.initialPeg) {
 					peg.sortPeg = true;
@@ -56,10 +76,10 @@ function setSortPeg() {
 				}
 			}
 		}
-		console.log('Error'); debugger;// TODO: error\
+		console.log('Error'); debugger;// TODO: error
 	}
 	else {
-		if (getInitialPeg().discs[0] % 2) {
+		if (baseDisc.num % 2) {
 			for (peg of pegs) {
 				if (peg.finalPeg & !peg.initialPeg) {
 					peg.sortPeg = true;
@@ -79,6 +99,15 @@ function setSortPeg() {
 	console.log('Error'); debugger;// TODO: error
 }
 
+function setBaseDiscDestinationPeg() {
+	for(let peg of pegs) {
+		if (peg.sortPeg === true) {
+			return peg.pos;
+		}
+	}
+	console.log('Error'); debugger;// TODO: error
+}
+
 function moveDisc(disc) {
 	addDiscToNewPeg(disc);
 	deleteDiscFromOldPeg(disc);
@@ -89,23 +118,10 @@ function moveDisc(disc) {
 function createMoveArray() {
 	for (let peg of pegs) {
 		if (!peg.sortPeg) {
-			if (baseDisc.num > peg.discs[0]) {
+			if(getLengthOfInitialPeg() == 0) {console.log(baseDisc);console.log(pegs);debugger;}
+			if (baseDisc.num > peg.discs[0].num) {
 				for(let i = 0; i < peg.discs.length; i++) {
-					smallerDiscs[i] = Object.create(Disc);
-					smallerDiscs[i].initialize = function() {
-						this.init();
-					}
-					smallerDiscs[i].initialize();
-					smallerDiscs[i].num = peg.discs[i];
-					smallerDiscs[i].currentPeg = peg.pos;
-					/*
-					As Oppossed To:
-						smallerDiscs[i] = {
-							num: peg.discs[i],
-							currentPeg: peg.pos,
-							destinationPeg: undefined,
-						}
-					*/
+					smallerDiscs[i] = peg.discs[i];
 				}
 			}
 		}
@@ -142,10 +158,10 @@ function LowestDiscInCurrentPeg(disc) {
 	let lower;
 	let peg = getCurrentPeg(disc);
 	for (let i in peg.discs) {
-		if (peg.discs[i] === disc.num) {
+		if (peg.discs[i].num === disc.num) {
 			lower = peg.discs[i-1];
 			if (lower != undefined) {
-				return getLowerDisc(lower);
+				return lower;
 			} else {
 				return disc;
 			}
@@ -157,10 +173,10 @@ function LowestDiscInDestinationPeg(disc) {
 	let peg = getDestinationPeg(disc);
 	let lengthOfPeg = peg.discs.length;
 	for (let i = lengthOfPeg - 1; i >= 0; ) {
-		if (peg.discs[i] > disc.num) {
+		if (peg.discs[i].num > disc.num) {
 			i--;
 		} else {
-			return getLowerDisc(peg.discs[i])
+			return getLowerDisc(peg.discs[i].num)
 		}
 	}
 	return disc;
@@ -217,41 +233,17 @@ function setFinalPeg(pos) {
 	}
 }
 
-function setPegDiscs() {
-	let numberOfDiscs = document.getElementById("numberOfDiscs").selectedIndex;
-	for (let peg of pegs) {
-		if (peg.initialPeg) {
-			for (let i = 0; i < numberOfDiscs; i++) {
-				peg.discs[i] = i+1;
-			}
-			for (let peg of pegs) {
-				console.log(peg.discs);
-			}
-			return 1;
-		}
-	}
-	console.log('Error'); // TODO: error
-}
-
 /*
   ========================================
   HELPER FUNCTIONS
   ========================================
 */
 
-function setBaseDiscDestinationPeg() {
-	for(let peg of pegs) {
-		if (peg.sortPeg === true) {
-			return peg.pos;
-		}
-	}
-	console.log('Error'); debugger;// TODO: error
-}
 
 function addDiscToNewPeg(disc) {
 	for (let peg of pegs) {
 		if (peg.pos === disc.destinationPeg) {
-			peg.discs.splice(0, 0, disc.num);
+			peg.discs.splice(0, 0, disc);
 			return 1;
 		}
 	}
@@ -336,7 +328,6 @@ function getLowerDisc(lower) {
 	}
 	console.log('Error'); debugger;// TODO: error
 }
-
 
 function eliminateDiscCP(disc) {
 	let currentPeg = pegPositions.indexOf(disc.currentPeg);

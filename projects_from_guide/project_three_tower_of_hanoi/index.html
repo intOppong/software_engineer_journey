@@ -7,6 +7,11 @@
 
 	<style media="screen">
 
+		.container {
+			width: 600px;
+			border: 1px solid black;
+			margin: 20px auto;
+		}
 	</style>
 </head>
 
@@ -37,7 +42,7 @@
 
 
 		<form>
-         <select id="numberOfDiscs" >
+         <select id="numOfDiscs" >
              <option disabled >-- Number of Discs --</option>
              <option value="1">One</option>
              <option value="2">Two</option>
@@ -56,7 +61,7 @@
 
 	</section>
 
-	<section>
+	<section class="container">
 		<canvas id="canvas">
 			<p>Sorry, your browser doesn't user the canvas feature</p>
 		</canvas>
@@ -67,9 +72,9 @@
 	</footer>
 
 	<!-- Main JS -->
-	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript" src="variables.js"></script>
 	<script type="text/javascript" src="functions.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 	<script src="canvas.js"></script>
 
 </body>
