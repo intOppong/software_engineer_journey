@@ -19,7 +19,7 @@ var baseDisc;
 
 	// Peg Object
 Peg = {
-	init: function(pos, xPos, yPos, width, height) {
+	init: function(pos, xPos, yPos, width, height, discsXPos, discsYPos) {
 		this.pos = pos;
 		this.sortPeg = false;
 		this.initialPeg = false;
@@ -29,6 +29,8 @@ Peg = {
 		this.yPos = yPos;
 		this.width = width;
 		this.height = height;
+		this.discsXPos = discsXPos;
+		this.discsYPos = discsYPos;
 	},
 	drawPeg: function() {
 	  ctx.fillStyle = '#424242';
@@ -41,12 +43,21 @@ function createPegs() {
 	let yPos = 150;
 	let width = 10;
 	let height = 250;
-
+	let discsXPos;
+	let discsYPos = [240, 260, 280, 300, 320, 340, 360, 380];
+	let gap = 195;
 	for (let i = 0; i < numOfPegs; i++) {
 		let pos = i+1;
 		pegs[i] = Object.create(Peg);
-		pegs[i].init(pos, xPos, yPos, width, height);
+		discsXPos = xPos - 20;
+		pegs[i].init(pos, xPos, yPos, width, height, discsXPos, discsYPos);
 		xPos += 195;
+
+	}
+}
+function drawPegs() {
+	for (let i = 0; i < numOfPegs; i++) {
+		pegs[i].drawPeg();
 	}
 }
 
@@ -61,27 +72,14 @@ Disc = {
 		this.width = width;
 		this.height = height;
 	},
-	drawPeg: function() {
-		ctx.fillStyle = '#424242';
+	drawDisc: function() {
+		ctx.fillStyle = '#0288D1';
 		ctx.fillRect(this.xPos, this.yPos, this.width, this.height);
+	},
+	move: function() {
+		this.yPos -= 1;
 	}
 }
-
-function sth() {
-	let xPos = 100;
-	let yPos = 150;
-	let width = 10;
-	let height = 250;
-	let num = 0;
-
-	for (let i = 0; i < numOfDiscs; i++) {
-		discs[i] = Object.create(Disc);
-		num += num;
-		discs[i].init(num, xPos, yPos, width, height);
-	}
-	console.log(discs);debugger;
-}
-
 
 
 

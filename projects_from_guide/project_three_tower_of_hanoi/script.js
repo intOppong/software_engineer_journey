@@ -18,12 +18,12 @@ ctx.fillRect(50, 400, 500, 15);
 
 // Draw Pegs
 createPegs();
-for (let i = 0; i < numOfPegs; i++) {
-	pegs[i].drawPeg();
-}
+drawPegs();
 
 function begin() {
 	createDiscs(getInitialPeg());
+	drawDiscs();
+
 	setSortPeg();
 	setBaseDisc(getInitialPeg());
 
@@ -44,8 +44,10 @@ function begin() {
 				smallerDiscs.splice(smallerDiscs.length - 1, 1);
 			}
 		}
-		setSortPeg();
-		setBaseDisc(getInitialPeg());
+		if (getLengthOfInitialPeg() != 0) {
+			setSortPeg();
+			setBaseDisc(getInitialPeg());
+		}
 	}
 	console.log("RESULTS");console.log(pegs);
 }
