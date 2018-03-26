@@ -132,25 +132,8 @@ function setBaseDiscDestinationPeg() {
 function moveDisc(disc) {
 	addDiscToNewPeg(disc);
 	deleteDiscFromOldPeg(disc);
-	animate(getCurrentPeg(disc), disc);
 	updateCurrentPeg(disc);
 	deleteDestinationPeg(disc);
-}
-
-function animate(peg, disc) {
-	requestAnimationFrame(animate); // Recursion: calls the animate function over & over again
-
-	// Clear entire canvas
-	ctx.clearRect(disc.xPos, disc.yPos, disc.width, disc.height);
-
-	// Draw Peg
-
-	peg.drawPeg();
-	// Draw Disc
-	disc.move();
-
-	disc.drawDisc();
-	console.log('here');debugger;
 }
 
 function createMoveArray() {
