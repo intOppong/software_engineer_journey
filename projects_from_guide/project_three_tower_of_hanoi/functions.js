@@ -10,17 +10,19 @@ function createDiscs(peg) {
 		return console.log('Error'); // TODO: error
 	}
 	numOfDiscs = document.getElementById("numOfDiscs").selectedIndex;
-	let xPos = 80;
-	let yPos = 240;
+	let xPos = peg.xPos - 20;
+	let yPos = 380;
 	let width = 50;
 	let height = 6;
-	let gap = 0;
+	let discHeightGap = 0;
 
-	for (let i = 0; i < numOfDiscs; i++) {
-		peg.discs[i] = Object.create(Disc);
-		peg.discs[i].init(i+1, xPos, yPos, width, height);
-		gap += 20;
-		yPos = 240 + gap;
+	let i = numOfDiscs;
+	while (i) {
+		peg.discs.unshift(Object.create(Disc));
+		peg.discs[0].init(i, xPos, yPos, width, height);
+		discHeightGap += 20;
+		yPos = 380 - discHeightGap;
+		i--;
 	}
 	return 1;
 }
@@ -130,9 +132,14 @@ function setBaseDiscDestinationPeg() {
 }
 
 function moveDisc(disc) {
+	orderOfMovement.push({
+		num: disc.num,
+		currentPeg: disc.currentPeg,
+		destinationPeg: disc.destinationPeg,
+	});
 	addDiscToNewPeg(disc);
 	deleteDiscFromOldPeg(disc);
-	updateCurrentPeg(disc);
+	update(disc);
 	deleteDestinationPeg(disc);
 }
 
@@ -279,7 +286,8 @@ function deleteDiscFromOldPeg(disc) {
 	console.log('Error'); debugger;// TODO: error
 }
 
-function updateCurrentPeg(disc) {
+
+function update(disc) {
 	for (let peg of pegs) {
 		if (peg.pos === disc.destinationPeg) {
 			disc.currentPeg = disc.destinationPeg;
@@ -288,6 +296,27 @@ function updateCurrentPeg(disc) {
 	}
 	console.log('Error'); debugger;// TODO: error
 }
+
+/*
+function update(disc) {
+
+	for (let peg of pegs) {
+		if (peg.pos === disc.destinationPeg) {
+			// update currentPeg
+			disc.currentPeg = disc.destinationPeg;
+
+			// update xPos
+			disc.xPos = peg.discsXPos;
+
+			// update yPos TODO; update yPos
+
+	}
+
+}
+console.log('Error'); debugger;// TODO: error
+}
+*/
+
 
 function deleteDestinationPeg(disc) {
 	disc.destinationPeg = null;

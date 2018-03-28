@@ -14,6 +14,9 @@ var smallerDiscs = [];
 var pegPositions = [];
 var numOfDiscs;
 var baseDisc;
+var orderOfMovement = [];
+var startAnimation = false;
+var moved = true;
 
 
 
@@ -44,15 +47,15 @@ function createPegs() {
 	let width = 10;
 	let height = 250;
 	let discsXPos;
+	let discDistanceToPeg = 20;
 	let discsYPos = [240, 260, 280, 300, 320, 340, 360, 380];
-	let gap = 195;
+	let pegGap = 195;
 	for (let i = 0; i < numOfPegs; i++) {
 		let pos = i+1;
 		pegs[i] = Object.create(Peg);
-		discsXPos = xPos - 20;
+		discsXPos = xPos - discDistanceToPeg;
 		pegs[i].init(pos, xPos, yPos, width, height, discsXPos, discsYPos);
-		xPos += 195;
-
+		xPos += pegGap;
 	}
 }
 function drawPegs() {
