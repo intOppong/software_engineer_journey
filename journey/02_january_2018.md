@@ -25,7 +25,7 @@ issues plagued this month & i couldn’t make any substantial progress. It was p
     * Begin Project: FCC Simon Game. :x: 
     * **Outstretched Goal**: Complete FCC Simon Game.
 * Process Oriented Goals:
-Work Everyday averaging 10 Pomodoros a day & at least 5 Pomodoros on days where life duties call (eg: going to the hospital, helping family with work etc). *data based on last 2 weeks of December.*
+Work Everyday averaging 10 Pomodoros a day & at least 5 Pomodoros on days where life duties call (eg: going to the hospital, helping family with work etc).
 
     | | No. of Working Days | Total Pomodoros | Average Pomodoro
     | --- | --- | --- | --- |
