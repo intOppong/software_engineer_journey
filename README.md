@@ -14,24 +14,19 @@ I know there’s a lot of aspiring [developers](https://forum.freecodecamp.org/t
 As stated above, I want to be an elite software engineer with good web dev skills. I define a Software Engineer as a programmer with the ability to Architect, Develop, Test & Maintain Libraries, Frameworks or Platforms that is used by developers to automatic some task or assist them in developing their applications. 
 * Result Oriented: *the outcome*
     * Finish the Guide in 18 months - Dec 2017 -> May 2019
-        * Outstretched: Finish the Guide in a Year - Dec 2017 -> Nov 2018
-    * Front-End: My goal for front-End is to understand the crucial topics & concepts & leave the specifics to designers. With that in mind my goals for studying the various technologies are as follows.
-        * HTML: understand how to create a fully Semantic complaint HTML code
-        * CSS: understand how measurements work. Page Layouts, Grids, Responsive Design and their likes.
-        * Javascript for Frontend: TBD
+    * Front-End: I want to have basic front end skills to enable be create quick prototypes / make a quick MVP [like this](https://medium.freecodecamp.org/how-i-built-the-airbnb-of-music-studios-in-an-evening-part-1-742b47bc09c2). As stated above I want to focus on the backend, algorithms etc & leave the design to more competent people like [slack did with metalab](https://medium.com/@awilkinson/slack-s-2-8-billion-dollar-secret-sauce-5c5ec7117908)
     * Backend: TBD
     * Algorithm: TBD
     * System Design: TBD
 * Process Oriented: *how the results should occurs. how to go about it*
-    * Work Everyday averaging 10 Pomodoros a day & at least 5 Pomodoros on days where life duties call (eg: going to the hospital, helping family with work etc).
-        * *Pomodoro settings is 30mins work, max of 10mins break.*
-    * Stay Disciplined, Stay Focused, Stay Patient & Stay Positive
+  * Work Everyday averaging 13 Pomodoros a day & 10 Pomodoros on days where life duties call (eg: going to the bank, helping family with work etc)
+    * *Pomodoro settings is 30mins work, max of 10mins break.*
 * What’s Important
-    * **Build all the projects in the guide.**
-    * **Deeply Understand Concepts.**
-    * **Helping Others on Forums (FCC, cohorts)**
-    * **Collaborating with others on projects (FCC, cohort)**
-    * **Writing about my journey**
+  * **Build all the projects in the guide.**
+  * **Deeply Understand Concepts.**
+  * **Helping Others on Forums (FCC, cohorts)**
+  * **Collaborating with others on projects (FCC, cohort)**
+  * **Writing about my journey**
     
 ## How I'll Use the [Guide](https://github.com/P1xt/p1xt-guides/blob/master/cs-wd.md)
 I don’t like reading book/course after book/course without working on projects. I like to study alongside a project. I’m able to identify specific skills that I should learn. Also learning the skill becomes more interesting because I’m actually using the skill + there’s a lot of AHA moments :bulb:
