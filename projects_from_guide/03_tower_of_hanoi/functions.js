@@ -14,14 +14,14 @@ function createDiscs(peg) {
 	let yPos = 380;
 	let width = 50;
 	let height = 6;
-	let discHeightGap = 0;
+	let discGap = 0;
 
 	let i = numOfDiscs;
 	while (i) {
 		peg.discs.unshift(Object.create(Disc));
 		peg.discs[0].init(i, xPos, yPos, width, height);
-		discHeightGap += 20;
-		yPos = 380 - discHeightGap;
+		discGap += 20;
+		yPos = 380 - discGap;
 		i--;
 	}
 	return 1;
@@ -136,11 +136,14 @@ function moveDisc(disc) {
 		num: disc.num,
 		currentPeg: disc.currentPeg,
 		destinationPeg: disc.destinationPeg,
+		xPos: disc.xPos,
+		yPos: disc.yPos,
 	});
 	addDiscToNewPeg(disc);
 	deleteDiscFromOldPeg(disc);
 	update(disc);
 	deleteDestinationPeg(disc);
+
 }
 
 function createMoveArray() {
@@ -291,6 +294,17 @@ function update(disc) {
 	for (let peg of pegs) {
 		if (peg.pos === disc.destinationPeg) {
 			disc.currentPeg = disc.destinationPeg;
+
+			disc.xPos = peg.discsXPos;
+
+			let lengthOfPeg = peg.discs.length;
+			let discGap = 20;
+			let yPos = 0;
+			if (lengthOfPeg == 1) {
+				disc.yPos = 380;
+			} else {
+				disc.yPos = 400 - (lengthOfPeg * discGap);
+			}
 			return 1;
 		}
 	}

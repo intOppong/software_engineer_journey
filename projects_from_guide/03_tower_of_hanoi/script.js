@@ -33,7 +33,7 @@ function towerOfTanoiSolver() {
 			setBaseDisc(getInitialPeg());
 		}
 		if (getLengthOfInitialPeg() == 0) {
-			console.log(orderOfMovement);
+			console.log(orderOfMovement);debugger;
 		}
 	}
 }
