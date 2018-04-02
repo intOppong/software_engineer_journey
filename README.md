@@ -39,35 +39,44 @@ I don’t like reading book/course after book/course without working on projects
 
 With that said I came up with a strategy that i think best suits my preference & priorities rather than to follow the guide chronologically.
 
-1. Identify the next project listed in the guide.
-   * List the Skills required to do that project. *if you already know the skill, Skip to 5) & do the project*
-2. Find a **[Tutorial Project](https://github.com/intOppong/software_engineer_journey/tree/master/tutorial_projects)** of similar difficulty to the given project. *a Tutorial Project: is just a project based tutorial like "Create a Tic Tac Toe game with HTML, CSS & Javascript"* 
-3. Follow the Tutorial Project. 
+1. Identify at the next project listed in the guide
+   * *Look @ the description (or a finished version) & List(predict) the Skills required to do that project.*
+   * *if you already know the skill, Skip to 4) & do the project*
+2. Find a **[Tutorial Project](https://github.com/intOppong/software_engineer_journey/tree/master/tutorial_projects)** of similar difficulty & follow it.
    * List (clarify) specific skills You’ll need to learn to do the project.
-   * List other skills unrelated to the project in a backlog.
-3. Learn the specific skills. *Learn just enough to get started*
-4. Do the Project
-   * If you need to learn or sharpen any skill to do the project, learn it as you do the project. 
+   * List new skills unrelated to the project in a backlog.
+3. Learn the specific skills. *just enough to get started*
+4. Do the Project in the guide.
+   * If I need to learn/know a specific skill to perform some task in the project, learn just enough to do the task.
 5. Work on bugs
 6. write project readme
-7. Learn stuff you need to expand understanding on.
+7. After the Project, Spend time to deeply understand (Learn) the skills used in the project.
 
 ***
    ### Illustration
 
-1. Project from guide: **Clone [this](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot2) online resume template**
-   * Skills Required: **Basic HTML & CSS.**
-2. Tutorial Project: **[resume](https://www.youtube.com/watch?v=jJuHQNULXGs&list=PLsIkqR8inizt8SpD6utVTPhy8gFQzQNug)**
-   * Focuses on: **Basic HTML & CSS**
-3. Follow the Tutorial Project (& simultaneously...go to next)
-   * List specific skills to learn to do the project: **none**
-   * List other skills unrealted to the project in a backlog: **none**
-4. Learn the specific skills
-   * Resource from guide: **[Learn to Code HTML & CSS](http://learn.shayhowe.com/html-css/)**
-5. Do the Project:
-   * Learn:
-6. Work on Bugs
-   * Circular progress bar expands in a wierd way
-7. Learn stuff you need to sharpen: **Positioning, Selectors**
+1. Project from guide: Tower of Hanoi Solver
+  * Skills Required:
+    * Javascript - programming Logic
+    * Animation - CSS Transition & Transform
+    * HTML & CSS - basic web page
+2. Find a Tutorial Project & follow it: Snake Game - Youtube, HTML5 animation - Youtube
+  * Clarify skills you need to learn:
+    * Javascript - programming Logic.
+    * HTML5 canvas & Javascript - animation.
+    * DOM manipulation using Javascript.
+  * List new skills unrealted to the project in a backlog
+3. Learn the skills; just enough to get started
+4. Do the Project: 
+  * Skills needed to do specific tasks
+    * Callbacks & Async: to make sure functions in the correct order
+5. Work on bugs
+6. After Project: Skills to Expand Knowledge on
+  * working with branches on git/github: i want to work in a temporary branch then merge it to the master branch when it’s bug
+  “free” (main repo) when complete
+  * Working with the DOM - DOM manipulation
+  * Debugging using google dev environment
+  * Async & Callbacks: YDKJS: Async & Performance
+  * Follow 1 or 2 more canvas Animation tutorials 
 
    
