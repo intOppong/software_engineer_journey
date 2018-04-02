@@ -49,29 +49,27 @@ With that said I came up with a strategy that i think best suits my preference &
 
 ***
    ### Illustration
-
 1. Project from guide: Tower of Hanoi Solver
-  * Skills Required:
-    * Javascript - programming Logic
-    * Animation - CSS Transition & Transform
-    * HTML & CSS - basic web page
+	* Skills Required:
+		* Javascript - programming Logic
+		* Animation - CSS Transition & Transform
+		* HTML & CSS - basic web page
 2. Find a Tutorial Project & follow it: Snake Game - Youtube, HTML5 animation - Youtube
-  * Clarify skills you need to learn:
-    * Javascript - programming Logic.
-    * HTML5 canvas & Javascript - animation.
-    * DOM manipulation using Javascript.
-  * List new skills unrealted to the project in a backlog
+	* Clarify skills you need to learn:
+		* Javascript - programming Logic.
+		* HTML5 canvas & Javascript - animation.
+		* DOM manipulation using Javascript.
+	* List new skills unrealted to the project in a backlog
 3. Learn the skills; just enough to get started
 4. Do the Project: 
-  * Skills needed to do specific tasks
-    * Callbacks & Async: to make sure functions in the correct order
+	* Skills needed to do specific tasks
+		* Callbacks & Async: to make sure functions in the correct order
 5. Work on bugs
 6. After Project: Skills to Expand Knowledge on
-  * working with branches on git/github: i want to work in a temporary branch then merge it to the master branch when it’s bug
-  “free” (main repo) when complete
-  * Working with the DOM - DOM manipulation
-  * Debugging using google dev environment
-  * Async & Callbacks: YDKJS: Async & Performance
-  * Follow 1 or 2 more canvas Animation tutorials 
+	* working with branches on git/github: i want to work in a temporary branch then merge it to the master branch when it’s bug “free” (main repo) when complete
+	* Working with the DOM - DOM manipulation
+	* Debugging using google dev environment
+	* Async & Callbacks: YDKJS: Async & Performance
+	* Follow 1 or 2 more canvas Animation tutorials 
 
    
