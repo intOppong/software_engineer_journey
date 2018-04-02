@@ -1,0 +1,102 @@
+# March 2018 Progress
+
+## Content
+* [Goals](#goals)
+* [Week One](#week-one)
+* [Week Two](#week-two)
+* [Week Three](#week-three)
+* [Week Four](#week-four)
+* [My Thoughts](#my-thoughts)
+
+### March 2018 Overview
+***
+* Loss of momentum from February trickled down to beginning of March.
+* I Stopped setting Result Oriented Goals & now focusing only on the Process Oriented Goals.
+  * reason: Result Oriented Goals are not ideal for my situation because I don’t fully know all the requirements to achieve 
+  said goals. I will rather focus on the Process Oriented Goals because if i’m averaging 13 Pomodoros of focused work daily, 
+  doing only what’s necessary, i bet I’d complete a lot of results. 
+* March 20: Life stuff was intensive, my little brother was admitted at the hospital for a week & I had to sit in for my parents 
+at the retail shop. It affected my process. (my fault though - I should’ve worked @ night time).
+* Still working on [Project Three: Tower of Hanoi Solver](https://github.com/intOppong/software_engineer_journey/tree/master/projects_from_guide/project_three_tower_of_hanoi).
+* New found momentum from focusing on the Process & ignoring the results.
+
+## Goals
+**March 2018 run from 4th March to 31st March 2018. ie *"4 weeks"* 2018.**
+
+* Process Oriented Goals:
+Work Everyday averaging 13 Pomodoros a day & 10 Pomodoros on days where life duties call (eg: going to the bank, helping family with work etc).
+
+    | | No. of Working Days | Total Pomodoros | Average Pomodoro
+    | --- | --- | --- | --- |
+    | Full Days | 7 days | 101 | 12.6 |
+    | Half Days | 5 days | 46 | 9.2 |
+    | Total |  12 out of 25 days | 147 |  **7.3** |
+    
+* Once per month: do two or more of the following [as per the guide](https://github.com/intOppong/software_engineer_journey/blob/master/faq.md)
+    * Write up a comprehensive blog post or markdown entry in a repository detailing the high points of what you learned that month. :white_check_mark:
+    * Livestream what you're working on for an hour. Or, lend a hand to someone who needs help by screen-sharing and walking them through it. :x:
+    * Do any of these :x:
+      * Watch [this video](https://www.youtube.com/watch?v=4NIb9l3imAo) and [this video](https://www.youtube.com/watch?v=Eg5-tdAwclo) - on interviewing
+      * Read this - on crafting a resume
+      * Do one lesson from [CUST104: Business Communications](https://learn.saylor.org/course/view.php?id=345) :x:
+
+### Week One
+***
+* What I Did
+  * Nothing :disappointed:
+
+### Week Two
+***
+* What I Did
+  * Got stuck coding the logic for Tower of Hanoi project. I regressed & wrote a better/clearer code-like pseudocode, 
+  tested it well & wrote the code. It all looks good.
+  * Organizing/refactoring the code.
+  * Added user input
+  * I place the functions & variables into separate files. *not sure if it's the right thing to do*
+* What I Learnt & Challenges I Faced
+  * I've detailed it in the project's [readme]()
+    
+### Week Three
+***
+* What I Did
+  * Started working on the animation part of the project. 
+* What I Learnt
+  * I've detailed it in the project's [readme]()
+ 
+### Week Four
+***
+* What I Did
+  * Working on the animation part of the project ie moving disc from one peg to another.
+  * Learnt about Callbacks & a lil bit about Async reading [YDKJS :Async & Performance](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/README.md#you-dont-know-js-async--performance) 
+  but stopped a few pages into the first chapter because I decided to just google tutorials on callbacks & read the book later 
+  on for deeper understanding.
+  * Started working on a task given to me by a mentor: **make a simple blog with basic CRUD functionality**. So I took time off 
+  the Tower of Hanoi project. I used this tutorial Series as a guide [How to Build a Blog with Laravel](https://www.youtube.com/playlist?list=PLwAKR305CRO-Q90J---jXVzbOd4CDRbVx) 
+* What I learnt & Challenges I faced
+  * I've detailed it in the project's [readme]()
+  * for the blogging project: 
+    * I revised basic PHP & Laravel. *I used PHP & Laravel for my final school project*
+    * I setup vagrant to use laravel Homestead as my Local Dev env. Why develop using a light weight virtualMachine (tailor made 
+    for dev)  instead of downloading XAMP onto your local machine => so you can setup your light weight VM to be close to what 
+    you ‘ll eventually have on your hosting platform…so less unexpected problems when you go live.
+    * difficulty setting up the database for deployment. i used mySQL on my local environment but the host required users to 
+    use postgreSQL which i had no experience with & mostly had to configure everything from the command line. 
+  
+  
+### My Thoughts
+***
+* Breaking things down into functions & giving them meaningful names helps me read/understand code better. This also helps in 
+debugging since all you have to do is follow the functions (& variables)
+* Ways to make coding easy: write pseudocode, break everything into function.
+* From working on the Tower of Hanoi project, I realized programming is all about, deciding which data structures to use, knowing 
+the return types of functions, writing code to access the data you want.
+* I think I spend too much time making the code look good.
+* This caught my attention: Because JavaScript can be used without understanding, the understanding of the language is often never 
+attained. from [YDKJS Async & Performance](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/README.md#you-dont-know-js-async--performance) 
+Preface.
+* I think the time for learning is really after a project. Initially I thought I should learn alongside the project but it’s best to learn after the project.
+
+
+
+
+
