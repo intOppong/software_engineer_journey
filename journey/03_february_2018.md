@@ -17,18 +17,18 @@ with anyone*
 * I can complete a lot of tasks if I'm able to stay consistent.
 
 ## Goals
-**February 2018 run from 4th February to 3rd March 2018. ie *"4 weeks"* 2018.**
+**February 2018 run from 4th February to 3rd March 2018. ie *"4 weeks"***
 
 * Result Oriented Goals:
     * Complete Projects: Tower of Hanoi :x:
     * Begin Project: FCC Simon Game. :x: 
     * **Outstretched Goal**: Complete FCC Simon Game. :x:
 * Process Oriented Goals:
-Work Everyday averaging 10 Pomodoros a day & at least 5 Pomodoros on days where life duties call (eg: going to the hospital, helping family with work etc). *data based on last 2 weeks of December.*
+Work Everyday averaging 10 Pomodoros a day & at least 5 Pomodoros on days where life duties call (eg: going to the hospital, helping family with work etc).
 
     | | No. of Working Days | Total Pomodoros | Average Pomodoro
     | --- | --- | --- | --- |
-    | Ideal Days | 11 days | 149 | 13.5 |
+    | Full Days | 11 days | 149 | 13.5 |
     | Half Days | 6 days | 49 | 8.1|
     | Total |  4 out of 25 days | 198 |  **9.9** |
 * Once per month: do two or more of the following [as per the guide](https://github.com/intOppong/software_engineer_journey/blob/master/faq.md)
@@ -110,15 +110,9 @@ Work Everyday averaging 10 Pomodoros a day & at least 5 Pomodoros on days where 
   * Finished writing the pseudocode for Project three.
   * Started coding the Logic for the project.
   * Set up github pages to host my frontEnd projects.
-* What I learnt
-  * Handy Javascript Array methods: slice, splice etc.
-  * Debugging JS in Chrome DevTools
-* Challenges I faced
-  * Difficulty writing a programatic pseudocode for a puzzle which i’ve already solved.
-  * Difficulty selecting which data structure to use: Array or Objects.
-  * Difficulty debugging the code - tracking the state of variables.
-  * I find myself changing variable names a lot, during coding
-  
+* What I learnt & & Challenges I faced
+  * I've detailed it in the project's [readme](https://github.com/intOppong/software_engineer_journey/blob/master/projects_from_guide/project_three_tower_of_hanoi/README.md)
+
 ### My Thoughts
 ***
 * I don’t see the relevance of having -0 & 0. Then having the comparison statements say they are the same - It’s conversion to string reports them as the same.
