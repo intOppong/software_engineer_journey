@@ -36,8 +36,8 @@ Peg = {
 		this.discsYPos = discsYPos;
 	},
 	drawPeg: function() {
-	  ctx.fillStyle = '#424242';
-		ctx.fillRect(this.xPos, this.yPos, this.width, this.height);
+	  ctx.strokeStyle = '#424242';
+		ctx.strokeRect(this.xPos, this.yPos, this.width, this.height);
 	}
 }
 

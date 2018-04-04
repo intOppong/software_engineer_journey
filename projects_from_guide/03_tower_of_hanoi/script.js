@@ -32,9 +32,6 @@ function towerOfTanoiSolver() {
 			setSortPeg();
 			setBaseDisc(getInitialPeg());
 		}
-		if (getLengthOfInitialPeg() == 0) {
-			console.log(orderOfMovement);debugger;
-		}
 	}
 }
 
@@ -47,7 +44,7 @@ function animation(callback){
 
 		// Animation
 		if (startAnimation) {
-			if(discXPos <= dpXPos){
+			if(discXPos <= dpXPos ){
 				console.log('Animate: move discs x & y values on canvas');
 				discXPos++;
 				moved = false;
@@ -58,6 +55,11 @@ function animation(callback){
 				discXPos = 1;
 			}
 		}
+		if (orderOfMovement >= 1) {
+			console.log(orderOfMovement);debugger;
+		}
+		let disc = orderOfMovement.splice(0,1);
+		let peg = getDestinationPeg(disc);
 
 		// Clear Interval. ie End
 		if (!getLengthOfInitialPeg() && !startAnimation) {
