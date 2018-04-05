@@ -5,24 +5,38 @@
   ========================================
 */
 
-var Peg;
-var pegs = [];
-var numOfPegs = 3;
-var sortPeg;
-var Discs;
-var smallerDiscs = [];
-var pegPositions = [];
-var numOfDiscs;
-var baseDisc;
-var orderOfMovement = [];
-var startAnimation = false;
-var moved = true;
-
+let Peg;
+let pegs = [];
+let numOfPegs = 3;
+let sortPeg;
+let Discs;
+let smallerDiscs = [];
+let pegPositions = [];
+let numOfDiscs;
+let baseDisc;
+let orderOfMovement = [];
+let startAnimation = false;
+let moved = true;
+let widthDiff = 10;
+let baseWidth = 25;
+let discHeight = 6;
+let discsColors = [
+	'#FF5252',
+	'#E040FB',
+	'#4483FF',
+	'#69F0AE',
+	'#FFAB40',
+	'#FF6E40',
+	'#607D8B',
+	'#00E5FF',
+	'#1DE9B6',
+	'#C0CA33',
+];
 
 
 	// Peg Object
 Peg = {
-	init: function(pos, xPos, yPos, width, height, discsXPos, discsYPos) {
+	init: function(pos, xPos, yPos, width, height) {
 		this.pos = pos;
 		this.sortPeg = false;
 		this.initialPeg = false;
@@ -32,8 +46,6 @@ Peg = {
 		this.yPos = yPos;
 		this.width = width;
 		this.height = height;
-		this.discsXPos = discsXPos;
-		this.discsYPos = discsYPos;
 	},
 	drawPeg: function() {
 	  ctx.strokeStyle = '#424242';
@@ -44,17 +56,14 @@ Peg = {
 function createPegs() {
 	let xPos = 100;
 	let yPos = 150;
-	let width = 10;
+	let width = 5;
 	let height = 250;
-	let discsXPos;
 	let discDistanceToPeg = 20;
-	let discsYPos = [240, 260, 280, 300, 320, 340, 360, 380];
-	let pegGap = 195;
+	let pegGap = 185;
 	for (let i = 0; i < numOfPegs; i++) {
 		let pos = i+1;
 		pegs[i] = Object.create(Peg);
-		discsXPos = xPos - discDistanceToPeg;
-		pegs[i].init(pos, xPos, yPos, width, height, discsXPos, discsYPos);
+		pegs[i].init(pos, xPos, yPos, width, height);
 		xPos += pegGap;
 	}
 }
@@ -75,8 +84,9 @@ Disc = {
 		this.width = width;
 		this.height = height;
 	},
-	drawDisc: function() {
-		ctx.fillStyle = '#0288D1';
+	drawDisc: function(color) {
+
+		ctx.fillStyle = color;
 		ctx.fillRect(this.xPos, this.yPos, this.width, this.height);
 	},
 	move: function() {

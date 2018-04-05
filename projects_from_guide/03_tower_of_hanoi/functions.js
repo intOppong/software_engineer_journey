@@ -10,31 +10,30 @@ function createDiscs(peg) {
 		return console.log('Error'); // TODO: error
 	}
 	numOfDiscs = document.getElementById("numOfDiscs").selectedIndex;
-	let xPos = peg.xPos - 20;
-	let yPos = 380;
-	let width = 50;
-	let height = 6;
-	let discGap = 0;
+
+	let discWidth;
+	let xPos;
+	let yPos = 400;
+	let discGap = 20;
 
 	let i = numOfDiscs;
 	while (i) {
+		discWidth = widthDiff * (i-1) + baseWidth;
+		xPos = (peg.xPos - widthDiff) - (widthDiff/2) * (i-1);
+		yPos -= discGap;
 		peg.discs.unshift(Object.create(Disc));
-		peg.discs[0].init(i, xPos, yPos, width, height);
-		discGap += 20;
-		yPos = 380 - discGap;
+		peg.discs[0].init(i, xPos, yPos, discWidth, discHeight);
 		i--;
 	}
 	return 1;
 }
 
-
 function drawDiscs(peg) {
 		if (peg.discs.length != 0) {
 			for (let i = 0; i < peg.discs.length; i++) {
-				peg.discs[i].drawDisc();
+				peg.discs[i].drawDisc(discsColors[i]);
 			}
 		}
-
 }
 
 function setBaseDisc(peg) {
@@ -136,22 +135,23 @@ function moveDisc(disc) {
 	orderOfMovement[orderOfMovement.length - 1].init(disc.num, disc.xPos, disc.yPos, disc.width, disc.height);
 	orderOfMovement[orderOfMovement.length - 1].currentPeg = disc.currentPeg;
 	orderOfMovement[orderOfMovement.length - 1].destinationPeg = disc.destinationPeg;
-	orderOfMovement[orderOfMovement.length - 1].numOfDiscsCP = getCurrentPeg(disc).discs.length - 1;
 	orderOfMovement[orderOfMovement.length - 1].discsCP = {
-		total: getCurrentPeg(disc).discs.length,
-		num: [],
+		total: getCurrentPeg(disc).discs.length - 1,
+		nums: [],
 	};
 	orderOfMovement[orderOfMovement.length - 1].discsDP = {
 		total: getDestinationPeg(disc).discs.length,
-		num: [],
+		nums: [],
 	};
 
 	for (let one of getCurrentPeg(disc).discs) {
-		orderOfMovement[orderOfMovement.length - 1].discsCP.num.push(one.num);
+		if (one.num != disc.num)
+		orderOfMovement[orderOfMovement.length - 1].discsCP.nums.push(one.num);
 	}
 	for (let one of getDestinationPeg(disc).discs) {
-		orderOfMovement[orderOfMovement.length - 1].discsDP.num.push(one.num);
+		orderOfMovement[orderOfMovement.length - 1].discsDP.nums.push(one.num);
 	}
+
 
 
 
@@ -310,9 +310,7 @@ function update(disc) {
 	for (let peg of pegs) {
 		if (peg.pos === disc.destinationPeg) {
 			disc.currentPeg = disc.destinationPeg;
-
-			disc.xPos = peg.discsXPos;
-
+			disc.xPos = (peg.xPos - widthDiff) - (widthDiff/2) * (disc.num - 1);
 			setDiscYPos(peg, disc);
 			return 1;
 		}
@@ -330,28 +328,6 @@ function setDiscYPos(peg, disc) {
 		disc.yPos = 400 - (lengthOfPeg * discGap);
 	}
 }
-
-
-/*
-function update(disc) {
-
-	for (let peg of pegs) {
-		if (peg.pos === disc.destinationPeg) {
-			// update currentPeg
-			disc.currentPeg = disc.destinationPeg;
-
-			// update xPos
-			disc.xPos = peg.discsXPos;
-
-			// update yPos TODO; update yPos
-
-	}
-
-}
-console.log('Error'); debugger;// TODO: error
-}
-*/
-
 
 function deleteDestinationPeg(disc) {
 	disc.destinationPeg = null;
@@ -488,6 +464,14 @@ function nextOccurrenceOfDisc(disc) {
 		}
 	}
 	return false;
+}
+
+function calc(numA, numB, callback) {
+	return callback(numA, numB);
+}
+
+function discXPos(pegXPos, discNum) {
+	return (pegXPos - widthDiff) - (widthDiff / 2) * (discNum - 1);
 }
 
 

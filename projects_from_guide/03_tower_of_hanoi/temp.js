@@ -36,7 +36,6 @@ function towerOfTanoiSolver() {
 	}
 }
 
-
 function animation(callback) {
 	var moveToX;
 	var moveToY;
@@ -52,10 +51,6 @@ function animation(callback) {
 			let movingDisc = orderOfMovement[0];
 			let j = nextOccurrenceOfDisc(movingDisc);
 
-			/*if (i == 4 && orderOfMovement.length == 5) {
-				console.log(peg);console.log(movingDisc);console.log(orderOfMovement);debugger;
-			}*/
-
 			if (j) {
 				moveToX = orderOfMovement[j].xPos;
 				moveToY = orderOfMovement[j].yPos;
@@ -68,30 +63,33 @@ function animation(callback) {
 					}
 				}
 			}
-
-
+			/*if (i == 2) {
+				console.log(orderOfMovement);console.log(pegs);debugger;
+			}*/
 
 			// if disc x pos != dp x pos && disc y pos != dp y pos
 			if (movingDisc.xPos != moveToX || movingDisc.yPos != moveToY) {
+
+				let biggestDiscWidth = widthDiff * (numOfDiscs - 1) + baseWidth;
 
 				if (movingDisc.yPos != (pegs[0].yPos - 20) && movingDisc.xPos != moveToX) {	// move Y till it's 20px above cp
 					console.log('move Y to top of cp');
 
 					let peg = getCurrentPeg(movingDisc);
+					let biggestDiscXPos = calc(peg.xPos, numOfDiscs, discXPos);
 
-					ctx.clearRect(movingDisc.xPos, peg.yPos - 20, movingDisc.width, peg.height + 20);
+					ctx.clearRect(biggestDiscXPos, peg.yPos - 20, biggestDiscWidth, peg.height + 20);
 					peg.drawPeg();
-
-					let numOfDiscsCP = movingDisc.numOfDiscsCP;
+					let numOfDiscsCP = movingDisc.discsCP.total;
 					let gap = 20;
 
 					for (let i = 0; numOfDiscsCP > 0; i++) {
-						tempDisc.num = movingDisc.discsCP.num[i];
-						tempDisc.xPos = movingDisc.xPos;
+						tempDisc.num = movingDisc.discsCP.nums[i];
+						tempDisc.xPos = (peg.xPos - widthDiff) - (widthDiff/2) * (tempDisc.num-1);
 						tempDisc.yPos = movingDisc.yPos + gap + distance;
-						tempDisc.width = movingDisc.width;
+						tempDisc.width = widthDiff * (tempDisc.num - 1) + baseWidth;
 						tempDisc.height = movingDisc.height;
-						tempDisc.drawDisc();
+						tempDisc.drawDisc(discsColors[tempDisc.num - 1]);
 						gap += 20;
 						numOfDiscsCP--;
 					}
@@ -99,7 +97,7 @@ function animation(callback) {
 
 					ctx.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
 					movingDisc.yPos--;
-					movingDisc.drawDisc();
+					movingDisc.drawDisc(discsColors[movingDisc.num - 1]);
 
 				} else if (movingDisc.xPos != moveToX) {	// move x pos till it's same as dp x pos
 					console.log('move X to top of dp');
@@ -107,55 +105,44 @@ function animation(callback) {
 
 						ctx.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
 						movingDisc.xPos++;
-						movingDisc.drawDisc();
+						movingDisc.drawDisc(discsColors[movingDisc.num - 1]);
 
 					} else {
 
 						ctx.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
 						movingDisc.xPos--;
-						movingDisc.drawDisc();
+						movingDisc.drawDisc(discsColors[movingDisc.num - 1]);
 
 					}
 				} else {
-					// move y pos till it's at right position in dp y pos
-					console.log('move Y down to its dp position');
+						// move y pos till it's at right position in dp y pos
+						console.log('move Y down to its dp position');
 
-					let peg = getDestinationPeg(movingDisc);
+						let peg = getDestinationPeg(movingDisc);
+						let biggestDiscXPos = calc(peg.xPos, numOfDiscs, discXPos);
 
-					ctx.clearRect(movingDisc.xPos, peg.yPos - 20, movingDisc.width, peg.height + 20);
-					peg.drawPeg();
+						ctx.clearRect(biggestDiscXPos, peg.yPos - 20, biggestDiscWidth, peg.height + 20);
 
+						peg.drawPeg();
 
 						let numOfDiscsDP = movingDisc.discsDP.total;
 						let gap = 0;
 
-						for (let i = 0; numOfDiscsDP > 0; i++) {
-							tempDisc.num = movingDisc.discsDP.num[i];
-							tempDisc.xPos = movingDisc.xPos;
+
+						for (let i = movingDisc.discsDP.nums.length - 1; numOfDiscsDP > 0; i--) {
+							tempDisc.num = movingDisc.discsDP.nums[i];
+							tempDisc.xPos = (peg.xPos - widthDiff) - (widthDiff/2) * (tempDisc.num - 1);
 							tempDisc.yPos = 380 - gap;
-							tempDisc.width = movingDisc.width;
+							tempDisc.width = widthDiff * (tempDisc.num - 1) + baseWidth;
 							tempDisc.height = movingDisc.height;
-							tempDisc.drawDisc();
+							tempDisc.drawDisc(discsColors[tempDisc.num - 1]);
 							gap += 20;
 							numOfDiscsDP--;
 						}
 
-						/*
-						let numOfDiscsDP = movingDisc.numOfDiscsDP;
-						for (let i = 1; numOfDiscsDP > 0; i++) {
-							for (let peg of pegs) {
-								for (let disc of peg.discs) {
-									if (disc.num == movingDisc.num + i) {
-										disc.drawDisc();
-									}
-								}
-							}
-							numOfDiscsDP--;
-						}*/
 						ctx.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
 						movingDisc.yPos++;
-						movingDisc.drawDisc();
-
+						movingDisc.drawDisc(discsColors[movingDisc.num - 1]);
 
 				}
 			} else {
@@ -180,6 +167,7 @@ function begin() {
 		drawDiscs(peg);
 	}
 
+	//console.log(numOfDiscs);debugger;
 
 	setSortPeg();
 	setBaseDisc(getInitialPeg());
