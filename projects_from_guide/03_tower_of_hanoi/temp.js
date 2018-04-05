@@ -1,30 +1,28 @@
 
-// Create Canvas
-var canvas = document.getElementById('canvas');
-canvas.width = 600;
-canvas.height = 500;
-var ctx = canvas.getContext('2d');
+window.onload = function () {
+	createCanvas();
+}
 
-// Draw Table
-ctx.fillStyle = '#795548';
-ctx.fillRect(50, 400, 500, 20);
-
-// Draw Pegs
-createPegs();
-drawPegs();
-
-var i = 0;
+function begin() {
+	createDiscs(getInitialPeg());
+	setSortPeg();
+	setBaseDisc(getInitialPeg());
+	if (checkPegState() != 3) {
+		console.log('Error'); debugger; // TODO: error
+	}
+	animation(towerOfTanoiSolver);
+}
 
 function towerOfTanoiSolver() {
-	console.log('New Round');i++;
+	console.log('New Round');
 	if (getLengthOfInitialPeg()) {
 		moveDisc(baseDisc);
 		if (baseDisc.num > 1) {
-			createMoveArray();
+			createSmallerDiscs();
 			while (smallerDiscs.length != 0 ) {
-				setDestinationPegs();
+				setDestinationPeg();
 				for (let i = 0; i < smallerDiscs.length; i++) {
-					movement(smallerDiscs[i]);
+					moveDisc(smallerDiscs[i]);
 				}
 				smallerDiscs.splice(smallerDiscs.length - 1, 1);
 			}
@@ -43,17 +41,16 @@ function animation(callback) {
 	var tempDisc = Object.create(Disc);
 	tempDisc.init();
 
-	var discAnimation = setInterval(function() {
+	discAnimation = setInterval(function() {
 
-		// Animation
 		if (orderOfMovement.length) {
 
 			let movingDisc = orderOfMovement[0];
-			let j = nextOccurrenceOfDisc(movingDisc);
 
-			if (j) {
-				moveToX = orderOfMovement[j].xPos;
-				moveToY = orderOfMovement[j].yPos;
+			let i = nextOccurrenceOfDisc(movingDisc);
+			if (i) {
+				moveToX = orderOfMovement[i].xPos;
+				moveToY = orderOfMovement[i].yPos;
 			} else {
 				let peg = getDestinationPeg(movingDisc);
 				for (let movedDisc of peg.discs) {
@@ -63,18 +60,13 @@ function animation(callback) {
 					}
 				}
 			}
-			/*if (i == 2) {
-				console.log(orderOfMovement);console.log(pegs);debugger;
-			}*/
 
-			// if disc x pos != dp x pos && disc y pos != dp y pos
 			if (movingDisc.xPos != moveToX || movingDisc.yPos != moveToY) {
 
 				let biggestDiscWidth = widthDiff * (numOfDiscs - 1) + baseWidth;
 
-				if (movingDisc.yPos != (pegs[0].yPos - 20) && movingDisc.xPos != moveToX) {	// move Y till it's 20px above cp
-					console.log('move Y to top of cp');
-
+				if (movingDisc.yPos != (pegs[0].yPos - 20) && movingDisc.xPos != moveToX) {
+					// move Disc to the top of Current Peg
 					let peg = getCurrentPeg(movingDisc);
 					let biggestDiscXPos = calc(peg.xPos, numOfDiscs, discXPos);
 
@@ -99,25 +91,23 @@ function animation(callback) {
 					movingDisc.yPos--;
 					movingDisc.drawDisc(discsColors[movingDisc.num - 1]);
 
-				} else if (movingDisc.xPos != moveToX) {	// move x pos till it's same as dp x pos
-					console.log('move X to top of dp');
-					if (movingDisc.xPos < moveToX) {
+				} else if (movingDisc.xPos != moveToX) {
+						// move Disc to the top of Destination Peg
+						if (movingDisc.xPos < moveToX) {
 
-						ctx.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
-						movingDisc.xPos++;
-						movingDisc.drawDisc(discsColors[movingDisc.num - 1]);
+							ctx.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
+							movingDisc.xPos++;
+							movingDisc.drawDisc(discsColors[movingDisc.num - 1]);
 
-					} else {
+						} else {
 
-						ctx.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
-						movingDisc.xPos--;
-						movingDisc.drawDisc(discsColors[movingDisc.num - 1]);
+							ctx.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
+							movingDisc.xPos--;
+							movingDisc.drawDisc(discsColors[movingDisc.num - 1]);
 
-					}
+						}
 				} else {
-						// move y pos till it's at right position in dp y pos
-						console.log('move Y down to its dp position');
-
+						// Lower Disc to the right position on it's Destination Peg
 						let peg = getDestinationPeg(movingDisc);
 						let biggestDiscXPos = calc(peg.xPos, numOfDiscs, discXPos);
 
@@ -146,11 +136,10 @@ function animation(callback) {
 
 				}
 			} else {
-				// continue animation: animate next disc in orderOfMovement
 				orderOfMovement.splice(0,1);
 				distance = 0;
 			}
-		} else if (!getLengthOfInitialPeg()) {	// Clear Interval. ie End
+		} else if (!getLengthOfInitialPeg()) {
 			console.log(pegs);
 			console.log('DONE');
 			clearInterval(discAnimation);
@@ -159,21 +148,4 @@ function animation(callback) {
 		}
 
 	}, 1);
-}
-
-function begin() {
-	createDiscs(getInitialPeg());
-	for (let peg of pegs) {
-		drawDiscs(peg);
-	}
-
-	//console.log(numOfDiscs);debugger;
-
-	setSortPeg();
-	setBaseDisc(getInitialPeg());
-	if (checkPegState() != 3) {
-		console.log('Error'); debugger; // TODO: error
-	}
-
-	animation(towerOfTanoiSolver);
 }

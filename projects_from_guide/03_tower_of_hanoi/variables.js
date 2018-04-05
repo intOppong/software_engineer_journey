@@ -5,21 +5,24 @@
   ========================================
 */
 
+let canvas;
+let ctx;
 let Peg;
 let pegs = [];
-let numOfPegs = 3;
+const numOfPegs = 3;
 let sortPeg;
+let pegPositions = [];
 let Discs;
 let smallerDiscs = [];
-let pegPositions = [];
 let numOfDiscs;
 let baseDisc;
 let orderOfMovement = [];
-let startAnimation = false;
-let moved = true;
-let widthDiff = 10;
-let baseWidth = 25;
-let discHeight = 6;
+let discAnimation;
+const widthDiff = 10;
+const baseWidth = 25;
+const discHeight = 6;
+const discGap = 20;
+const pegGap = 185;
 let discsColors = [
 	'#FF5252',
 	'#E040FB',
@@ -33,8 +36,7 @@ let discsColors = [
 	'#C0CA33',
 ];
 
-
-	// Peg Object
+// Peg Object
 Peg = {
 	init: function(pos, xPos, yPos, width, height) {
 		this.pos = pos;
@@ -50,26 +52,6 @@ Peg = {
 	drawPeg: function() {
 	  ctx.strokeStyle = '#424242';
 		ctx.strokeRect(this.xPos, this.yPos, this.width, this.height);
-	}
-}
-
-function createPegs() {
-	let xPos = 100;
-	let yPos = 150;
-	let width = 5;
-	let height = 250;
-	let discDistanceToPeg = 20;
-	let pegGap = 185;
-	for (let i = 0; i < numOfPegs; i++) {
-		let pos = i+1;
-		pegs[i] = Object.create(Peg);
-		pegs[i].init(pos, xPos, yPos, width, height);
-		xPos += pegGap;
-	}
-}
-function drawPegs() {
-	for (let i = 0; i < numOfPegs; i++) {
-		pegs[i].drawPeg();
 	}
 }
 
