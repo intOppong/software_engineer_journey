@@ -110,7 +110,8 @@ Work Everyday averaging 10 Pomodoros a day & at least 5 Pomodoros on days where 
   * Finished writing the pseudocode for Project three.
   * Started coding the Logic for the project.
   * Set up github pages to host my frontEnd projects.
-* What I learnt & & Challenges I faced
+* What I learnt & Challenges I faced
+  * How to host frontEnd projects on online(github).
   * I've detailed it in the project's [readme](https://github.com/intOppong/software_engineer_journey/blob/master/projects_from_guide/project_three_tower_of_hanoi/README.md)
 
 ### My Thoughts
