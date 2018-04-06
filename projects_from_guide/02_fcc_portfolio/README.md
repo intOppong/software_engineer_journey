@@ -32,8 +32,8 @@ was a bad month.
 		* Portfolio Section: contains thumbnail images of different projects developed by the portfolio creator
 		* Footer: contains links to creator’s social media pages 
 * Dev Environment
-  * Atom
-  * Google Chrome Browser
+  * [Atom Editor](https://atom.io/)
+  * Chrome DevTools
 
 ### Major Decisions on the Project 
 ***
