@@ -9,7 +9,7 @@
 
 		.container {
 			width: 600px;
-			
+
 			margin: 20px auto;
 		}
 	</style>
@@ -28,53 +28,58 @@
 	</header>
 
 	<!-- Main Section -->
+	<div class="">
+		<section>
+			<div class="">
+				<p>Initial Peg</p>
+				<button onclick="setInitialPeg(1);" value="1">Peg One</button>
+				<button onclick="setInitialPeg(2);" value="2">Peg Two</button>
+				<button onclick="setInitialPeg(3);" value="3">Peg Three</button>
+			</div>
 
-	<section>
-		<div class="">
-			<p>Initial Peg</p>
-			<button onclick="setInitialPeg(1);" value="1">Peg One</button>
-			<button onclick="setInitialPeg(2);" value="2">Peg Two</button>
-			<button onclick="setInitialPeg(3);" value="3">Peg Three</button>
-		</div>
+			<div id="finalPeg"></div>
 
-	<div id="finalPeg">
+			<form>
+	       <select id="numOfDiscs" >
+		       <option disabled >-- Number of Discs --</option>
+		       <option value="1">One</option>
+		       <option value="2">Two</option>
+		       <option value="3">Three</option>
+		       <option value="4" selected>Four</option>
+		       <option value="5">Five</option>
+		       <option value="6">Six</option>
+		       <option value="7">Seven</option>
+		       <option value="8" >Eight</option>
+		       <option value="9">Nine</option>
+					 <option value="10">Ten</option>
+	       </select>
+			</form>
+
+			<!-- Color of Table, Pegs & Discs -->
+
+			<!-- Speed of Movement -->
+
+			<button onclick="begin()">Begin</button>
+
+		</section>
+
+		<section class="container">
+			<canvas id="canvas">
+				<p>Sorry, your browser doesn't user the canvas feature</p>
+			</canvas>
+		</section>
+
 	</div>
 
-
-		<form>
-         <select id="numOfDiscs" >
-             <option disabled >-- Number of Discs --</option>
-             <option value="1">One</option>
-             <option value="2">Two</option>
-             <option value="3">Three</option>
-             <option value="4" selected>Four</option>
-             <option value="5">Five</option>
-             <option value="6">Six</option>
-             <option value="7">Seven</option>
-             <option value="8" >Eight</option>
-             <option value="9">Nine</option>
-						 <option value="10">Ten</option>
-         </select>
-		</form>
-
-		<button onclick="begin()">Begin</button>
-
-	</section>
-
-	<section class="container">
-		<canvas id="canvas">
-			<p>Sorry, your browser doesn't user the canvas feature</p>
-		</canvas>
-	</section>
 
 	<!-- Footer -->
 	<footer id="mainFooter">
 	</footer>
 
 	<!-- Main JS -->
-	<script type="text/javascript" src="variables.js"></script>
-	<script type="text/javascript" src="functions.js"></script>
-	<script type="text/javascript" src="temp.js"></script>
+	<script type="text/javascript" src="assets/scripts/variables.js"></script>
+	<script type="text/javascript" src="assets/scripts/functions.js"></script>
+	<script type="text/javascript" src="assets/scripts/script.js"></script>
 
 </body>
 

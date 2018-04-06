@@ -5,24 +5,24 @@
   ========================================
 */
 
-let canvas;
-let ctx;
+const NUM_OF_PEGS = 3;
+const NUM_OF_DISCS = document.getElementById("numOfDiscs").selectedIndex;
+const WIDTH_DIFF = 10;
+const BASE_WIDTH = 25;
+const DISC_HEIGHT = 6;
+const DISC_GAP = 20;
+const PEG_GAP = 185;
+const CANVAS = document.getElementById('canvas');
+const CTX = CANVAS.getContext('2d');
+
 let Peg;
 let pegs = [];
-const numOfPegs = 3;
 let sortPeg;
 let pegPositions = [];
 let Discs;
 let smallerDiscs = [];
-let numOfDiscs;
 let baseDisc;
 let orderOfMovement = [];
-let discAnimation;
-const widthDiff = 10;
-const baseWidth = 25;
-const discHeight = 6;
-const discGap = 20;
-const pegGap = 185;
 let discsColors = [
 	'#FF5252',
 	'#E040FB',
@@ -50,8 +50,8 @@ Peg = {
 		this.height = height;
 	},
 	drawPeg: function() {
-	  ctx.strokeStyle = '#424242';
-		ctx.strokeRect(this.xPos, this.yPos, this.width, this.height);
+	  CTX.strokeStyle = '#000';
+		CTX.strokeRect(this.xPos, this.yPos, this.width, this.height);
 	}
 }
 
@@ -68,8 +68,8 @@ Disc = {
 	},
 	drawDisc: function(color) {
 
-		ctx.fillStyle = color;
-		ctx.fillRect(this.xPos, this.yPos, this.width, this.height);
+		CTX.fillStyle = color;
+		CTX.fillRect(this.xPos, this.yPos, this.width, this.height);
 	},
 	move: function() {
 		this.yPos -= 1;

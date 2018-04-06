@@ -35,18 +35,17 @@ function towerOfTanoiSolver() {
 }
 
 function animation(callback) {
-	var moveToX;
-	var moveToY;
-	var distance = 0;
-	var tempDisc = Object.create(Disc);
+	let discAnimation;
+	let moveToX;
+	let moveToY;
+	let distance = 0;
+	let tempDisc = Object.create(Disc);
 	tempDisc.init();
 
 	discAnimation = setInterval(function() {
 
 		if (orderOfMovement.length) {
-
 			let movingDisc = orderOfMovement[0];
-
 			let i = nextOccurrenceOfDisc(movingDisc);
 			if (i) {
 				moveToX = orderOfMovement[i].xPos;
@@ -63,23 +62,23 @@ function animation(callback) {
 
 			if (movingDisc.xPos != moveToX || movingDisc.yPos != moveToY) {
 
-				let biggestDiscWidth = widthDiff * (numOfDiscs - 1) + baseWidth;
+				const biggestDiscWidth = WIDTH_DIFF * (NUM_OF_DISCS - 1) + BASE_WIDTH;
 
 				if (movingDisc.yPos != (pegs[0].yPos - 20) && movingDisc.xPos != moveToX) {
 					// move Disc to the top of Current Peg
 					let peg = getCurrentPeg(movingDisc);
-					let biggestDiscXPos = calc(peg.xPos, numOfDiscs, discXPos);
+					let biggestDiscXPos = calc(peg.xPos, NUM_OF_DISCS, discXPos);
 
-					ctx.clearRect(biggestDiscXPos, peg.yPos - 20, biggestDiscWidth, peg.height + 20);
+					CTX.clearRect(biggestDiscXPos, peg.yPos - 20, biggestDiscWidth, peg.height + 20);
 					peg.drawPeg();
 					let numOfDiscsCP = movingDisc.discsCP.total;
 					let gap = 20;
 
 					for (let i = 0; numOfDiscsCP > 0; i++) {
 						tempDisc.num = movingDisc.discsCP.nums[i];
-						tempDisc.xPos = (peg.xPos - widthDiff) - (widthDiff/2) * (tempDisc.num-1);
+						tempDisc.xPos = (peg.xPos - WIDTH_DIFF) - (WIDTH_DIFF/2) * (tempDisc.num-1);
 						tempDisc.yPos = movingDisc.yPos + gap + distance;
-						tempDisc.width = widthDiff * (tempDisc.num - 1) + baseWidth;
+						tempDisc.width = WIDTH_DIFF * (tempDisc.num - 1) + BASE_WIDTH;
 						tempDisc.height = movingDisc.height;
 						tempDisc.drawDisc(discsColors[tempDisc.num - 1]);
 						gap += 20;
@@ -87,7 +86,7 @@ function animation(callback) {
 					}
 					distance++;
 
-					ctx.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
+					CTX.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
 					movingDisc.yPos--;
 					movingDisc.drawDisc(discsColors[movingDisc.num - 1]);
 
@@ -95,13 +94,13 @@ function animation(callback) {
 						// move Disc to the top of Destination Peg
 						if (movingDisc.xPos < moveToX) {
 
-							ctx.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
+							CTX.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
 							movingDisc.xPos++;
 							movingDisc.drawDisc(discsColors[movingDisc.num - 1]);
 
 						} else {
 
-							ctx.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
+							CTX.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
 							movingDisc.xPos--;
 							movingDisc.drawDisc(discsColors[movingDisc.num - 1]);
 
@@ -109,9 +108,9 @@ function animation(callback) {
 				} else {
 						// Lower Disc to the right position on it's Destination Peg
 						let peg = getDestinationPeg(movingDisc);
-						let biggestDiscXPos = calc(peg.xPos, numOfDiscs, discXPos);
+						let biggestDiscXPos = calc(peg.xPos, NUM_OF_DISCS, discXPos);
 
-						ctx.clearRect(biggestDiscXPos, peg.yPos - 20, biggestDiscWidth, peg.height + 20);
+						CTX.clearRect(biggestDiscXPos, peg.yPos - 20, biggestDiscWidth, peg.height + 20);
 
 						peg.drawPeg();
 
@@ -121,16 +120,16 @@ function animation(callback) {
 
 						for (let i = movingDisc.discsDP.nums.length - 1; numOfDiscsDP > 0; i--) {
 							tempDisc.num = movingDisc.discsDP.nums[i];
-							tempDisc.xPos = (peg.xPos - widthDiff) - (widthDiff/2) * (tempDisc.num - 1);
+							tempDisc.xPos = (peg.xPos - WIDTH_DIFF) - (WIDTH_DIFF/2) * (tempDisc.num - 1);
 							tempDisc.yPos = 380 - gap;
-							tempDisc.width = widthDiff * (tempDisc.num - 1) + baseWidth;
+							tempDisc.width = WIDTH_DIFF * (tempDisc.num - 1) + BASE_WIDTH;
 							tempDisc.height = movingDisc.height;
 							tempDisc.drawDisc(discsColors[tempDisc.num - 1]);
 							gap += 20;
 							numOfDiscsDP--;
 						}
 
-						ctx.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
+						CTX.clearRect(movingDisc.xPos, movingDisc.yPos, movingDisc.width, movingDisc.height);
 						movingDisc.yPos++;
 						movingDisc.drawDisc(discsColors[movingDisc.num - 1]);
 
