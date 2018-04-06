@@ -98,6 +98,8 @@ Work Everyday averaging 10 Pomodoros a day & at least 5 Pomodoros on days where 
     the method on a completely different object in the prototype chain) so it’s best to use a different more descriptive names 
     for methods. That's also good for Information/implementation hiding.
   * Making [animations](https://www.youtube.com/watch?v=vxljFhP2krI&index=4&list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL) with the canvas.
+  * HTML5 canvas arc() method. 
+  * You don’t have to clear the entire canvas, just to make changes to a small section.
   * Various ways to use the DOM to access/modify HTML content
 * Challenges I Faced
   * Difficult to understand the Class Simulation in Javascript: function & function.prototype & constructors etc.
