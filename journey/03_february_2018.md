@@ -14,6 +14,7 @@
 * Working on [Project Three: Tower of Hanoi Solver](https://github.com/intOppong/software_engineer_journey/tree/master/projects_from_guide/project_three_tower_of_hanoi).
 * Lost momentum eventually. *I somehow always lose momentum. I guess it's because I'm doing this alone & not communicating 
 with anyone*
+   * sometimes, I feel I want to fail so I can feel guilty, breakdown then get back up fully motivated & repeat this vicious cycle…wtf.
 * I can complete a lot of tasks if I'm able to stay consistent.
 
 ## Goals
