@@ -14,6 +14,7 @@
 * Working on [Project Three: Tower of Hanoi Solver](https://github.com/intOppong/software_engineer_journey/tree/master/projects_from_guide/project_three_tower_of_hanoi).
 * Lost momentum eventually. *I somehow always lose momentum. I guess it's because I'm doing this alone & not communicating 
 with anyone*
+   * sometimes, I feel I want to fail so I can feel guilty, breakdown then get back up fully motivated & repeat this vicious cycle…wtf.
 * I can complete a lot of tasks if I'm able to stay consistent.
 
 ## Goals
@@ -98,6 +99,8 @@ Work Everyday averaging 10 Pomodoros a day & at least 5 Pomodoros on days where 
     the method on a completely different object in the prototype chain) so it’s best to use a different more descriptive names 
     for methods. That's also good for Information/implementation hiding.
   * Making [animations](https://www.youtube.com/watch?v=vxljFhP2krI&index=4&list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL) with the canvas.
+  * HTML5 canvas arc() method. 
+  * You don’t have to clear the entire canvas, just to make changes to a small section.
   * Various ways to use the DOM to access/modify HTML content
 * Challenges I Faced
   * Difficult to understand the Class Simulation in Javascript: function & function.prototype & constructors etc.
@@ -110,7 +113,8 @@ Work Everyday averaging 10 Pomodoros a day & at least 5 Pomodoros on days where 
   * Finished writing the pseudocode for Project three.
   * Started coding the Logic for the project.
   * Set up github pages to host my frontEnd projects.
-* What I learnt & & Challenges I faced
+* What I learnt & Challenges I faced
+  * How to host frontEnd projects on online(github).
   * I've detailed it in the project's [readme](https://github.com/intOppong/software_engineer_journey/blob/master/projects_from_guide/project_three_tower_of_hanoi/README.md)
 
 ### My Thoughts
