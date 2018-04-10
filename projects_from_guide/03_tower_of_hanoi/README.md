@@ -16,7 +16,7 @@
 ***
   * *TODO*
 
-### Major Decisions on the Project 
+### Major Decisions on the Project
 ***
   * *TODO*
 
@@ -36,4 +36,3 @@
 ### Attribution
 ***
   * *TODO*
-

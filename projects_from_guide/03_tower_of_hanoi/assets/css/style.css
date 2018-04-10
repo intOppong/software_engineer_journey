@@ -1,0 +1,99 @@
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+}
+html, body, #main, .row {
+  width: 100%;
+  height: 100%;
+}
+.container-fluid, .row {
+  margin: 0;
+  padding: 0;
+}
+
+.head {
+  font-size: 1.3rem;
+  color: #FFC107;
+  padding-top: 15px;
+}
+
+#preferences {
+  border-right: 1px solid black;
+  background-color: #708d9b ;/*#455A64 #1280B2;#03A9F4*/
+}
+
+#tower_of_hanoi {
+  background-color: #eff; /*#efefef;*/
+}
+
+.w-100 {
+  width: 100%;
+  margin: 20px 0;
+}
+.btn-100 {
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+.show-inline {
+  display: inline;
+}
+.show-block {
+  display: block;
+}
+
+#pause-play {
+  padding-top: 15px;
+  padding-left: 40px;
+}
+#pause-play button {
+  border-color: #795548;
+}
+#pause-play .btn-outline-primary {
+  color: blue;
+}
+#pause-play .btn-outline-primary:hover {
+  border-color: blue;
+  background-color: inherit;
+}
+#pause-play .btn-outline-danger {
+  color: red;
+}
+#pause-play .btn-outline-danger:hover {
+  border-color: red;
+  background-color: inherit;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .row {
+    width: 768px;
+  }
+  .col-md-3 {
+    width: 192px;
+  }
+  .col-md-9 {
+    width: 576px;
+  }
+}
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/

@@ -40,6 +40,7 @@ function createDiscs(peg) {
 		return console.log('Error'); // TODO: error
 	}
 
+	const NUM_OF_DISCS = document.getElementById("numOfDiscs").selectedIndex + 1;
 	let discWidth;
 	let xPos;
 	let yPos = 400;
@@ -299,6 +300,7 @@ function setFinalPeg(pos) {
 				if (!peg.initialPeg && peg.pos === pos) {
 					peg.finalPeg = true;
 					console.log(pegs);
+					showNumberOfDiscsOptions();
 					return 1;
 				}
 			}
@@ -514,6 +516,15 @@ function checkPegState() {
 	return allSet;
 }
 
+function changeState(state) {
+	if(state) {
+		isPaused = false;
+	} else {
+		isPaused = true;
+	}
+}
+
+
 
 
 			/*
@@ -524,18 +535,55 @@ function checkPegState() {
 
 function showFinalPegOptions(initialPegPos) {
 	if(initialPegPos == 1) {
-		document.getElementById("finalPeg").innerHTML = "<p>Final Peg</p>"+
-			"<button onclick=\"setFinalPeg(2);\" value=\"2\">Peg Two</button>"+
-			"<button onclick=\"setFinalPeg(3);\" value=\"3\">Peg Three</button>";
+		document.getElementById("finalPeg").innerHTML =
+			"<div class=\"btn-group\" role=\"group\" aria-label=\"pegs\">" +
+				"<button type=\"button\" class=\"btn btn-outline-light btn-sm\" onclick=\"setFinalPeg(2);\" value=\"2\">Two</button>"+
+				"<button type=\"button\" class=\"btn btn-outline-light btn-sm\" onclick=\"setFinalPeg(3);\" value=\"3\">Three</button>" +
+			"</div>";
 	}
 	if(initialPegPos == 2) {
-		document.getElementById("finalPeg").innerHTML = "<p>Final Peg</p>"+
-			"<button onclick=\"setFinalPeg(1);\" value=\"1\">Peg One</button>"+
-			"<button onclick=\"setFinalPeg(3);\" value=\"3\">Peg Three</button>";
+		document.getElementById("finalPeg").innerHTML =
+			"<div class=\"btn-group\" role=\"group\" aria-label=\"pegs\">" +
+				"<button type=\"button\" class=\"btn btn-outline-light btn-sm\" onclick=\"setFinalPeg(1);\" value=\"1\">One</button>"+
+				"<button type=\"button\" class=\"btn btn-outline-light btn-sm\" onclick=\"setFinalPeg(3);\" value=\"3\">Three</button>" +
+			"</div>";
 	}
 	if(initialPegPos == 3) {
-		document.getElementById("finalPeg").innerHTML = "<p>Final Peg</p>"+
-			"<button onclick=\"setFinalPeg(1);\" value=\"1\">Peg One</button>"+
-			"<button onclick=\"setFinalPeg(2);\" value=\"2\">Peg Two</button>";
+		document.getElementById("finalPeg").innerHTML =
+			"<div class=\"btn-group\" role=\"group\" aria-label=\"pegs\">" +
+				"<button type=\"button\" class=\"btn btn-outline-light btn-sm\" onclick=\"setFinalPeg(1);\" value=\"1\">One</button>"+
+				"<button type=\"button\" class=\"btn btn-outline-light btn-sm\" onclick=\"setFinalPeg(2);\" value=\"2\">Two</button>" +
+			"</div>";
 	}
+}
+
+function showNumberOfDiscsOptions() {
+	document.getElementById("discsForm").innerHTML =
+	`
+	<form class="form-group">
+	<select id="numOfDiscs" class="form-control">;
+			<option value="1">One</option>
+			<option value="2">Two</option>
+			<option value="3">Three</option>
+			<option value="4" selected>Four</option>
+			<option value="5">Five</option>
+			<option value="6">Six</option>
+			<option value="7">Seven</option>
+			<option value="8" >Eight</option>
+			<option value="9">Nine</option>
+			<option value="10">Ten</option>
+		</select>
+	</form>`;
+
+	return 1;
+}
+
+function showBlockElement(e) {
+	e.classList.remove("hide");
+	e.classList.add("show-block");
+	//e.style.display = "block";
+}
+function hideBlockElement(e) {
+	e.classList.remove("show-block");
+	e.classList.add("hide");
 }

@@ -6,7 +6,7 @@
 */
 
 const NUM_OF_PEGS = 3;
-const NUM_OF_DISCS = document.getElementById("numOfDiscs").selectedIndex;
+const NUM_OF_DISCS = null;
 const WIDTH_DIFF = 10;
 const BASE_WIDTH = 25;
 const DISC_HEIGHT = 6;
@@ -23,6 +23,7 @@ let Discs;
 let smallerDiscs = [];
 let baseDisc;
 let orderOfMovement = [];
+let isPaused = false;
 let discsColors = [
 	'#FF5252',
 	'#E040FB',
