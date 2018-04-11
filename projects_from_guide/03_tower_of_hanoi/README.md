@@ -102,6 +102,7 @@ Some Trule Statements
 * Changed peg & disc object structure to include their canvas data instead of storing it in a different object.
 * I place the functions & variables into separate files. *not sure if it's the right thing to do*
 * decided to create an orderOfMovement array to store all the disc movements during each round & use that for my animation after the round. I couldn't find a way to do a real time animation ie animate the discs as they move from 1 disc to another during each round.
+* Since I'm not focusing on front-end development & I already have a firm understanding of css layouts & other css principles,  I’m ditching custom css layout for bootstrap. I want to be good at bootstrap so I don’t worry about intricacies of CSS layouts anymore (calculating widths/padding/margin etc).
 
 ### What I Learnt
 ***
@@ -122,6 +123,7 @@ Some Trule Statements
 * setInterval() & requestAnimationFrame() are similar. They are both asynchronous. requestAnimationFrame is well optimized/better version of setInterval().
   * requestAnimationFrame() It’s simply a way to tell the browser “before drawing the next frame on the screen, execute this logic/animation processing”. The browser is in charge of choosing the best moment to execute the code, which results in a more efficient use of resources whereas with setinterval() you have to decide on the interval/time (in milisec) to run the logic/animation,
 * I learn’t various array helper functions such as push(), unshift(), splice() & slice()
+* I learnt about traversing the DOM to find any object (element) you want.
 * My personal Opinion on When to create a function
   * when a task comprises of a comprehensive number of other tasks.
   * when a task is/will-be used by multiple function.
@@ -148,9 +150,13 @@ Some Trule Statements
 * I think I spend too much time making the code look good.
 * I feel I could’ve / should’ve refactored the code better. I was trying to organize the code according to the Delegation-Oriented Design method (OOLO). but i think i need a better understanding of Design Patterns to do that.
 * The Data Structures you use really determine how you write your logic. because a big part coding is accessing data.
+* I like the method of predefining classes then changing them as the script runs to apply new styles/characteristics to elements.
+* I really like bootstrap. Now I don’t have to worry too much about the CSS details. Bootstrap is a life saver. :laughing:
+
 
 ### Attribution
 ***
   * [Effective Thinking Through Mathematics: Week 2](https://courses.edx.org/courses/course-v1:UTAustinX+UT.9.10x+3T2016/course/): Tower of Hanoi
   * [Chris Courses](https://www.youtube.com/watch?v=EO6OkltgudE&list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL): HTML5 Canvas Tutorial
   * [Eduonix Learning Solutions](https://www.youtube.com/watch?v=XccOs0tWngg&index=18&list=PLDmvslp_VR0wkiclky6vj6SSDx-N2QE9z): Snake Game Tutorial Project
+  * [Drew Ryan](https://www.youtube.com/watch?v=9cKsq14Kfsw): Bootstrap Tutorial Project
