@@ -3,9 +3,11 @@ window.onload = function () {
 	createCanvas();
 }
 
+/* ========== BEGIN HERE ========== */
 function begin() {
-	if (checkPegState() != 3) {
-		console.log('Error'); debugger; // TODO: error
+	if (checkPegState() != 2) {
+		showBlockElement(document.getElementById("errors"), showErrors);
+		throw new Error("pegs don't follow the rules");
 	}
 
 	hideBlockElement(document.getElementById("begin"));
@@ -13,9 +15,11 @@ function begin() {
 	createDiscs(getInitialPeg());
 	setSortPeg();
 	setBaseDisc(getInitialPeg());
+	console.log(baseDisc);debugger;
 	animation(towerOfTanoiSolver);
 }
 
+/* ========== MOVEMENT LOGIC ========== */
 function towerOfTanoiSolver() {
 	console.log('New Round');
 	if (getLengthOfInitialPeg()) {
@@ -36,6 +40,9 @@ function towerOfTanoiSolver() {
 		}
 	}
 }
+
+
+/* ========== ANIMATION ========== */
 
 function animation(callback) {
 	let discAnimation;
@@ -65,12 +72,12 @@ function animation(callback) {
 
 				if (movingDisc.xPos != moveToX || movingDisc.yPos != moveToY) {
 
-					const biggestDiscWidth = WIDTH_DIFF * (NUM_OF_DISCS - 1) + BASE_WIDTH;
+					const biggestDiscWidth = WIDTH_DIFF * (num_of_discs - 1) + BASE_WIDTH;
 
 					if (movingDisc.yPos != (pegs[0].yPos - 20) && movingDisc.xPos != moveToX) {
 						// move Disc to the top of Current Peg
 						let peg = getCurrentPeg(movingDisc);
-						let biggestDiscXPos = calc(peg.xPos, NUM_OF_DISCS, discXPos);
+						let biggestDiscXPos = calc(peg.xPos, num_of_discs, discXPos);
 
 						CTX.clearRect(biggestDiscXPos, peg.yPos - 20, biggestDiscWidth, peg.height + 20);
 						peg.drawPeg();
@@ -111,7 +118,7 @@ function animation(callback) {
 					} else {
 							// Lower Disc to the right position on it's Destination Peg
 							let peg = getDestinationPeg(movingDisc);
-							let biggestDiscXPos = calc(peg.xPos, NUM_OF_DISCS, discXPos);
+							let biggestDiscXPos = calc(peg.xPos, num_of_discs, discXPos);
 
 							CTX.clearRect(biggestDiscXPos, peg.yPos - 20, biggestDiscWidth, peg.height + 20);
 
@@ -153,17 +160,8 @@ function animation(callback) {
 	}, 1);
 }
 
+/* ========== PAUSE & RESUME -- with jquery ========== */
 
-
-
-var t = window.setInterval(function() {
-  if(!isPaused) {
-
-  }
-}, 1000);
-
-
-//with jquery
 $('.pause').on('click', function(e) {
   e.preventDefault();
   isPaused = true;

@@ -1,5 +1,4 @@
 
-
 /*
   ========================================
   FUNCTIONS
@@ -37,15 +36,14 @@ function createPegs() {
 
 function createDiscs(peg) {
 	if (peg === null) {
-		return console.log('Error'); // TODO: error
+		return console.log('Error');
 	}
-
-	const NUM_OF_DISCS = document.getElementById("numOfDiscs").selectedIndex + 1;
+	num_of_discs = document.getElementById("numOfDiscs").selectedIndex + 1;
 	let discWidth;
 	let xPos;
 	let yPos = 400;
 
-	let i = NUM_OF_DISCS;
+	let i = num_of_discs;
 	while (i) {
 		discWidth = WIDTH_DIFF * (i-1) + BASE_WIDTH;
 		xPos = calc(peg.xPos, i, discXPos);
@@ -66,7 +64,7 @@ function createDiscs(peg) {
 
 function setBaseDisc(peg) {
 	if (peg === null) {
-		return console.log('Error'); // TODO: error
+		return console.log('Error');
 	}
 	baseDisc = peg.discs[0];
 	baseDisc.currentPeg = peg.pos;
@@ -76,7 +74,7 @@ function setBaseDisc(peg) {
 				return peg.pos;
 			}
 		}
-		console.log('Error'); debugger;// TODO: error
+		console.log('Error'); debugger;
 	})();
 	return 1;
 }
@@ -96,7 +94,7 @@ function getLengthOfInitialPeg() {
 			return peg.discs.length;
 		}
 	}
-	console.log('Error'); debugger;// TODO: error
+	console.log('Error'); debugger;
 }
 
 function setSortPeg() {
@@ -107,7 +105,7 @@ function setSortPeg() {
 	}
 
 	if (getLengthOfInitialPeg() != 0) {
-		let biggestDiscNumberType = NUM_OF_DISCS % 2;
+		let biggestDiscNumberType = num_of_discs % 2;
 		if (!biggestDiscNumberType) {
 			// Even Numbers are sorted on the Final Peg
 			if (!(getInitialPeg().discs[0].num % 2)) {
@@ -125,7 +123,7 @@ function setSortPeg() {
 					}
 				}
 			}
-			console.log('Error'); debugger;// TODO: error
+			console.log('Error'); debugger;
 		} else {
 				// Odd Numbers are sorted on the Final Peg
 				if (getInitialPeg().discs[0].num % 2) {
@@ -143,7 +141,7 @@ function setSortPeg() {
 						}
 					}
 				}
-				console.log('Error'); debugger;// TODO: error
+				console.log('Error'); debugger;
 			}
 	} else {
 		for (peg of pegs) {
@@ -153,7 +151,7 @@ function setSortPeg() {
 			}
 		}
 	}
-	console.log('Error'); debugger;// TODO: error
+	console.log('Error'); debugger;
 }
 
 function moveToNewPeg(disc) {
@@ -267,7 +265,7 @@ function updateDestinationPeg(lowerDisc, higherDisc) {
   if (pegPositions.length == 1) {
 		lowerDisc.destinationPeg = pegPositions[0];
 	} else {
-		console.log('Error'); debugger;// TODO: error
+		console.log('Error'); debugger;
 	}
 }
 
@@ -278,8 +276,10 @@ function updateDestinationPeg(lowerDisc, higherDisc) {
 			*/
 
 function setInitialPeg(pos) {
-	if (initialPegExists()) {
-		console.log("ERROR - initialPeg already set");debugger;
+	let peg;
+	//reset Initial & final pegs
+	if (peg = getInitialPeg()) {
+		peg.initialPeg = false;
 	}
 
 	for (let peg of pegs) {
@@ -288,29 +288,30 @@ function setInitialPeg(pos) {
 			showFinalPegOptions(peg.pos);
 		}
 	}
+	console.log(pegs);
 }
 
 function setFinalPeg(pos) {
-	if (initialPegExists()) {
-		if (!finalPegExists()) {
-			for (let peg of pegs) {
-				peg.finalPeg = false;
-			}
-			for (let peg of pegs) {
-				if (!peg.initialPeg && peg.pos === pos) {
-					peg.finalPeg = true;
-					console.log(pegs);
-					showNumberOfDiscsOptions();
-					return 1;
-				}
-			}
-			console.log('Error - Initial Peg cannot be the Final Peg');debugger; // TODO: error
-		} else {
-			console.log('Error - final Peg already set');debugger; // TODO: error
-		}
-	} else {
-		console.log('Error - set Initial Peg first');debugger; // TODO: error
+	for (let peg of pegs) {
+		peg.finalPeg = false;
 	}
+	for (let peg of pegs) {
+		if (!peg.initialPeg && peg.pos === pos) {
+			peg.finalPeg = true;
+			console.log(pegs);
+			showBlockElement(document.getElementById("discsForm"));
+			return 1;
+		}
+	}
+}
+
+function getFinalPeg() {
+	for (let peg of pegs) {
+		if (peg.finalPeg === true) {
+			return peg;
+		}
+	}
+	return null;
 }
 
 /*
@@ -349,7 +350,7 @@ function addDiscToNewPeg(disc) {
 			return 1;
 		}
 	}
-	console.log('Error'); debugger;// TODO: error
+	console.log('Error'); debugger;
 }
 
 function deleteDiscFromOldPeg(disc) {
@@ -359,7 +360,7 @@ function deleteDiscFromOldPeg(disc) {
 			return 1;
 		}
 	}
-	console.log('Error'); debugger;// TODO: error
+	console.log('Error'); debugger;
 }
 
 
@@ -376,7 +377,7 @@ function update(disc) {
 			return 1;
 		}
 	}
-	console.log('Error'); debugger;// TODO: error
+	console.log('Error'); debugger;
 }
 
 function deleteDestinationPeg(disc) {
@@ -390,7 +391,7 @@ function getCurrentPeg(disc) {
 			return peg;
 		}
 	}
-	console.log('Error'); debugger;// TODO: error
+	console.log('Error'); debugger;
 }
 
 function getDestinationPeg(disc) {
@@ -399,7 +400,7 @@ function getDestinationPeg(disc) {
 			return peg;
 		}
 	}
-	console.log('Error'); debugger;// TODO: error
+	console.log('Error'); debugger;
 }
 
 function getSortPeg() {
@@ -408,7 +409,7 @@ function getSortPeg() {
 			return peg;
 		}
 	}
-	console.log('Error'); debugger;// TODO: error
+	console.log('Error'); debugger;
 }
 
 function getLowerDisc(lower) {
@@ -417,7 +418,7 @@ function getLowerDisc(lower) {
 			return lowerDisc;
 		}
 	}
-	console.log('Error'); debugger;// TODO: error
+	console.log('Error'); debugger;
 }
 
 function eliminateDiscCP(disc) {
@@ -445,7 +446,7 @@ function assignDestinationPeg(disc) {
 	if (pegPositions.length == 1) {
 		disc.destinationPeg = pegPositions[0];
 	} else {
-		console.log('Error'); debugger;// TODO: error
+		console.log('Error'); debugger;
 	}
 }
 
@@ -461,24 +462,6 @@ function getPegPositions() {
 	}
 }
 
-function initialPegExists() {
-	for (let peg of pegs) {
-		if (peg.initialPeg) {
-			return 1;
-		}
-	}
-	return 0;
-}
-
-function finalPegExists() {
-	for (let peg of pegs) {
-		if (peg.finalPeg) {
-			return 1;
-		}
-	}
-	return 0;
-}
-
 function nextOccurrenceOfDisc(disc) {
 	for (let i = 1; i < orderOfMovement.length; i++) {
 		if (orderOfMovement[i].num == disc.num) {
@@ -489,7 +472,9 @@ function nextOccurrenceOfDisc(disc) {
 }
 
 function calc(numA, numB, callback) {
-	return callback(numA, numB);
+	if (typeof callback === 'function') {
+		return callback(numA, numB);
+	}
 }
 
 function discXPos(pegXPos, discNum) {
@@ -500,17 +485,21 @@ function discXPos(pegXPos, discNum) {
 function checkPegState() {
 	let allSet = 0;
 	for (let peg of pegs) {
-		if (peg.initialPeg & !peg.finalPeg) {
-			allSet++;
-			console.log("initialPeg is set at Peg" + peg.pos);
-			if (peg.discs.length === getLengthOfInitialPeg()) {
+		if (peg.initialPeg) {
+			if (!peg.finalPeg) {
 				allSet++;
-				console.log("Discs are at initialPeg" + peg.pos);
+				console.log("initialPeg is set at Peg" + peg.pos);
+			} else {
+				errors.push('Initial Peg cannot be the Final Peg');
 			}
 		}
-		if (peg.finalPeg & !peg.initialPeg) {
-			allSet++;
-			console.log("finalPeg is set at Peg" + peg.pos);
+		if (peg.finalPeg) {
+			if (!peg.initialPeg) {
+				allSet++;
+				console.log("finalPeg is set at Peg" + peg.pos);
+			} else {
+				errors.push(`Final Peg ${peg.pos} cannot be the Initial Peg ${peg.pos}`);
+			}
 		}
 	}
 	return allSet;
@@ -536,10 +525,10 @@ function changeState(state) {
 function showFinalPegOptions(initialPegPos) {
 	if(initialPegPos == 1) {
 		document.getElementById("finalPeg").innerHTML =
-			"<div class=\"btn-group\" role=\"group\" aria-label=\"pegs\">" +
-				"<button type=\"button\" class=\"btn btn-outline-light btn-sm\" onclick=\"setFinalPeg(2);\" value=\"2\">Two</button>"+
-				"<button type=\"button\" class=\"btn btn-outline-light btn-sm\" onclick=\"setFinalPeg(3);\" value=\"3\">Three</button>" +
-			"</div>";
+			`<div class="btn-group" role="group" aria-label="pegs">
+				<button type="button" class="btn btn-outline-light btn-sm" onclick="setFinalPeg(2);" value="2">Two</button>
+				<button type="button" class="btn btn-outline-light btn-sm" onclick="setFinalPeg(3);" value="3">Three</button>
+			</div>`;
 	}
 	if(initialPegPos == 2) {
 		document.getElementById("finalPeg").innerHTML =
@@ -557,33 +546,20 @@ function showFinalPegOptions(initialPegPos) {
 	}
 }
 
-function showNumberOfDiscsOptions() {
-	document.getElementById("discsForm").innerHTML =
-	`
-	<form class="form-group">
-	<select id="numOfDiscs" class="form-control">;
-			<option value="1">One</option>
-			<option value="2">Two</option>
-			<option value="3">Three</option>
-			<option value="4" selected>Four</option>
-			<option value="5">Five</option>
-			<option value="6">Six</option>
-			<option value="7">Seven</option>
-			<option value="8" >Eight</option>
-			<option value="9">Nine</option>
-			<option value="10">Ten</option>
-		</select>
-	</form>`;
-
-	return 1;
-}
-
-function showBlockElement(e) {
+function showBlockElement(e, callback) {
 	e.classList.remove("hide");
 	e.classList.add("show-block");
-	//e.style.display = "block";
+	if (typeof callback === 'function') {
+		callback(e);
+	}
 }
 function hideBlockElement(e) {
 	e.classList.remove("show-block");
 	e.classList.add("hide");
+}
+function showErrors(e) {
+	for (error of errors) {
+		e.firstElementChild.innerHTML =	`<li>Error: ${error}</li>`;
+	}
+	errors.length = 0;
 }

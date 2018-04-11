@@ -6,7 +6,6 @@
 */
 
 const NUM_OF_PEGS = 3;
-const NUM_OF_DISCS = null;
 const WIDTH_DIFF = 10;
 const BASE_WIDTH = 25;
 const DISC_HEIGHT = 6;
@@ -15,6 +14,7 @@ const PEG_GAP = 185;
 const CANVAS = document.getElementById('canvas');
 const CTX = CANVAS.getContext('2d');
 
+let num_of_discs = null;
 let Peg;
 let pegs = [];
 let sortPeg;
@@ -23,7 +23,6 @@ let Discs;
 let smallerDiscs = [];
 let baseDisc;
 let orderOfMovement = [];
-let isPaused = false;
 let discsColors = [
 	'#FF5252',
 	'#E040FB',
@@ -36,6 +35,8 @@ let discsColors = [
 	'#1DE9B6',
 	'#C0CA33',
 ];
+let isPaused = false;
+let errors = [];
 
 // Peg Object
 Peg = {

@@ -40,18 +40,39 @@
 				<div id="finalPeg"></div>
 
 				<h2 class="head">Number of Discs</h2>
-				<div id="discsForm" class="">	</div>
+				<div id="discsForm" class="hide">
+					<form class="form-group">
+						<select id="numOfDiscs" class="form-control">;
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+							<option value="4" selected>Four</option>
+							<option value="5">Five</option>
+							<option value="6">Six</option>
+							<option value="7">Seven</option>
+							<option value="8" >Eight</option>
+							<option value="9">Nine</option>
+							<option value="10">Ten</option>
+						</select>
+					</form>
+				</div>
 
 				<div class="w-100" id="begin">
 					<button type="button" class="btn btn-primary btn-100" onclick="begin()">Begin</button>
 				</div>
 
 				<div class="w-100 hide" id="replay">
-					<button type="button" class="btn btn-primary btn-100" onclick="location.reload()">Replay</button>
+					<button type="button" class="btn btn-primary btn-100" onclick="location.reload()">Again</button>
 				</div>
 
 			</section>
 			<section id="tower_of_hanoi" class="col-md-9">
+				<div id="errors" class="alert alert-danger hide" role="alert">
+					<ul>
+
+					</ul>
+					<button type="button" class="btn btn-link" onclick="location.reload()"> Try Again </button>
+				</div>
 				<div id="pause-play" class="hide">
 					<button type="button" class="btn btn btn-outline-danger btn-sm" onclick="changeState(false);">Pause</button>
 					<button type="button" class="btn btn btn-outline-primary btn-sm" onclick="changeState(true);">Resume</button>
