@@ -13,10 +13,10 @@ Below is a list of Tutorial Projects I used as practice before doing the actual 
 * I based the selection of Tutorial Projects on the projects listed in the guide.
 
 
-| Tutorial Projects  | Guide | Skills Required |
+| Project from Guide | Skills Required | Tutorial Projects  |
 | --- | --- | --- |
-| [Resume](https://www.youtube.com/watch?v=jJuHQNULXGs&list=PLsIkqR8inizt8SpD6utVTPhy8gFQzQNug) | [Project One: Clone this online resume template](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot3) | Basic HTML & CSS |
-| <ul><li>[Snake Game](https://www.youtube.com/watch?v=XccOs0tWngg&index=18&list=PLDmvslp_VR0wkiclky6vj6SSDx-N2QE9z)</li><li>[HTML5 Canvas Tutorial](https://www.youtube.com/watch?v=yq2au9EfeRQ&index=3&list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL)</li></u> | [Project Three: Tower of Hanoi Solver]() |<ul><li> HTML Canvas</li><li>Programming Concepts / Logic with Javascripts</li><li>basic DOM manipulation</li> |
+| [Project One: Clone this online resume template](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot3) | Basic HTML & CSS | [Clone Resume](https://www.youtube.com/watch?v=jJuHQNULXGs&list=PLsIkqR8inizt8SpD6utVTPhy8gFQzQNug) | 
+| [Project Three: Tower of Hanoi Solver]() |<ul><li> HTML Canvas</li><li>Programming Concepts / Logic with Javascripts</li><li>basic DOM manipulation</li><li>Bootstrap: *for the frontend*</li></ul> | <ul><li>[Snake Game](https://www.youtube.com/watch?v=XccOs0tWngg&index=18&list=PLDmvslp_VR0wkiclky6vj6SSDx-N2QE9z)</li><li>[HTML5 Canvas Tutorial](https://www.youtube.com/watch?v=yq2au9EfeRQ&index=3&list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL)</li><li>[Responsive Site with Bootstrap 4](https://www.youtube.com/watch?v=9cKsq14Kfsw)</li></u> | 
 
 
 
