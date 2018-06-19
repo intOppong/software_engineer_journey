@@ -3,18 +3,22 @@
 ## Content
 * [The Guide](#the-guide)
 * [My Goal](#my-goal)
+* [How I Learn](#how-i-learn)
+
+
+## NOTE
+
+*NOTE: I’m switching from [P1xt’s](https://github.com/P1xt) [Computer Science & Web Development Guide](https://github.com/P1xt/p1xt-guides#computer-science-and-web-development---comprehensive) to [FCC’s guide](https://learn.freecodecamp.org/). I feel FCC is suits me better. Also I just need a new spark after months on inconsistency. I hope this creates a new & sustained drive.*
 
 ## The Guide
-I’m using [P1xt’s](https://github.com/P1xt) [Computer Science & Web Development Guide](https://github.com/P1xt/p1xt-guides#computer-science-and-web-development---comprehensive). My goal is to be a software engineer with good web development skills. I want to focus on the Backend with basic Fornt-End knowledge. So this guide is well suited for my needs. I’m grateful to P1xt for curating such an overarching project oriented guide. Your work, to us aspiring Developers is truly invaluable. God Bless You.
+I’m using [FreeCodeCamps Curriculum](https://learn.freecodecamp.org/) and [P1xt’s Guide](https://github.com/P1xt/p1xt-guides#computer-science-and-web-development---comprehensive) as backup. I’m going to do all FCC’s projects using my method of learning detailed below. FreeCodeCamp has a huge community of people willing to assist whenever you get stuck. That’s a huge plus for me. This journey is not easy and you’ll often need encouragement from the community. 
 
-I know there’s a lot of aspiring [developers](https://forum.freecodecamp.org/t/computer-deprecated-guide-web-development-with-computer-science-foundations-comprehensive-path/64516) who are in need of a structure like this, so I’m not gonna taking this journey lightly. I hope to complete the guide in a 18months or less. I understand it’s very hard but i’m dedicated & have structured my time for the long run to complete this guide. I’m Committed to see it through.
-*Commitment implies you know there will be times when you feel like you made the wrong decision, when you want to give up cos it’s too damn difficult than you ever anticipated. But you are going to do it anyway because that is what you want & there’s nothing better else to do that’ll make you happier.*
+P1xt guide will serve as a referral source for books & courses and also other projects i might be interested in.
 
 ## My Goal
-As stated above, I want to be an elite software engineer with good web dev skills. I define a Software Engineer as a programmer with the ability to Architect, Develop, Test & Maintain Libraries, Frameworks or Platforms that is used by developers to automatic some task or assist them in developing their applications. 
+My goal is to be a software engineer. I define a Software Engineer as a programmer with the ability to Architect, Develop, Test & Maintain Libraries, Frameworks or Platforms that is used by developers to automatic some task or assist them in developing their applications. I like the Backend and i like Architecture.
 * Result Oriented: *the outcome*
-    * Finish the Guide in 18 months - Dec 2017 -> May 2019
-    * Front-End: I want to have basic front end skills to enable be create quick prototypes / make a quick MVP [like this](https://medium.freecodecamp.org/how-i-built-the-airbnb-of-music-studios-in-an-evening-part-1-742b47bc09c2). As stated above I want to focus on the backend, algorithms etc & leave the design to more competent people like [slack did with metalab](https://medium.com/@awilkinson/slack-s-2-8-billion-dollar-secret-sauce-5c5ec7117908)
+    * Front-End: I want to have basic frontend skills to enable be create quick prototypes / make a quick MVP [like this](https://medium.freecodecamp.org/how-i-built-the-airbnb-of-music-studios-in-an-evening-part-1-742b47bc09c2). As stated above I want to focus on the backend & leave the design to more competent people.
     * Backend: TBD
     * Algorithm: TBD
     * System Design: TBD
@@ -22,19 +26,17 @@ As stated above, I want to be an elite software engineer with good web dev skill
   * Work Everyday averaging 13 Pomodoros a day & 10 Pomodoros on days where life duties call (eg: going to the bank, helping family with work etc)
     * *Pomodoro settings is 30mins work, max of 10mins break.*
 * What’s Important
-  * **Build all the projects in the guide.**
+  * **Build all FCC projects.**
   * **Deeply Understand Concepts.**
   * **Helping Others on Forums (FCC, cohorts)**
   * **Collaborating with others on projects (FCC, cohort)**
   * **Writing about my journey**
     
-## How I'll Use the [Guide](https://github.com/P1xt/p1xt-guides/blob/master/cs-wd.md)
+## How I Learn
 I don’t like reading book/course after book/course without working on projects. I like to study alongside a project. I’m able to identify specific skills that I should learn. Also learning the skill becomes more interesting because I’m actually using the skill + there’s a lot of AHA moments :bulb:
-> Its usually not important to learn sth that you won’t use in the near future. I feel more motivated to learn sth, knowing I’ll be needing it now.
+> Its usually not important to learn something that you won’t use in the near future. I feel more motivated to learn a skill knowing I’ll be needing it now.
 
-With that said I came up with a strategy that i think best suits my preference & priorities rather than to follow the guide chronologically.
-
-1. Identify at the next project listed in the guide
+1. Identify the next project listed in the guide
    * *Look @ the description (or a finished version) & List(predict) the Skills required to do that project.*
    * *if you already know the skill, Skip to 4) & do the project*
 2. Find a **[Tutorial Project](https://github.com/intOppong/software_engineer_journey/tree/master/tutorial_projects)** of similar difficulty & follow it.
