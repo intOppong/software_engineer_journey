@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+	<meta charset="UTF=8">
+	<title>Product Landing Page</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Font Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+
+	<style media="screen">
+		#main {
+			margin-top: 100px;
+			margin-bottom: 50px;
+		}
+		.container-fluid {
+			padding:0;
+		}
+		.container {
+			max-width: 992px;
+		}
+		.nav-link {
+			padding-left: 16px !important;
+			padding-right: 0 !important;
+		}
+		#welcome p {
+			font-size: 1.4em;
+		}
+		#welcome {
+			margin-bottom: 100px;
+		}
+		.card img {
+		}
+		footer > div {
+			padding-bottom: 20px;
+		}
+		footer .row div:last-child {
+			color: #9E9E9E;
+		}
+
+	</style>
+</head>
+
+<body>
+	<!-- Header -->
+
+	<header id="header" class="container-fluid bg-light fixed-top">
+
+		<nav id="nav-bar" class="navbar navbar-expand navbar-light container">
+			<div class="">
+				 <a class="navbar-brand" href="#"><img id="header-img" width="35" src="https://i.imgur.com/oJH4qAws.png" alt=""> </a>
+			</div>
+			<div class="ml-auto">
+				<ul class="navbar-nav ">
+					<li class="nav-item active">
+						<a class="nav-link" href="#header">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#main">Products</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#footer">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+	</header>
+
+	<div id="main" class="container">
+		<div id="welcome" class="row">
+			<div class="col-md-5">
+				<iframe id="video" height="350" width="100%" src="https://www.youtube.com/embed/cZ1YHueZlXI?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div class="offset-1 col-md-6">
+				<form id="form" class="" action="https://www.freecodecamp.com/email-submit" method="get">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel facilisis nulla, eu ultricies mi. In ut ligula eu mi
+						sollicitudin malesuada. Praesent tempor in turpis eget pretium. Duis non volutpat nulla. Mauris gravida eu tellus in blandit.
+						Nunc nec orci nec erat viverra blandit vel a elit. Ut id vulputate libero, et porttitor lectus.
+					</p>
+			 		<input type="email" name="email" class="form-control form-control-sm" id="email" placeholder="Enter Your Email" required>
+					<input id="submit" type="submit" value="Submit" class="btn btn-primary btn-sm mt-2">
+				</form>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-4" >
+				<div class="card">
+					<img class="card-img-top" src="https://i.imgur.com/IXBK2SB.jpg" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Tecno</h5>
+				    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel facilisis nulla, eu ultricies mi.</p>
+				    <a href="#" class="btn btn-outline-secondary btn-sm">Buy</a>
+				  </div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="card">
+					<img class="card-img-top" src="https://i.imgur.com/8nR8qMK.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Infinix</h5>
+				    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel facilisis nulla, eu ultricies mi.</p>
+				    <a href="#" class="btn btn-outline-secondary btn-sm">Buy</a>
+				  </div>
+				</div>
+			</div>
+
+			<div class="col-md-4" >
+				<div class="card">
+					<img class="card-img-top" src="https://i.imgur.com/f8oWUtJ.jpg" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Huawei</h5>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel facilisis nulla, eu ultricies mi.</p>
+				    <a href="#" class="btn btn-outline-secondary btn-sm">Buy</a>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="footer" class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<ul class="nav col-sm-8">
+				  <li class="nav-item">
+				    <a class="nav-link active" href="#">About</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">Terms</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">Privacy</a>
+				  </li>
+				</ul>
+				<div class="col-sm-4 text-right">
+					&copy; 2018, Ricamp Phones
+				</div>
+			</div>
+			<p>Contact: 0244-234532</p>
+		</div>
+
+
+	</footer>
+
+
+
+
+</body>
+
+</html>
