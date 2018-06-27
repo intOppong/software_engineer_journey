@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+	<meta charset="UTF=8">
+	<title>Technical Documentation Page</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style media="screen">
+		.row {
+			min-width: 850px;
+		}
+		#navbar, #main-doc {
+			padding-top: 50px;
+		}
+		.nav-link {
+			color: black;
+			padding-left: 0;
+		}
+		.nav-link:hover {
+			color: black;
+			background-color:#eee;
+		}
+		.nav-link:active {
+			background-color: #ccc;
+
+		}
+		#navbar {
+			position: fixed;
+			min-width: 200px;
+			margin-left: 10px;
+		}
+		#main-doc {
+			margin-left: 270px;
+			padding-left: 40px;
+			padding-right: 40px;
+			min-width: 576px;
+			max-width: 992px;
+			border-left: 1px solid #aaa;
+		}
+		h2 {
+			font-size: 1.7em;
+		}
+		h3 {
+			font-size: 1.2em;
+			padding-left: 40px;
+		}
+		blockquote {
+			font-style: italic;
+		}
+		code {
+			font-family: monospace;
+			display: block;
+			line-height: 1.5;
+			background-color:rgb(245, 245, 245);
+			border-radius:5px;
+			padding: 10px;
+			margin:0;
+			margin-left: 40px;
+		}
+		.small {
+			font-size: .7em;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<nav id="navbar">
+				<header>
+					<h2>DOM Docs</h2>
+					<hr>
+				</header>
+
+				<ul class="nav flex-column">
+				  <li class="nav-item">
+				    <a class="nav-link" href="#Document_Object_Module">Document Object Module</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#Node_Overview">Node Overview</a>
+				  </li>
+					<li class="nav-item">
+				    <a class="nav-link" href="#Document_Node">Document Node</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#Element_Node">Element Node</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#Text_Node">Text Node</a>
+				  </li>
+					<li class="nav-item">
+				    <a class="nav-link" href="#Reference">Reference</a>
+				  </li>
+				</ul>
+			</nav>
+			<main id="main-doc" class="text-justify">
+				<section id="Document_Object_Module" class="main-section">
+					<header>
+						<h2>Document Object Module (DOM)</h2>
+					</header>
+					<p>The Document Object Model (DOM) connects web pages to scripts or programming languages. Usually that means
+						JavaScript, but modelling HTML, SVG, or XML documents as objects is not part of the JavaScript language. The
+						DOM model represents a document with a logical tree. Each branch of the tree ends in a node, and each node
+						contains objects. DOM methods allow programmatic access to the tree; with them you can change the document's
+						structure, style or content. Nodes can have event handlers attached to them. Once an event is triggered, the
+						event handlers get executed.</p>
+					<p>With the object model, JavaScript gets all the power it needs to create dynamic HTML:</p>
+					<ul>
+						<li>JavaScript can change all the HTML elements in the page</li>
+						<li>JavaScript can change all the HTML attributes in the page</li>
+						<li>JavaScript can change all the CSS styles in the page</li>
+						<li>JavaScript can remove existing HTML elements and attributes</li>
+						<li>JavaScript can create new HTML events in the page</li>
+					</ul>
+					<blockquote>&ldquo;The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs
+						and scripts to dynamically access and update the content, structure, and style of a document.&rdquo;</blockquote>
+					<h3>What is the HTML DOM?</h3>
+					<p>The HTML DOM is a standard object model and programming interface for HTML. It defines:
+					<ul>
+						<li>The HTML elements as objects</li>
+						<li>The properties of all HTML elements</li>
+						<li>The methods to access all HTML elements</li>
+					</ul>
+				</section>
+
+				<section id="Node_Overview" class="main-section">
+					<header>
+						<h2>Node Overview</h2>
+					</header>
+						<p>When you write an HTML document, you encapsulate HTML content inside other HTML content. By doing this, you
+							set up a hierarchy that can be expressed as a tree. Often this hierarchy or encapsulation system is indicated
+							visually by indenting markup in an HTML document. The browser, when loading the HTML document, interrupts and
+							parses this hierarchy to create a tree of node objects that simulates how the markup is encapsulated.</p>
+							<pre><code>&lt;head&gt;
+  &lt;title&gt;HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Add your content here -- &gt;
+&lt;/body&gt;
+</code></pre>
+						<p>The preceding HTML code, when parsed by a browser, creates a document that contains nodes structured in a tree format
+							(i.e., DOM).</p>
+						<h3>Node Object Types</h3>
+						<p>Here is a list of the most common types of nodes (i.e., nodeType/node classifications) one encounters when working
+							with HTML documents:</p>
+						<ul>
+							<li>DOCUMENT_NODE (e.g., window.document)</li>
+							<li>ELEMENT_NODE (e.g., &lt;body&gt;, &lt;a&gt;, &lt;p&gt;, &lt;script&gt;,&lt;style&gt;, &lt;html&gt;, &lt;h1&gt;)</li>
+							<li>ATTRIBUTE_NODE (e.g., class="funEdges")</li>
+							<li>TEXT_NODE (e.g., text characters in an HTML document including carriage returns and whitespace)</li>
+							<li>DOCUMENT_FRAGMENT_NODE (e.g., document.createDocumentFragment())</li>
+							<li>DOCUMENT_TYPE_NODE (e.g., &lt;!DOCTYPE html&gt;)</li>
+						</ul>
+						<p>The DOM specification semantically labels nodes like Node, Element, Text, Attr, and HTMLAnchorElement as interfaces,
+							which they are, but keep in mind that these are also the names given to the JavaScript constructor functions that
+							construct the nodes. As you read this doc, The interfaces will be referred to as (i.e., Element, Text, Attr, HTMLAnchor
+							Element) as objects or constructor functions, while the specification refers to them as interfaces.</p>
+						<h3>Subnode Objects Inherit From the Node Object</h3>
+						<p>
+							Depending on the type of node in the document, there are also additional subnode objects/interfaces that extend the
+							Node object. The following list details the inheritance model implemented by browsers for the most common node interfaces
+							(< indicates "inherited from"):
+						</p>
+						<ul>
+							<li>Object < Node < Element < HTMLElement < (e.g., HTML*Element)</li>
+							<li>Object < Node < Attr (this is deprecated in DOM4)</li>
+							<li>Object < Node < CharacterData < Text</li>
+							<li>Object < Node < Document < HTMLDocument</li>
+							<li>Object < Node < DocumentFragmentli></li>
+						</ul>
+				</section>
+
+				<section id="Document_Node" class="main-section">
+					<header>
+						<h2>Document Node</h2>
+					</header>
+					<p>
+						The HTMLDocument constructor (which inherits from document) creates a DOCUMENT_NODE (i.e., a window.document) in the
+						DOM. To verify this, I can simply ask which constructor was used in the creation of the document node object.
+					</p>
+					<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;body&gt;
+&lt;script&gt;
+console.log(window.document.constructor); /* logs function HTMLDocument()
+{ [native code] } */
+console.log(window.document.nodeType); /* logs 9, which is a numeric key
+mapping to DOCUMENT_NODE */
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+					<p>
+						The preceding code concludes that the HTMLDocument constructor function constructs
+					the window.document node object and that this node is a DOCUMENT_NODE object.
+					</p>
+					<p>
+						Both Document and HTMLDocument constructors are typically instantiated by the browser when you load an HTML document.
+						However, using <span class="small">document.implementation.createHTMLDocument()</span>, it's possible to create your own HTML document outside the
+						one currently loaded in the browser. In addition to createHTMLDocument(), it's possible to create a document object that
+						has yet to be set up as an HTML document createDocument(). An example use of these methods might be to programmatically provide
+						an HTML document to an iframe.
+					</p>
+					<h3>Getting General HTML Document Information</h3>
+					<p>The document object provides access to some general information about the HTML document/DOM being loaded. In the following
+						code, I use the document.title, document.URL, document.referrer, document.lastModified, and document.compatMode properties
+						to gain some general information about the document. Based on the property name, the returned values be obvious.</p>
+						<pre><code>&lt;&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;body&gt;
+&lt;script&gt;
+var d = document;
+console.log('title = ' +d.title);
+console.log('url = ' +d.URL);
+console.log('referrer = ' +d.referrer);
+console.log('lastModified = ' +d.lastModified);
+//logs either BackCompat (Quirks Mode) or CSS1Compat (Strict Mode)
+console.log('compatibility mode = ' +d.compatMode);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+	</code></pre>
+				</section>
+
+				<section id="Element_Node" class="main-section">
+					<header>
+						<h2>Element Node</h2>
+					</header>
+					<p>
+						Each element in an HTML document has a unique nature, and as such, each has a unique JavaScript constructor that instantiates
+						the element as a node object in a DOM tree. For example, an <a> element is created as a DOM node from the HTMLAnchorElement()
+						constructor. In the following code, It verify that an anchor element is created from HTMLAnchorElement().
+					</p>
+					<pre><code>&lt;&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;body&gt;
+&lt;script&gt;
+/* grab &lt;a&gt; element node from DOM and ask for the name of the constructor
+that constructed it */
+console.log(document.querySelector('a').constructor);
+//logs function HTMLAnchorElement() { [native code] }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+					<p>
+						In the preceding code example, I am trying to make the point that each element in the DOM is constructed from a unique
+						JavaScript interface/constructor. The following list should give you a good sense of the interfaces/constructors used
+						to create HTML elements.
+					</p>
+				</section>
+
+				<section id="Text_Node" class="main-section">
+					<header>
+						<h2>Text Node</h2>
+					</header>
+					<p>
+						Text in an HTML document is represented by instances of the Text() constructor function, which produces text nodes.
+						When an HTML document is parsed, the text mixed in among the elements of an HTML page is converted to text nodes
+					</p>
+					<pre><code>&lt;&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;body&gt;
+&lt;p&gt;Hi&lt;p&gt;
+&lt;script&gt;
+//select 'hi' text node
+var textHi = document.querySelector('p').firstChild
+console.log(textHi.constructor); //logs Text()
+//logs Text {textContent="hi", length=2, wholeText="hi", ...}
+console.log(textHi);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>The preceding code concludes that the Text() constructor function constructs the text
+node, but keep in mind that Text inherits from CharacterData, Node, and Object.</p>
+					<h3>Text Object and Properties</h3>
+					<p>
+						To get accurate information pertaining to the available properties and methods on a Text node, it’s best to ignore the specification
+						and to ask the browser what is available. Examine the arrays created in the following code detailing the properties and methods
+						available from a text node.
+					</p>
+				</section>
+				<section id="Reference" class="main-section">
+					<header>Reference</header>
+					<p>The Documentation is taken from:</p>
+					<ul>
+						<li><a href="https://www.amazon.com/DOM-Enlightenment-Exploring-JavaScript-Modern/dp/1449342841">DOM Englightenment</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/">developer.mozilla.org</a></li>
+						<li><a href="https://www.w3schools.com/js/js_htmldom.asp">w3schools.com</a></li>
+					</ul>
+				</section>
+			</main>
+		</div>
+	</div>
+
+</body>
+
+</html>
