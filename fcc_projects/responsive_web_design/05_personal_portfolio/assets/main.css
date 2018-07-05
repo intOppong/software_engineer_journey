@@ -214,7 +214,7 @@ body {
   background: #fff;
 }
 
-#main_nav, #main_footer {
+#navbar, #main_footer {
   background-color: #f6f6f6;
 }
 
@@ -225,35 +225,35 @@ body {
 */
 
 /* ========== Navigation ========== */
-#main_nav {
+#navbar {
   position: fixed;
   width: 100%;
   z-index: 1;
   padding: 1.25em 0;
 }
 
-#main_nav div {
+#navbar div {
   float: right;
 }
 
-#main_nav li {
+#navbar li {
   float: left;
   margin-right: 0.93em;
 
 }
 
-#main_nav li:last-child {
+#navbar li:last-child {
   margin-right: 0;
 }
 
-#main_nav a {
+#navbar a {
   padding-bottom: 0.31em;
   text-transform: uppercase;
   font-size: 0.87em;
   letter-spacing: 0.8px;
 }
 
-#main_nav a:hover {
+#navbar a:hover {
   border-bottom: 2px solid #f2849e;
 }
 
@@ -343,7 +343,7 @@ input[type="submit"]:active {
 
 /* ========== Header ========== */
 
-#main_header .row {
+#welcome-section .row {
   padding-top: 3.12em;
   padding-bottom: 3.12em;
 }
@@ -355,7 +355,7 @@ input[type="submit"]:active {
   font-weight: 300;
   font-style: italic;
 }
-#main_header p {
+#welcome-section p {
   font-size: 1.1em;
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -371,6 +371,7 @@ input[type="submit"]:active {
   word-spacing: 0.31em;
   text-transform: uppercase;
 }
+
 
 #main_footer {
   padding-top: 3.12em;
@@ -388,21 +389,21 @@ input[type="submit"]:active {
 
 /* ========== Header ========== */
 
-#main_header {
+#welcome-section {
   padding-top: 6.25em;                  /* height of the fixed nav element + general 50px for the main header padding-top */
 }
 
-#main_header img {
+#welcome-section img {
   border-radius: 50%;
   width: 235px;          /* width of nav element */
   height: 235px;         /* same as width */
 }
 
-#main_header .col-width:first-child {
+#welcome-section .col-width:first-child {
   width: 66.6666666664%;  /* 8 cols */
 }
 
-#main_header .col-width:last-child {
+#welcome-section .col-width:last-child {
   width: 33.3333333332%;  /* 4 cols */
 }
 
@@ -417,11 +418,11 @@ input[type="submit"]:active {
    * NOTE: Grid with Margins are used for the portfolio section.
    */
 
-#portfolio .row {
+#projects .row {
   margin-bottom: 3.12em;
 }
 
-#portfolio .col-width {
+#projects .col-width {
   width: 31.33%;              /* 4cols + 3 margins */
   padding: 15.665%;          /* equal width & height */
 }
@@ -452,17 +453,17 @@ input[type="submit"]:active {
   color: #fff;
 }
 
-.project_desc {
+.project-desc {
   display: none;
-} .project a:hover .project_desc {
+} .project a:hover .project-desc {
   display:inherit;
 }
 
-.project a:hover .project_name {
+.project a:hover .project-title {
   font-weight: 600;
 }
 
-.project_content {
+.project-tile {
   display: inline-block;
   width: 80%;
   height: 20%;
@@ -475,7 +476,7 @@ input[type="submit"]:active {
   text-align: center;
 }
 
-.project_name {
+.project-title {
   font-size: 1.3em;
 }
 
@@ -553,7 +554,9 @@ form > .col:first-child {
 
     /* ========== Follow Me ========== */
 
-#follow-me h2 {
+#social h2 {
+  font-size: .7em;
+  font-style: italic;
   margin-bottom: 1.87em;
 }
 .icon {
@@ -601,15 +604,15 @@ form > .col:first-child {
 
   /* ========== Header ========== */
 
-  #main_header .col-width:first-child {
+  #welcome-section .col-width:first-child {
     width: 100%;  /* 12 cols */
   }
 
-  #main_header div:first-child {
+  #welcome-section div:first-child {
     margin-bottom: 50px;
   }
 
-  #main_header .col-width:last-child {
+  #welcome-section .col-width:last-child {
     width: 100%;  /* 12 cols */
   }
 
@@ -628,7 +631,7 @@ form > .col:first-child {
 
   /* ========== Portfolio ========== */
 
-  #portfolio .col-width {
+  #projects .col-width {
     width: 48.49999998%;              /* 6cols + 5 margins */
     padding: 24.25%;                  /* equal width & height */
   }
@@ -643,7 +646,6 @@ form > .col:first-child {
 
   #main_footer .col-width:first-child {
     width: 100%;
-
   }
 
   #main_footer div:first-child {
@@ -667,7 +669,7 @@ form > .col:first-child {
 
   /* ========== Portfolio ========== */
 
-   #portfolio .col-width {
+   #projects .col-width {
     width: 100%;              /* 6cols + 5 margins */
     padding-top: 32%;
     padding-bottom: 32%;

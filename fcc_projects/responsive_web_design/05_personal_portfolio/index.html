@@ -5,8 +5,8 @@
 		<meta charset="UTF=8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0, user-scalable=yes">
 		<title>Personal Portfolio Website</title>
-	  <link rel="stylesheet" href="assets/stylesheets/reset.css">
-	  <link rel="stylesheet" href="assets/stylesheets/main.css">
+	  <link rel="stylesheet" href="assets/reset.css">
+	  <link rel="stylesheet" href="assets/main.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
 		<script src="https://use.fontawesome.com/1fc598a760.js"></script>
 	</head>
@@ -15,14 +15,14 @@
 
 		<!-- Nav -->
 
-		<nav id="main_nav" class="">
+		<nav id="navbar" class="">
 
 			<h2 class="outline">Main Navigation</h2>
 
 	    <ul class="row">
 				<div>
-					<li><a href="#about-me">About Me</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#welcome-section">About Me</a></li>
+					<li><a href="#projects">Projects</a></li>
 					<li><a href="#contact-me">Contact</a></li>
 				</div>
 	    </ul>
@@ -31,22 +31,22 @@
 
 		<!-- Header -->
 
-		<header id="main_header" class="">
+		<header id="welcome-section" class="">
 
 			<div class="row">
 
-				<div id="about-me" class="col col-width">
+				<section class="col col-width">
 
 					<h1>Lord Oppong <span class="tagline">Software Engineer</span></h1>
 					<hr>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla turpis quam, cursus sed sodales
 						at, aliquet quis lectus. Maecenas lacinia, urna ut bibendum porta, nibh tortor auctor risus</p>
 
-		    </div>
+		    </section>
 
 		    <div class="col col-width">
 					<div id="profile-pic">
-						<img src="assets/images/profile-pic.jpeg" alt="profile picture">
+						<img src="https://i.imgur.com/gz3unZu.jpg" alt="profile picture">
 					</div>
 		    </div>
 
@@ -57,7 +57,7 @@
 
 		<!-- Main Section - Portfolio -->
 
-	  <section id="portfolio">
+	  <section id="projects">
 
 	    <h2 class="outline">My Portfolio</h2>
 
@@ -67,10 +67,10 @@
 
 					<a href="https://intoppong.github.io/software_engineer_journey/projects_from_guide/01_resume/" class="">
 
-						<div class="project_content">
+						<div class="project-tile">
 
-							<h2 class="project_name">Clone Online Resume</h2>
-							<p class="project_desc">I'm a clone of a resume template from creative market</p>
+							<h2 class="project-title">Clone Online Resume</h2>
+							<p class="project-desc">I'm a clone of a resume template from creative market</p>
 
 						</div>
 
@@ -82,10 +82,10 @@
 
 					<a href="#" class="">
 
-						<div class="project_content">
+						<div class="project-tile">
 
-							<h2 class="project_name">FCC Personal Portfolio Website </h2>
-							<p class="project_desc">Hi!!!</p>
+							<h2 class="project-title">FCC Personal Portfolio Website </h2>
+							<p class="project-desc">Hi!!!</p>
 
 						</div>
 
@@ -97,25 +97,10 @@
 
 					<a href="https://intoppong.github.io/software_engineer_journey/projects_from_guide/03_tower_of_hanoi/" class="">
 
-						<div class="project_content">
+						<div class="project-tile">
 
-							<h2 class="project_name">Tower Of Hanoi Solver</h2>
-							<p class="project_desc">I solve the dreaded tower of hanoi puzzle</p>
-
-						</div>
-
-					</a>
-
-				</article>
-
-				<article class="col col-width project">
-
-					<a href="#" class="">
-
-						<div class="project_content">
-
-							<h2 class="project_name">FCC Simon Game</h2>
-							<p class="project_desc">TBD</p>
+							<h2 class="project-title">Tower Of Hanoi Solver</h2>
+							<p class="project-desc">I solve the dreaded tower of hanoi puzzle</p>
 
 						</div>
 
@@ -127,25 +112,10 @@
 
 					<a href="#" class="">
 
-						<div class="project_content">
+						<div class="project-tile">
 
-							<h2 class="project_name">Easy Classic Puzzles</h2>
-							<p class="project_desc">TBD</p>
-
-						</div>
-
-					</a>
-
-				</article>
-
-				<article class="col col-width project">
-
-					<a href="#" class="">
-
-						<div class="project_content">
-
-							<h2 class="project_name">Clone Landing Page</h2>
-							<p class="project_desc">TBD</p>
+							<h2 class="project-title">FCC Simon Game</h2>
+							<p class="project-desc">TBD</p>
 
 						</div>
 
@@ -157,25 +127,10 @@
 
 					<a href="#" class="">
 
-						<div class="project_content">
+						<div class="project-tile">
 
-							<h2 class="project_name">Clone Admin Template</h2>
-							<p class="project_desc">TBD</p>
-
-						</div>
-
-					</a>
-
-				</article>
-
-				<article class="col col-width project">
-
-					<a href="#" class="">
-
-						<div class="project_content">
-
-							<h2 class="project_name">Coding Jam</h2>
-							<p class="project_desc">TBD</p>
+							<h2 class="project-title">Easy Classic Puzzles</h2>
+							<p class="project-desc">TBD</p>
 
 						</div>
 
@@ -187,10 +142,55 @@
 
 					<a href="#" class="">
 
-						<div class="project_content">
+						<div class="project-tile">
 
-							<h2 class="project_name">Clone Front Page of urbanarmorgear</h2>
-							<p class="project_desc">TBDn</p>
+							<h2 class="project-title">Clone Landing Page</h2>
+							<p class="project-desc">TBD</p>
+
+						</div>
+
+					</a>
+
+				</article>
+
+				<article class="col col-width project">
+
+					<a href="#" class="">
+
+						<div class="project-tile">
+
+							<h2 class="project-title">Clone Admin Template</h2>
+							<p class="project-desc">TBD</p>
+
+						</div>
+
+					</a>
+
+				</article>
+
+				<article class="col col-width project">
+
+					<a href="#" class="">
+
+						<div class="project-tile">
+
+							<h2 class="project-title">Coding Jam</h2>
+							<p class="project-desc">TBD</p>
+
+						</div>
+
+					</a>
+
+				</article>
+
+				<article class="col col-width project">
+
+					<a href="#" class="">
+
+						<div class="project-tile">
+
+							<h2 class="project-title">Clone Front Page of urbanarmorgear</h2>
+							<p class="project-desc">TBD</p>
 
 						</div>
 
@@ -228,7 +228,7 @@
 							<textarea name="message" id="message" placeholder="Message"></textarea>
 						</div>
 
-						<div class="">
+						<div class="col col-1">
 							<input type="submit" value="Send"/>
 						</div>
 
@@ -237,15 +237,15 @@
 
 				<!-- Follow Me -->
 
-		    <section id="follow-me" class="col col-width">
+		    <section id="social" class="col col-width">
 
-					<h2>Follow</h2>
+					<h2>How do you take your coffee?</h2>
 
 					<ul class="icons">
 
 						<li><a href="https://twitter.com/int_oppong" target="_blank" class="icon fa fa-twitter"><span class="icon-label">Twitter</span></a></li>
 						<li><a href="https://web.facebook.com/int.oppong" target="_blank" class="icon fa fa-facebook"><span class="icon-label">Facebook</span></a></li>
-						<li><a href="https://github.com/intOppong" target="_blank" class="icon fa fa-github"><span class="icon-label">GitHub</span></a></li>
+						<li><a href="https://github.com/intOppong" target="_blank" id="profile-link" class="icon fa fa-github"><span class="icon-label">GitHub</span></a></li>
 						<li><a href="#" target="_blank" class="icon fa fa-phone"><span class="icon-label">Phone</span></a></li>
 
 					</ul>

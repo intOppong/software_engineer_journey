@@ -1,3 +1,5 @@
+#### *NOTE: This was previously done as the second project using p1xt's guide. I've made minor changes to fit FCC's test suite.*
+
 # Project Two: [Porfolio](https://www.freecodecamp.org/challenges/build-a-personal-portfolio-webpage) from frontend section of FCC.
 
 ## Content
