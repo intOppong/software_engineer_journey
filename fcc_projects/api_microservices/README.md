@@ -3,8 +3,8 @@
 
 ## Content
 * [What I Learnt](#what-i-learnt)
-* [Project 1](#project-1:-timestamp-microservice)
-* [Project 2](#project-2:-request-header-parser-microservice)
+* [Project 1](#timestamp-microservice)
+* [Project 2](#request-header-parser-microservice)
 
 ## What I Learnt
 * Managing Packages with npm
@@ -22,7 +22,7 @@
 ## My Thoughts
 *
 
-# Project 1: Timestamp Microservice
+# Timestamp Microservice
 
 Create a Timestamp API
 
