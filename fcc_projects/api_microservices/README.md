@@ -3,7 +3,8 @@
 
 ## Content
 * [What I Learnt](#what-i-learnt)
-* [Project 1](#project-1)
+* [Project 1](#project-1:-timestamp-microservice)
+* [Project 2](#project-2:-request-header-parser-microservice)
 
 ## What I Learnt
 * Managing Packages with npm
@@ -42,7 +43,7 @@ e.g. `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`.
 #### Example output:
 * { unix: 1531094400000, utc: "Mon, 09 Jul 2018 00:00:00 GMT" }
 
-# API Project: Request Header Parser Microservice for freeCodeCamp
+# Request Header Parser Microservice
 Create a Request Header Parser
 
 ### User stories:
