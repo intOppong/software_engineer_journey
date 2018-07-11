@@ -2,26 +2,12 @@
 # FCC API & Microservices Project:
 
 ## Content
-* [What I Learnt](#what-i-learnt)
 * [Project 1](#timestamp-microservice)
 * [Project 2](#request-header-parser-microservice)
-* [Project 3](#url_shortener_microservice)
+* [Project 3](#url-shortener-microservice)
+* [What I Learnt](#what-i-learnt)
+* [Challenges](#challenges)
 
-## What I Learnt
-* Managing Packages with npm
-* NodeJs with ExpressJs
-  * Routing
-  * Middleware
-  * Creating an API
-* Managing a MongoDB with Mongoose
-* More Javascript
-  * Date Object
-
-## Challenges
-*
-
-## My Thoughts
-*
 
 # Timestamp Microservice
 
@@ -75,3 +61,48 @@ POST [project_url]/api/shorturl/new - body (urlencoded) :  url=https://www.googl
 #### Will redirect to:
 
 http://forum.freecodecamp.com
+
+***
+
+## What I Learnt
+* `typeof` returns a string so be careful of comparison statements involving `typeof`
+    ``` javascript
+    var str = undefined
+    ( typeof str === undefined ) // false
+    ( typeof str === “undefined" ) // true
+   ```
+* A note on URL string parameter. The addition of a `?` at the end of the parameter allows the request is forwarded even if the parameter string is empty
+  ``` javascript
+    https://freecodecamp.com/timestamp/:string    // cannot forward request when string is empty
+    https://freecodecamp.com/timestamp/:sttring?  // forward request even if string is empty
+  ```
+* Some Modules I used
+  * [accept](https://github.com/jshttp/accepts): used it to access the request header.
+  * [dns](https://nodejs.org/api/dns.html): It's a core node module. Used the dns.lookup() method to check if the submitted url points to a valid site.
+* Async with Callbacks (Callback Hell): Most of the database methods are async so I had to keep placing more async methods within another because i had to make sure one particular code runs before another resulting in a whole lot of nesting. It's a mess. 
+  ``` javascript
+    // validate url before saving
+    dns.lookup('url', (err, address) => {
+	    // count the number of document in the db collection to get auto_increment value before saving it
+	    ShortUrl.count({}, function (err, count) {
+		    // save document to database
+	      shortUrl.save((err, data) => {
+	    	  // find document & return it
+	        ShortUrl.findOne({}, (err, data) => {
+	        
+	        });
+	      });
+	    });
+    });
+  ```
+* Learnt a couple of JS string methods: split(), search(), match()
+* dns.lookup() expect a parsed url of this format `freecodecamp.com` OR `www.freecodecamp.com` else it returns an error
+  * http(s)://www.freecodecamp.com, www.freecodecamp.com/home results in an error
+
+
+## Challenges
+* took at while to find a way to count documents in a collection Model.count() works.
+* Multiple Async with callbacks is a headache to figure out.
+    
+    
+    
