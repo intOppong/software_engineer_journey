@@ -69,7 +69,7 @@ http://forum.freecodecamp.com
     ``` javascript
     var str = undefined
     ( typeof str === undefined ) // false
-    ( typeof str === “undefined" ) // true
+    ( typeof str === "undefined" ) // true
    ```
 * A note on URL string parameter. The addition of a `?` at the end of the parameter allows the request is forwarded even if the parameter string is empty
   ``` javascript
