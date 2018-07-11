@@ -5,6 +5,7 @@
 * [What I Learnt](#what-i-learnt)
 * [Project 1](#timestamp-microservice)
 * [Project 2](#request-header-parser-microservice)
+* [Project 3](#url_shortener_microservice)
 
 ## What I Learnt
 * Managing Packages with npm
@@ -54,3 +55,23 @@ Create a Request Header Parser
 
 #### Example output:
 * `{"ipaddress":"::ffff:127.0.0.1","language":"en-US,en;q=0.9,th;q=0.8,la;q=0.7","software":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"}`
+
+# Url Shortener Microservice
+Create a Url Shortener
+
+### User stories:
+1. I can POST a URL to `[project_url]/api/shorturl/new` and I will receive a shortened URL in the JSON response. Example : `{"original_url":"www.google.com","short_url":1}`
+2. If I pass an invalid URL that doesn't follow the valid `http(s)://www.example.com(/more/routes)` format, the JSON response will contain an error like `{"error":"invalid URL"}`. *HINT*: to be sure that the submitted url points to a valid site you can use the function `dns.lookup(host, cb)` from the `dns` core module.
+3. When I visit the shortened URL, it will redirect me to my original link.
+
+#### Creation Example:
+
+POST [project_url]/api/shorturl/new - body (urlencoded) :  url=https://www.google.com
+
+#### Usage:
+
+[this_project_url]/api/shorturl/3
+
+#### Will redirect to:
+
+http://forum.freecodecamp.com
