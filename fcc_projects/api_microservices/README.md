@@ -126,4 +126,4 @@ I can add an exercise to any user by posting form data userId(id), description, 
 * Multiple Async with callbacks is a headache to figure out.
 * In the exercise Tracker Project
   * Array of objects did not persist, even after adding .markmodified() as the doc specified. maybe i’m using the wrong  version.
-  * In previous projects collections were created just fine, but not I have to add a unique property to any one of the schematypes for the collection to be created.
+  * In previous projects db collections were created just fine, but now I have to add a unique property to any one of the schematypes for the collection to be created in the database. Created a new dabatabse & it has the same issue

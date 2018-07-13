@@ -12,8 +12,8 @@ app.set("view engine", "jade");
 
 // Middleware
 	// Logging & Debugging
-	var accessLogStream = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'});
-app.use(morgan('combined', {stream: accessLogStream})); 	// combined: an example format of logging used with morgan'
+	//var accessLogStream = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'});
+//app.use(morgan('combined', {stream: accessLogStream})); 	// combined: an example format of logging used with morgan'
 	// Static
 app.use(express.static("public"));
 app.use(express.static("node_modules/bootstrap/dist"));
