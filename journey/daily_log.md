@@ -35,22 +35,16 @@
 - What i did
   - Completed URL shortener Microservice Project
   - Started Exercise Tracker Project
-- What i learnt
-  -
-- Challenges
-  - I couldn’t get an array of objects to save/persist. Mongoose/Mongo ignores the array of objects.
-- Thoughts
-  -
+- What i learnt & Challenges I faced
+  - ref to Fcc: api projects readme
 
 ### Thursday
 - What i did
-  -
-- What i learnt
-  -
-- Challenges
-  -
-- Thoughts
-  -
+  - Finished Exercise Tracker Project
+  - Setup a basic node app for testing purposes on my local machine using both pure node & express's generator
+- What i learnt & Challenges I faced
+  - ref to Fcc: api projects readme
+
 
 ### Friday
 - What i did
