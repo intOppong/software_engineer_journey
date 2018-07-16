@@ -3,9 +3,10 @@
 
 ## Content
 * [Project 1](#timestamp-microservice)
-* [Project 2](#request-header-parser-microservice)
-* [Project 3](#url-shortener-microservice)
+* [Project 2](#request-header-parser)
+* [Project 3](#url-shortener)
 * [Project 4](#exercise-tracker)
+* [Project 5](#file-metadata)
 * [What I Learnt](#what-i-learnt)
 * [Challenges](#challenges)
 
@@ -31,7 +32,7 @@ e.g. `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`.
 #### Example output:
 * { unix: 1531094400000, utc: "Mon, 09 Jul 2018 00:00:00 GMT" }
 
-# Request Header Parser Microservice
+# Request Header Parser
 Create a Request Header Parser API
 
 ### User stories:
@@ -43,7 +44,7 @@ Create a Request Header Parser API
 #### Example output:
 * `{"ipaddress":"::ffff:127.0.0.1","language":"en-US,en;q=0.9,th;q=0.8,la;q=0.7","software":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"}`
 
-# Url Shortener Microservice
+# Url Shortener
 Create a Url Shortener API
 
 ### User stories:
@@ -72,6 +73,20 @@ Create an Exercise Tracker API
 I can add an exercise to any user by posting form data userId(id), description, duration, and optionally date to /api/exercise/add. If no date supplied it will use current date. Returned will the the user object with also with the exercise fields added.
 3. I can retrieve a full exercise log of any user by getting /api/exercise/log with a parameter of userId(id). Return will be the user object with added array log and count (total exercise count).
 4. I can retrieve part of the log of any user by also passing along optional parameters of from & to or limit. (Date format yyyy-mm-dd, limit = int)
+
+# File Metadata
+Create a file metadata API
+
+### User stories:
+1. I can submit a form that includes a file upload.
+2. The from file input field has the "name" attribute set to "upfile". We rely on this in testing.
+3. When I submit something, I will receive the file name and size in bytes within the JSON response
+
+### Usage
+- Go to the main page, and upload a file using the provided form.
+
+### Hint
+- To handle the file uploading you should use the [multer](https://www.npmjs.com/package/multer) npm package.
 
 ***
 
