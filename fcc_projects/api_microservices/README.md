@@ -6,6 +6,7 @@
 * [Project 2](#request-header-parser)
 * [Project 3](#url-shortener)
 * [Project 4](#exercise-tracker)
+* [Project 5](#file-metadata)
 * [What I Learnt](#what-i-learnt)
 * [Challenges](#challenges)
 
