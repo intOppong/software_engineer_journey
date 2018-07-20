@@ -78,9 +78,14 @@
 
 ### Thursday
 - What i did
-  - 
+  - cont reading MongoDB docs on CRUD: Updating & Deleting.
+  - Used mongoose instead of native node driver to interface with my local mongodb.
 - What i learnt & Challenges I faced
-  - 
+  - How to iterate a cursor in the mongo shell
+  - projection: return the Specified Fields from a document (_id is returned by default).
+  - Querying for Null or Missing Fields.
+- Thoughts
+  - using mongoose SchemaType Mixed in your design is bad don’t use it. And They don’t even manage the mixed type well.
 
 
 ### Friday
