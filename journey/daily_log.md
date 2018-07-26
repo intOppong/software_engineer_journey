@@ -29,11 +29,29 @@
 
 ### Tuesday
 - What i did
-  - 
+  - FCC Lectures on Passport: the Local Auth Strategy & the Social Auth Strategy
 - What i learnt
-  - 
+  - export a function containing all the needed routes or use express's mini app: `express.Router()` and export that? when some routes depend on a variable from the main app, export a funciton containing all the routes else use `express.Router()` to export route modules.
+    ``` javascript
+      // Export a function containing all the routes
+      module.exports = function(app, db) {            
+      app.get('/', (req, res) => {
+        db.findOne()                       // db instance is needed in the routes
+        res.send('home')
+      });
+      
+      // express.Router()
+      const router = require('express').Router()
+
+      module.exports = router;
+
+      router.get('/', (req, res) => {
+        res.send('home')
+      });
+    ```
+  - Strategies with Social Auth require you (the dev) to have at least a `Client ID` and a `Client Secret` which is a way for the 3rd party to verify who the authentication request is coming from and if it is valid. THEY ARE NOT TO BE SHARED. A common practice is to put them in your .env file and reference them like: process.env.GITHUB_CLIENT_ID.
 - Challenges
-  -
+  - some of FCC's tests fails even when the tasks are complete. It's Frustrating!
 - Thoughts
   -
 
