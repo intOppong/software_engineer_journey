@@ -12,12 +12,21 @@ html(lang='en')
 			.container
 				#navbar.collapse.navbar-collapse
 					ul.nav.navbar-nav
-						li.active
-							a(href='/') Home
-						li
-							a(href='/admin/rooms') Chat Rooms
-						li
-							a(href='/admin/users') Users
+						if login
+							li.active
+								a(href='/login') Welcome
+						else
+							li.active
+								a(href='/') Home
+							li
+								a(href='/admin/rooms') Chat Rooms
+							li
+								a(href='/admin/users') Users
+							li
+					ul.nav.navbar-nav.navbar-right
+						if !login
+							li
+								a(href='/logout') Logout #{user.name}
 		.container
 			.main-content
 				block content
