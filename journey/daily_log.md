@@ -57,7 +57,7 @@
 
 ### Wednesday
 - What i did
-  - 
+  - Did not work on Wednesday - was feeling sick
 - What i learnt 
   - 
 - Challenges I faced
@@ -67,9 +67,20 @@
 
 ### Thursday
 - What i did
-  - 
+  - Did FCC’s social Auth with passport.
+  - Followed the nodejs chatapp [tutorial project](https://github.com/intOppong/software_engineer_journey/tree/dev/tutorial_projects/nodejs_chat_app) on auth with passport. 
+  - Reading passport Docs to get more understanding.
 - What i learnt 
-  - 
+  - To serialize an object means to break it’s properties down into a smaller unit so it can be easily accessed/transported/saved etc. When we serialize an object we store a (unique) part of the object for the session, so it's available for the next request to the app. Serialization is where the session is created & saved.
+  - To Deserialize an object means use one known unit to assemble the whole object back together. Deserialization finds the user & makes it available to the app for the session.
+  - Understood how the passport authentication process works.
+  - Passport adds some properties to the req/res objects including
+    - `req.user`: stores the user object after authenticating. Is also used as a check to verify if user is authenticated. It's also done with the `req.isAuthenticated` property
+    - `req.logout()`: it sets `req.user` property to null & clears out the session.
+    - `req.logIn()`: used to login a user
+  - Expresses `req.app`:The app instance is available on the req object & is used to access application settings eg `req.app.get('env')` returns the development environment
+  - done() as used in node is a callback that you can call when done executing a function.
+    - done() in passport acts as the next() like in express i.e. it calls the next function in the stack. 
 - Challenges I faced
   - 
 - Thoughts
