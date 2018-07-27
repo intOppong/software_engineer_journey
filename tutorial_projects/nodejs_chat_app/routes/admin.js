@@ -11,12 +11,16 @@ var express = require("express");
 var uuid = require("node-uuid");
 var _ = require("lodash");
 
-	// database module
-var rooms = require("./data/rooms.json");
+	// data modules
+var rooms = require("../data/rooms.json");
 
 var router = express.Router();
 module.exports = router;	// export the router function
 
+router.use((req, res, next) => {
+	if (req.user.admin) return next();	// same: if (req.user) return next();
+	else res.redirect('/');
+})
 
 router.get('/rooms', function (req, res) {
 	res.render("rooms.jade", {
