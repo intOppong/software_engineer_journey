@@ -5,12 +5,9 @@ var bodyParser = require("body-parser");
 var morgan = require('morgan');
 var passport = require('passport');
 var session = require('express-session');
-
-	// Route Modules
-var adminRouter = require("./routes/admin");
-var apiRouter = require("./routes/api");
-var authRouter = require("./routes/auth");
-var logging = require('./logging.js')
+	// Our Modules
+var routes = require("./routes/routes");
+var logging = require('./modules/logging.js');
 
 
 // App Settings
@@ -36,34 +33,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());	// creates a session
 
-
-
-app.use(authRouter);
-
-app.use((req, res, next) => {
-	if (req.isAuthenticated()) {		// same: if (req.user) return next();
-		res.locals.user = req.user;
-		return next();
-	}
-	else res.redirect('/login');
-})
-
-app.get('/', function (req, res) {
-	res.render("home.jade", {title: "Home"});
-});
-
-app.use("/admin", adminRouter);
-app.use("/api", apiRouter);
-
-
-
-
-
-app.use((req, res, next) => {
-  res.status(404)
-    .type('text')
-    .send('Not Found');
-});
+routes(app);
 
 app.listen(3000, () => {
 	console.log('Node is listening on port 3000')
