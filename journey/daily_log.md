@@ -89,10 +89,19 @@
 
 ### Friday
 - What i did
-  -
+  - organized node chat-app TP directory structure
+  - started FCC lectures on socket.io.
+  - built socket.io [getting started](https://socket.io/get-started/chat/) basic chat-app
+  - started following a TP on [building socket.io chatapp with mongodb](https://www.youtube.com/watch?v=8Y6mWhcdSUM)
 - What i learnt
-  -
+  - Sockets provide a bi-directional communication channel between a client and a server. This means that the server can push messages to clients. Whenever you write a chat message, the idea is that the server will get it and push it to all other connected clients. The main idea behind Socket.IO is that you can send and receive any events you want, with any data you want
+  - Socket.io is composed of two parts: 
+    - A server that integrates with (or mounts on) the Node.JS HTTP Server: socket.io module
+    - A client library that loads on the browser side: socket.io-client module. `NOTE` During development, socket.io serves the client automatically for us so you only need one module for dev because io() defaults to trying to connect to the host that serves the page. Socket.io it automatically serve the client file to via `http://localhost:<port>/socket.io/socket.io.js`
+  - Events are names used to match the client-side socket to the server-side socket. Each event has a corresponding data which it transports.
+  - The 2 main functions used for communicating are `emit()` which sends out event and data & on() which listens for events & data.
 - Challenges
-  -
+  - It's still a little confusing how the socket.io.js file is served to the client without a cdn link in the clients html. In socket.io basic chat-app tutorial, the file was served as if it existed in our directory: 
+  `<script src="/socket.io/socket.io.js"></script>`
 - Thoughts
-  -
+  - FCC Advanced Node & Express tests are not stable & lectures are not detailed/simplified like the ones before it.
