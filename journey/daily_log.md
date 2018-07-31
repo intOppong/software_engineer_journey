@@ -2,13 +2,13 @@
 
 ### Monday
 - What i did
-  - 
+  - Did not work: Mum was sick & had to sit in for her at the shop.
 - What i learnt
   - 
 - Challenges
   - 
 - Thoughts
-  - 
+  - Could've done 2P early in the morning though
 
 ### Tuesday
 - What i did
