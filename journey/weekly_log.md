@@ -6,12 +6,12 @@
 
 ### Week 1
 - What I did:
-  - Finished a [Tutorial project](link-to-socket.io-tp-dir) on socket.io
+  - Finished a [Tutorial project](https://github.com/intOppong/software_engineer_journey/tree/dev/tutorial_projects/socket-io-chat-app) on socket.io
   - Finished FCC sockets lectures: code working but tests failed.
   - Started doing FCC Information Security & Quality Assurance Projects: Metric-Imperial Converter
 - What I Learnt
   - The socket.io process is basically about defining sockets at the server-side & client side to listen & emit data
-  - Got introduced to keycodes associated with characters. example: Enter key === 13. [link](https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes)
+  - Got introduced to keycodes associated with characters. example: Enter key === 13. [Link](https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes)
   - passport.socketio: It's a module used to find out who’s connected to your web socket by making the authenticated `req.user` object available on the socket object as `socket.request.user.`
 - Challenges
   - 
