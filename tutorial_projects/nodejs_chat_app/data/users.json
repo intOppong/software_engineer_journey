@@ -1,0 +1,23 @@
+[
+ {
+  "name": "thorin",
+  "id": "abc54172-1c58-41ed-ae84-74e046888xyz",
+  "password": "arkenstone",
+  "admin": true
+ },
+ {
+  "name": "balin",
+  "id": "def6d9e6-d1d4-4194-89f2-154643fbfghi",
+  "password": "old"
+ },
+ {
+  "name": "dwalin",
+  "id": "jklc7ae8-6f8e-4136-9c8c-308a1fd2amno",
+  "password": "bald"
+ },
+ {
+  "name": "fili",
+  "id": "pqr102c9-906c-4162-9d43-122e90f35stu",
+  "password": "hier"
+ }
+]
