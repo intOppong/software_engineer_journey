@@ -100,7 +100,7 @@ Create a file metadata API
 * A note on URL string parameter. The addition of a `?` at the end of the parameter allows the request is forwarded even if the parameter string is empty
   ``` javascript
     https://freecodecamp.com/timestamp/:string    // cannot forward request when string is empty
-    https://freecodecamp.com/timestamp/:sttring?  // forward request even if string is empty
+    https://freecodecamp.com/timestamp/:string?  // forward request even if string is empty
   ```
 * Async with Callbacks (Callback Hell): Most of the database methods are async so I had to keep placing more async methods within another because i had to make sure one particular code runs before another resulting in a whole lot of nesting. It's a mess.
   ``` javascript

@@ -3,6 +3,7 @@
 
 ## Content
 - [Project 1](#metric-imperial-converter)
+- [Project 2](#issue-tracker)
 
 
 # Metric Imperial Converter
@@ -35,17 +36,54 @@ Create a Metric/Imperial Converter
 #### Example Return
 - {initNum: 3.1, initUnit: 'mi', returnNum: 5.0000008, returnUnit: 'km', string: '3.1 miles converts to 5.00002 kilometers'}
 
+# Issue Tracker
+
+Create an Issue Tracker
+
+## User stories :
+
+1. Prevent cross site scripting(XSS attack).
+2. I can POST /api/issues/{projectname} with form data containing required issue_title, issue_text, created_by, and optional assigned_to and status_text.
+3. The object saved (and returned) will include all of those fields (blank for optional no input) and also include created_on(date/time), updated_on(date/time), open(boolean, true for open, false for closed), and \_id.
+4. I can PUT /api/issues/{projectname} with a \_id and any fields in the object with a value to object said object. Returned will be 'successfully updated' or 'could not update '+\_id. This should always update updated_on. If no fields are sent return 'no updated field sent'.
+5. I can DELETE /api/issues/{projectname} with a \_id to completely delete an issue. If no \_id is sent return '\_id error', success: 'deleted '+\_id, failed: 'could not delete '+\_id.
+6. I can GET /api/issues/{projectname} for an array of all issues on that specific project with all the information for each issue as was returned when posted.
+7. I can filter my get request by also passing along any field and value in the query(ie. /api/issues/{project}?open=false). I can pass along as many fields/values as I want.
+8. All 11 functional tests are complete and passing.
+
+#### Example usage:
+- /api/issues/{project}
+- /api/issues/{project}?open=true&assigned_to=Joe
+
+#### Example Return
+- [{"\_id":"5871dda29faedc3491ff93bb","issue_title":"Fix error in posting data","issue_text":"When we post data it has an error.","created_on":"2017-01-08T06:35:14.240Z","updated_on":"2017-01-08T06:35:14.240Z","created_by":"Joe","assigned_to":"Joe","open":true,"status_text":"In QA"},...]
+
 ***
 
 ## What I Learnt
 - Writing numbers with `e`: [link](https://javascript.info/number).
-  - Anything that can coerced into a number is considered a number by isNaN(). ie the parameter is coerced into a number before isNaN runs. example `isNaN(null) => false` ie null is a number. `isNaN(undefined) => true` ie undefined is not a number
-  - [Null vs Undefined](https://stackoverflow.com/questions/6604749/what-reason-is-there-to-use-null-instead-of-undefined-in-javascript): Null and undefined are essentially two different values that mean the same thing. My Preference is undefined. Here's Why
-    - null is a data type but `typeof null` returns an `object` (this is a bug). This can cause issues in comparison statements.
-    - an undefined varialbe (a declared variable without a value) has the value `undefined` by default so why change that.
-    - null can be coerced to 0 & cause unexpected results. null = 0, undefined = NaN
-  - I think array.forEach() allows you to write your own custom handler to be executed for each array element like JS provides for you with filter(), map(), reduce()
-
+- Anything that can coerced into a number is considered a number by isNaN(). ie the parameter is coerced into a number before isNaN runs. example `isNaN(null) => false` ie null is a number. `isNaN(undefined) => true` ie undefined is not a number
+- [Null vs Undefined](https://stackoverflow.com/questions/6604749/what-reason-is-there-to-use-null-instead-of-undefined-in-javascript): Null and undefined are essentially two different values that mean the same thing. My Preference is undefined. Here's Why
+  - null is a data type but `typeof null` returns an `object` (this is a bug). This can cause issues in comparison statements.
+  - an undefined varialbe (a declared variable without a value) has the value `undefined` by default so why change that.
+  - null can be coerced to 0 & cause unexpected results. null = 0, undefined = NaN
+- I think array.forEach() allows you to write your own custom handler to be executed for each array element like JS provides for you with filter(), map(), reduce()
+- You have to place the port in the `MongoClient.connect` definition in order to access routes defined in `MongoClient`.
+  ``` javascript
+  mongo.connect(process.env.DATABASE, (err, db) => {
+    // ROUTES
+    app.get('/', (req, res) => {
+      res.send('Homepage')
+    })
+    // PORT
+    app.listen(3000, () => console.log("Listening on port 3000" ) );
+  });
+  ```
+- When Creating a document using `InsertOne()` & it’s family, the newly inserted Document is passed as a parameter(say `result`) to the callback . It can be accessed on the `ops` property of the `result` object. ie `result.ops[0]`
+- Various ways to check for an empty object. [Link](https://stackoverflow.com/questions/679915/how-do-i-test-for-an-empty-javascript-object).
 
 ## Challenges
--
+- Issue Tracker Project
+  - At the start of the project, I couldn't access my routes in `MongoConnect.connect()`.
+  - During the project, it took a while to figure out that I had to retrieve the existing document to be updated & compare it with the user modified document before updating.
+  - Even Though the functional tests passed, I don't feel I did it right.
