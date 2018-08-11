@@ -55,11 +55,14 @@ module.exports = function (app, db) {
   
     .post(function (req, res){
       var project = req.params.project;
+      var title = req.body.issue_title;
+      var text = req.body.issue_text;
+      var created_by = req.body.created_by;
       var collection = db.collection(project + '-issue-tracker');
       //console.log('BODY: ', req.body);
     
       // Save to db
-      if (req.body.issue_title != '' && req.body.issue_text != '' && req.body.createdby != '') {
+      if (title && text && created_by) {
         collection.insertOne({
           issue_title: req.body.issue_title,
           issue_text: req.body.issue_text,
@@ -149,21 +152,21 @@ module.exports = function (app, db) {
   
     .delete(function (req, res){
       var project = req.params.project;
+      var issue_id = req.body._id
       var collection = db.collection(project + '-issue-tracker');
-      console.log('BODY: ', req.body);
-      if (req.body._id === '') {
-        res.send('_id error');
+      //console.log('BODY: ', req.body);
+    
+      if (!issue_id) {
+        return res.send('_id error');
       }
       
-      collection.deleteOne(
-        {_id: ObjectId(req.body._id)}, (err, result) => {
+      collection.deleteOne({_id: ObjectId(req.body._id)}, (err, result) => {
           if (err) {
             res.send('could not delete' + req.body._id);
             return;
           }
           res.send('deleted ' + req.body._id)
-        }
-      )
+        });
       
     });
     
