@@ -2,7 +2,10 @@
 
 ### Overview
 - Week 1
-  - Mum was sick & had to go to the shop everyday…But i know i had time in the eve & early mom to put in some pomodoro but i didn’t — These are the times  that will determine if i succeed (break in) or not. 
+  - summary: Mum was sick so I had to go to the shop everyday. But I know I had time in the evenings & early mornings to put in some pomodoro but I didn’t — These are the times  that will determine if i succeed (break in) or not. 
+- Week 2
+  - I’m at the point where Doing what I have to do especially when I don’t feel like doing it is my only option to break in.
+  - summary: week started of like last week ended, but I came out of it stronger & crushed it like I’ve never done before. Thanks to merijn & the realization that I have to do what I have to do to get what I want & that doing what I have to do makes me more happier than otherwise. Even though it sometimes "sucks" that’s life & it is what it is. So stick to happyness (cos it easier) & instead of feeling down & doing it cos it sucks. So since you're going to do it no matter the mood, choose to be happy & do it rather than feeling down & doing it because then it will really suck doing it.
 
 ### Week 1
 - What I did:
@@ -18,11 +21,10 @@
 
 ### Week 2
 - What I did:
-  - 
-- What I Learnt
-  - 
-- Challenges
-  - 
+  - Started & Finished FCC Project: Metric-Imperial Converter, Issue Tracker & Personal Library
+  - Working on Stock Price Checker Project
+- What I Learnt & Challenges
+  - ref to FCC InfoSec Project [Readme](https://github.com/intOppong/software_engineer_journey/blob/dev/fcc_projects/information_security_and_quality_assurance/README.md#personal-library)
 
 ### Week 3
 - What i did:
