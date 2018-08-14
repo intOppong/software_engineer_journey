@@ -5,6 +5,7 @@
 - [Project 1](#metric-imperial-converter)
 - [Project 2](#issue-tracker)
 - [Project 3](#personal-library)
+- [Project 4](#stock-price-checker)
 
 
 # Metric Imperial Converter
@@ -76,6 +77,30 @@ Create a Personal Library
 9. I can send a delete request to /api/books to delete all books in the database. Returned will be 'complete delete successful' if successful.
 10. All 6 functional tests required are complete and passing.
 
+# Stock Price Checker
+
+Create a Stock Price Checker
+
+## User stories :
+
+1. Set the content security policies to only allow loading of scripts and css from your server.
+2. I can GET /api/stock-prices with form data containing a Nasdaq stock ticker and recieve back an object stockData.
+3. In stockData, I can see the stock(string, the ticker), price(decimal in string format), and likes(int).
+4. I can also pass along field like as true(boolean) to have my like added to the stock(s). Only 1 like per ip should be accepted.
+5. If I pass along 2 stocks, the return object will be an array with both stock's info but instead of likes, it will display rel_likes(the difference between the likes on both) on both.
+6. A good way to receive current price is the following external API(replacing 'GOOG' with your stock): https://finance.google.com/finance/info?q=NASDAQ%3aGOOG
+7. All 5 functional tests are complete and passing.
+
+#### Example usage:
+- /api/stock-prices?stock=goog
+- /api/stock-prices?stock=goog&like=true
+- /api/stock-prices?stock=goog&stock=msft
+- /api/stock-prices?stock=goog&stock=msft&like=true
+
+#### Example Return
+- {"stockData":{"stock":"GOOG","price":"786.90","likes":1}}
+- {"stockData":[{"stock":"MSFT","price":"62.30","rel_likes":-1},{"stock":"GOOG","price":"786.90","rel_likes":1}]}
+
 ***
 
 ## What I Learnt
@@ -99,6 +124,33 @@ Create a Personal Library
   ```
 - When Creating a document using `InsertOne()` & it’s family, the newly inserted Document is passed as a parameter(say `result`) to the callback . It can be accessed on the `ops` property of the `result` object. ie `result.ops[0]`
 - Various ways to check for an empty object. [Link](https://stackoverflow.com/questions/679915/how-do-i-test-for-an-empty-javascript-object).
+- URL encoding: URL encoding converts characters into a format that can be transmitted over the Internet. URL encoding replaces unsafe ASCII characters (like spaces) & non-ASCII character sets with a "%" followed by two hexadecimal digits.[Link](https://www.w3schools.com/tags/ref_urlencode.asp)
+- when using Helmet.js `contentSecurityPolicy` add the "unsafe-inline" keyword to the respective `directive` properties to allow inline scripts & css to execute. Example:
+  ```JavaScript
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'", 'https://code.jquery.com'],
+      styleSrc: ["'self'", "'unsafe-inline'"]
+    }
+  ```
+- Data passed to the `get` request through the jquery-ajax is accessed on the `req.query` object.
+- Any variables of same name are grouped into an array in the `query` object. Example   
+```JavaScript
+  // Given the url
+  'example.com?stock=goog&stock=msft&like=true'
+
+  req.query.stock // returns: ['goog', 'msft']
+```
+- CORS (Cross Origin Requests): a specification that enables truly open access across domain boundaries.
+  - Why Cors: Currently, client-side scripts (e.g., JavaScript) are prevented from accessing much of the Web of Linked Data due to "same origin" restrictions implemented in all major Web browsers.
+  - “Same Origin” Policy allows ajax request only to make request to resources within the same origin
+- An introduction to making API Calls. [Link](https://www.taniarascia.com)
+  - NOTE: __`this.responseText` contains the actual API response but `this.response` works too on the client but not on the server from my experience.__
+- How to access a (last) property's value in an object
+  ```JavaScript
+    var obj = { 'a' : 'apple', 'b' : 'banana', 'c' : 'carrot' };
+    obj[Object.keys(obj)[Object.keys(obj).length - 1]];
+  ```
 
 ## Challenges
 - Issue Tracker Project
@@ -107,3 +159,9 @@ Create a Personal Library
   - Even Though the functional tests passed, I don't feel I did it right.
 - Personal Library Project
   - Like with the Issue Tracker project, functional test is a problem
+- Stock Price Checker Project
+  - It was difficult to get the api call to work from server-side. Not knowing I only had to change `this.response` to `this.responseText`
+  - The stock collection I created had some weird default indexes which prevented me from saving multiple documents.
+
+My Thoughts
+- As of Issue Tracker Project, I just wanted to finish the InfoSec projects & that’s making me rush through the coding process leading to more bugs & hence more time spent on the project.
