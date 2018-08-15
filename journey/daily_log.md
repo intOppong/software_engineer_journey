@@ -12,9 +12,10 @@
 
 ### Tuesday
 - What i did
-  - 
+  - Finished FCC Project: Stock Price Checker
+  - Started FCC Project: Anonymous Message Board
 - What i learnt
-  - 
+  - ref to FCC: Infomation Security & Quality Assurance [README](https://github.com/intOppong/software_engineer_journey/blob/dev/fcc_projects/information_security_and_quality_assurance/README.md)
 - Challenges
   - 
 - Thoughts
