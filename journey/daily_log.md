@@ -2,9 +2,9 @@
 
 ### Monday
 - What i did
-  - Did not work: Was waiting for the my mood to work. 
+  - Continue Work on FCC Project: Stock Price Checker
 - What i learnt
-  - 
+  - ref to FCC: Infomation Security & Quality Assurance [README](https://github.com/intOppong/software_engineer_journey/blob/dev/fcc_projects/information_security_and_quality_assurance/README.md)
 - Challenges
   - 
 - Thoughts
@@ -12,9 +12,10 @@
 
 ### Tuesday
 - What i did
-  - Worked on Sth other than SE
+  - Finished FCC Project: Stock Price Checker
+  - Started FCC Project: Anonymous Message Board
 - What i learnt
-  - 
+  - ref to FCC: Infomation Security & Quality Assurance [README](https://github.com/intOppong/software_engineer_journey/blob/dev/fcc_projects/information_security_and_quality_assurance/README.md)
 - Challenges
   - 
 - Thoughts
@@ -22,30 +23,22 @@
 
 ### Wednesday
 - What i did
-  - Started & Finished FCC Project: Metric-Imperial Converter
-  - Started FCC Project: Issue Tracker
+  - Continued work on FCC Project: Anonymous Message Board
 - What i learnt & Challenges
-  - ref to FCC InfoSec Project [Readme]()
+  - ref to FCC: Infomation Security & Quality Assurance [README](https://github.com/intOppong/software_engineer_journey/blob/dev/fcc_projects/information_security_and_quality_assurance/README.md)
 - Thoughts
   - 
 
 ### Thursday
 - What i did
   - 
-- What i learnt 
+- What i learnt & Challenges
   - 
-- Challenges I faced
-  - 
-- Thoughts
-  - 
+- 
 
 
 ### Friday
 - What i did
   - 
-- What i learnt
-  - 
-- Challenges
-  - 
-- Thoughts
+- What i learnt & Challenges
   - 

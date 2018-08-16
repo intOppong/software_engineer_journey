@@ -15,7 +15,7 @@ app.set("views", "./views");
 app.set("view engine", "jade");
 
 // Middleware
-app.use(logging);
+//app.use(logging);
 	// Static
 app.use(express.static("public"));
 app.use(express.static("node_modules/bootstrap/dist"));
