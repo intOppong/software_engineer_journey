@@ -6,6 +6,7 @@
 - [Project 2](#issue-tracker)
 - [Project 3](#personal-library)
 - [Project 4](#stock-price-checker)
+- [Project 5](#anonymous-message-board)
 
 
 # Metric Imperial Converter
@@ -101,6 +102,25 @@ Create a Stock Price Checker
 - {"stockData":{"stock":"GOOG","price":"786.90","likes":1}}
 - {"stockData":[{"stock":"MSFT","price":"62.30","rel_likes":-1},{"stock":"GOOG","price":"786.90","rel_likes":1}]}
 
+# Anonymous Message Board
+
+Create an Anonymous Message Board
+
+## User stories :
+
+1. Only allow your site to be loading in an iFrame on your own pages.
+2. Do not allow DNS prefetching.
+3. Only allow your site to send the referrer for your own pages.
+4. I can POST a thread to a specific message board by passing form data text and delete_password to /api/threads/{board}.(Recomend res.redirect to board page /b/{board}) Saved will be \_id, text, created_on(date&time), bumped_on(date&time, starts same as created_on), reported(boolean), delete_password, & replies(array).
+5. I can POST a reply to a thead on a specific board by passing form data text, delete_password, & thread\_id to /api/replies/{board} and it will also update the bumped_on date to the comments date.(Recomend res.redirect to thread page /b/{board}/{thread\_id}) In the thread's 'replies' array will be saved \_id, text, created_on, delete_password, & reported.
+6. I can GET an array of the most recent 10 bumped threads on the board with only the most recent 3 replies from /api/threads/{board}. The reported and delete_passwords fields will not be sent.
+7. I can GET an entire thread with all it's replies from /api/replies/{board}?thread\_id={thread\_id}. Also hiding the same fields.
+8. I can delete a thread completely if I send a DELETE request to /api/threads/{board} and pass along the thread\_id & delete_password. (Text response will be 'incorrect password' or 'success')
+9. I can delete a post(just changing the text to '[deleted]') if I send a DELETE request to /api/replies/{board} and pass along the thread\_id, reply\_id, & delete_password. (Text response will be 'incorrect password' or 'success')
+10. I can report a thread and change it's reported value to true by sending a PUT request to /api/threads/{board} and pass along the thread\_id. (Text response will be 'success')
+11. I can report a reply and change it's reported value to true by sending a PUT request to /api/replies/{board} and pass along the thread\_id & reply\_id. (Text response will be 'success')
+12. Complete functional tests that wholely test routes and pass.
+
 ***
 
 ## What I Learnt
@@ -151,17 +171,32 @@ Create a Stock Price Checker
     var obj = { 'a' : 'apple', 'b' : 'banana', 'c' : 'carrot' };
     obj[Object.keys(obj)[Object.keys(obj).length - 1]];
   ```
+- Learnt about the MongoDB update Result Object. [Link](https://www.w3schools.com/nodejs/nodejs_mongodb_update.asp)
+- New way of using Closure: Call the child function from the parent function as the parent function is executing - _didn’t think of that_. Always thought the child function has to be called after the parent function is done executing.
+  ```javascript
+    var parent = function() {
+      var a = 'A';
+      console.log('parent', a);
+      child();                    // called from within parent function
+      function child () {
+        console.log('child', a);
+      }
+    }
+    parent();
+  ```
 
 ## Challenges
+- Even Though the functional tests passed, I don't feel I did it right.
 - Issue Tracker Project
   - At the start of the project, I couldn't access my routes in `MongoConnect.connect()`.
   - During the project, it took a while to figure out that I had to retrieve the existing document to be updated & compare it with the user modified document before updating.
-  - Even Though the functional tests passed, I don't feel I did it right.
 - Personal Library Project
-  - Like with the Issue Tracker project, functional test is a problem
 - Stock Price Checker Project
   - It was difficult to get the api call to work from server-side. Not knowing I only had to change `this.response` to `this.responseText`
   - The stock collection I created had some weird default indexes which prevented me from saving multiple documents.
+- Anonymous Message Board Project
+  - mongoDB update operator $[<identifier>] wasn't working in my project. Not knowing I was using earlier version of mongo (2.2). $[] requires version 3.x
 
 My Thoughts
 - As of Issue Tracker Project, I just wanted to finish the InfoSec projects & that’s making me rush through the coding process leading to more bugs & hence more time spent on the project.
+- I’m gonna comment (pseudocode) every part of my code because I’m __"Lazy"__ & I think that’s a good thing. It’ll make reading, searching & debugging the code easier. As a programmer you are supposed to make your (& others) job easier. And also Good Comments means you understand the code.
