@@ -28,11 +28,11 @@
 
 ### Week 3
 - What i did:
-  - 
-- What I Learnt
-  - 
-- Challenges
-  - 
+  - Finsed FCC Projects: Stock Price Checker & Anonymous Message Board. Hence _finished all of FCC's Information Security & Quality Assurance Projects_
+  - Found some nice subreddits to follow: [r/learnprogramming](https://www.reddit.com/r/learnprogramming/), [r/cscareerquestions](https://www.reddit.com/r/cscareerquestions/), [r/programming](https://www.reddit.com/r/programming/)
+  - Found a very useful tool to search for information before even googling. [link](https://goalkicker.com/)
+- What I Learnt & Challenges
+  - ref to FCC: Infomation Security & Quality Assurance [README](https://github.com/intOppong/software_engineer_journey/blob/dev/fcc_projects/information_security_and_quality_assurance/README.md)
 
 ### Week 4
 - What i did:
