@@ -2,20 +2,36 @@
 
 ### Monday
 - What i did
-  - Continue Work on FCC Project: Stock Price Checker
+  - read mongodb node driver's docs on [CRUD](http://mongodb.github.io/node-mongodb-native/3.1/tutorials/crud/)
+  - read mdn's doc on Javascript [Destructuring Assignments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 - What i learnt
-  - ref to FCC: Infomation Security & Quality Assurance [README](https://github.com/intOppong/software_engineer_journey/blob/dev/fcc_projects/information_security_and_quality_assurance/README.md)
+  - Multiple interesting ways to use Object Destructuring. Example: Nested Object & Array Destructuring
+    ```javascript
+      var people = [
+        {name: 'Mike',family: [{mother: 'Jane',father: 'Harry',sister: 'Samantha'}],other: {age: 35}},
+        {name: 'Tom',family: [{mother: 'Norah',father: 'Richard',brother: 'Howard'}],other: {age: 25}}
+      ];
+      
+      for (var {name: n, family: [{father: f}], other: {age: a}} of people) {
+        console.log('Name: ' + n + ', Age: ' + a + ', Father: ' + f);
+      }
+    ```
+  - findAndModify(), findAndRemove & update() are deprecated from node Driver
 - Challenges
-  - 
+  - Don't understand why this destructuring code works. It wasn't in the mdn docs
+    ```javascript
+      const obj = { a: 5, b: 6, c: 7  };
+      const picked = (({ a, c }) => ({ a, c }))(obj);
+      console.log(picked); // { a: 5, c: 7 }
+    ```
 - Thoughts
   - 
 
 ### Tuesday
 - What i did
-  - Finished FCC Project: Stock Price Checker
-  - Started FCC Project: Anonymous Message Board
+  - 
 - What i learnt
-  - ref to FCC: Infomation Security & Quality Assurance [README](https://github.com/intOppong/software_engineer_journey/blob/dev/fcc_projects/information_security_and_quality_assurance/README.md)
+  - 
 - Challenges
   - 
 - Thoughts
@@ -23,18 +39,17 @@
 
 ### Wednesday
 - What i did
-  - Continued work on FCC Project: Anonymous Message Board
+  - 
 - What i learnt & Challenges
-  - ref to FCC: Infomation Security & Quality Assurance [README](https://github.com/intOppong/software_engineer_journey/blob/dev/fcc_projects/information_security_and_quality_assurance/README.md)
+  - 
 - Thoughts
   - 
 
 ### Thursday
 - What i did
-  - Finished FCC Project: Anonymous Message Board
-  - Planning my next action & finding resources
+  - 
 - What i learnt & Challenges
-  - ref to FCC: Infomation Security & Quality Assurance [README](https://github.com/intOppong/software_engineer_journey/blob/dev/fcc_projects/information_security_and_quality_assurance/README.md)
+  - 
 - 
 
 
