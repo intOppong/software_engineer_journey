@@ -29,7 +29,7 @@
 
 ### Tuesday
 - What i did
-  - 
+  - started doing FCC Lectures on Regex.
 - What i learnt
   - 
 - Challenges
