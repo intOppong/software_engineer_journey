@@ -31,15 +31,15 @@
 - What i did
   - started doing FCC Lectures on Regex.
 - What i learnt
-  - 
-- Challenges
-  - 
+  - Regular expressions just checks if the pattern is in the given string. It does not return the matched string if any. Use  `match()` to return the matched part of the string & `test()` to check if the pattern matched anything in our string.
+- Challenges.
+  - Does each pattern start the search from the beginning of the string or continue from where the last pattern found it's match.
 - Thoughts
   -
 
 ### Wednesday
 - What i did
-  - 
+  - Continued FCC lectures on Regex.
 - What i learnt & Challenges
   - 
 - Thoughts
