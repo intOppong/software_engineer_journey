@@ -2,7 +2,8 @@
 
 ### Monday
 - What i did
-  - 
+  - planning the week
+  - finding my Next Project: Want it to be crypto based
 - What i learnt
   - 
 - Challenges
