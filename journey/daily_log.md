@@ -13,7 +13,8 @@
 
 ### Tuesday
 - What i did
-  - 
+  - Finding a project to do - i want it to be crypto based
+  - working on my crypto portfolio
 - What i learnt
   - 
 - Challenges.
