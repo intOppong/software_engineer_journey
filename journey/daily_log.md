@@ -41,6 +41,7 @@
 
 ### Friday
 - What i did
-  - 
+  - Planning out the Project - Setup meeting with Najib (client) to discuss it
+  - Searching for TP thats a good fit: React, Node, Express
 - What i learnt & Challenges
   - 
