@@ -74,13 +74,16 @@
 
 ### Tuesday
 - What i did
-  - 
+  - Reading about Promises from [YDKJS: Async & Perfomance](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/README.md#you-dont-know-js-async--performance), & a a [video tutorial](https://www.youtube.com/watch?v=QO4NXhWo_NM)
 - What i learnt
-  - 
+  - The idea for Promises: What if instead of wrapping our code in a callback (the part of our code that we want to execute Later) & handing it over to another party, we could expect the third party to return us a capability to know when its task finishes, and then our code could decide what to do next.
+  - A Promise is an object that represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
+  - Promise.all(): When 2 values A & B, are needed in an operation & A is available now & B available later (through an async callback), the operation will fail because B is undefined at the moment it runs. To circumvent this using callbacks, you have to make both operations become available through async.
+    - With Promises use Promise.all([ .. ]): it takes an array of promises, and returns a new promise that waits on them all to finish.
 - Challenges.
   - 
 - Thoughts
-  -
+  - The book is too abstract but is great to get a deeper understanding of Promises. So I'll add a more practical Tutorial to it.
 
 ### Wednesday
 - What i did
