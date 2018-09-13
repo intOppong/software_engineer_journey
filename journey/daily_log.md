@@ -87,9 +87,13 @@
 
 ### Wednesday
 - What i did
-  - 
-- What i learnt & Challenges
-  - 
+  - Watched a youtube tutorial on promises & async/await: [link1](https://www.youtube.com/watch?v=PoRJizFvM7s) [link2](https://www.youtube.com/watch?v=XO77Fib9tSI&list=PLRqwX-V7Uu6bKLPQvPRNNE65kBL62mVfx&index=3)
+  - Started following FCC's [react](https://learn.freecodecamp.org/front-end-libraries/react) tutorials
+  - Found a [Tutorial Project](https://www.udemy.com/node-with-react-fullstack-web-development/) to follow as a guide for my next Project
+- What I learnt & Challenges
+  - Async/Await is just syntax sugar for Promises ie A more elegant way to handle promises. `async` keyword sets up a function to use the `await` keyword. Async functions returns a promise & the await keyword says 'if a function returns a promise, then wait for it to resolve before moving on.'
+  - React.js is just a of Javascript Library used to create regular HTML/CSS through the use of sth called components. In other words it's used to render the User Interface (UI) of modern web applications. Components are at the heart of react - everything in react is a component. React uses it's own language JSX that allows you to write HTML directly within Javascript.
+    - A component is a representation of HTML using the react JSX language. 
 - Thoughts
   - 
 
