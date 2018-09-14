@@ -99,9 +99,23 @@
 
 ### Thursday
 - What i did
-  - 
+  - read MDN's Tutorials on [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  - Started Following Stephen Grider's [Node with React](https://www.udemy.com/node-with-react-fullstack-web-development/?siteID=a1o1REVAqJg-SH5_dN_AYT64vuTm1wD2.A&LSNPUBID=a1o1REVAqJg) Tutorial Project
+    - setup a new express/node app
+    - Deployed website to Heroku 
+    - started google oAuth 
 - What i learnt & Challenges
-  - 
+  - `catch()` is short for `then(null, failureCallback)`.
+  - Always return results, otherwise callbacks won't catch the result of a previous promise.
+  - Error Propagation: Promises solve a fundamental flaw with the callback pyramid of doom, by catching all errors,
+	even thrown exceptions and programming errors. A promise chain stops if there's an exception, looking down the chain for catch handlers instead
+  - Common JS Modules:  a system implemented in Nodejs for sharing (requiring) code between different files. The ES6 version is `import`.
+    - const express require("express"); // Common JS Modules
+    - import express from 'express'     // ES6 style
+  - Deploying Website to Heroku from the command line
+- Challenges
+  - difficulty understanding the passport oAuth process. something I already did with FCC :smh:
+  
 
 
 ### Friday
