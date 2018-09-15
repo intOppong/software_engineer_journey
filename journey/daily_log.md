@@ -120,6 +120,20 @@
 
 ### Friday
 - What i did
-  - 
+  - continue reading YDKJS:Async chapter on Promises
+  - Following TP: Node with React
 - What i learnt & Challenges
-  - 
+  - How Promises solves the challenges with the callback pattern of async. for example 'Once a promise has fulfilled/resolved or rejected, it can not change'
+  - Promise.resolve(): Its used to create a promise from a non-promise object. If you pass an immediate, non-Promise, non-thenable value to Promise.resolve(..) , you get a promise that's fulfilled with that value. The following code creates 2 identical promises.
+  ``` javascript
+		// p1 & p2 are identical
+		var p1 = new Promise( function(resolve,reject){
+			resolve( 42 );
+		} );
+		var p2 = Promise.resolve( 42 );
+  ```
+	- nodemon module is a CLI tool that automatically restarts the server anytime changes are made to a file.
+	- HTTP is stateless by default: ie it doesn’t share information on 2 separate requests. so if a login request contained your login details, a 2nd request to view your profile page does not have any data (knowledge) on who the user is.
+  
+  
+ 
