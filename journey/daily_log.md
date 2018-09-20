@@ -66,11 +66,38 @@
 
 ### Wednesday
 - What i did
-  - 
+  - cont learning Promises. YDKJS: Async
+  - cont FCC Tutorials on React
+  - Reading MDN docs on ES6 Classes
 - What I learnt & Challenges
-  - 
+  - The nuances of promise errors.
+  - `Promise.all([ .. ])` & `Promise.race[ .. ]` Patterns. The former takes an array of promises, and returns a new promise that waits on them all to finish regardless of the order. The main promise returned from Promise.all([ .. ]) will only be fulfilled if and when all its constituent promises are fulfilled else the promise is immediately rejected. The fulfillment message from Promise.all([ .. ]) is an array of all the fulfillment messages from the passed in promises in the same order as specified. Unlike `Promise.all([ .. ])`,  `Promise.race([ .. ])` waits for the first async to complete then returns just that one, ignoring the others. Both these Patterns passes each value in the array through Promise.resolve() which returns a promise.
+  ``` javascript
+    const promise1 = Promise.resolve('Hello World');
+    const promise3 = new Promise((resolve, reject) => setTimeout(resolve, 200, 'GoodBye'));
+    const promise4 = fetch(jsonAPI).then((res) => res.json());
+    const promise2 = 10;                // NOTE: resolves to a promise
+    
+    // Promise.all([ .. ])
+    Promise.all([promise1, promise2, promise3, promise4])
+      .then((values) => console.log(values)); // ['Hello World', 'GoodBye', {json}, 10]
+      
+    // Promise.race([promise1, promise2, promise3, promise4])
+    Promise.race([promise1, p2])
+      .then( function(msg){  
+        console.log(msg);     // only 1 will fulfill and pass (win the race)
+      })
+  ```
+  - A function's object ie function.prorotype has a read only `name` property indicates the function's name as specified when it was created or `anonymous` for functions created anonymously. 
+  - A function itself can have properties listed on it just like the function.prototype object ie 
+  ```javascript
+    function Person() {console.log('I'm a function)}
+    Person.age = 10;
+    Person.prototype.age = 20;
+  ```
+  - Learnt about the 3 different Types of react components: Stateless Functional Components, Stateless ES6 Class Components & Stateful Components
 - Thoughts
-  - 
+  - I’m starting to like all this theoretical stuff from reading YDKJS Promises. Its becoming cool; I even liked reading about "what's proper name: resolve or fulfilled."
 
 ### Thursday
 - What i did
