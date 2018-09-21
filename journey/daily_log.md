@@ -101,9 +101,25 @@
 
 ### Thursday
 - What i did
-  -  
+  - Finished FCC Tutorials on React
+  - Begun FCC Tutorials on Redux
+  - Finished YDKJS: Async Chapter on Promises
+  - Cont with TP: React Router Setup & installed Materialize UI
 - What i learnt & Challenges
-  - 
+  - pasing state as props to child components
+  - Component Lifecycle Methods/hooks: They're special methods that provide opportunities to perform actions at specific points in the lifecycle of a component. They include `componentWillMount()`, `componentDidMount()` etc. the lifecycle of a component.
+  - Inline Styling with react
+   ``` javascript
+    // HTML inline Styles
+    <div style="color: yellow; font-size: 16px">Mellow Yellow</div>
+
+    // JSX Inline styles
+    <div style={{color: "yellow", fontSize: 16}}>Mellow Yellow</div>
+
+    // Define a varialbe
+    const beautify = {color: 'purple',fontSize: 40, border: '2px solid purple'}
+    <div style={beautify}>Mellow Yellow</div>
+   ```
 - Challenges
   - 
   
