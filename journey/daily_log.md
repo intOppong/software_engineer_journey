@@ -13,9 +13,21 @@
 
 ### Tuesday
 - What i did
-  - 
+  - more on ES6 Classes: extend & super keyword
+  - cont with TP: Redux Thunk, react-redux: connect, Link
 - What i learnt
-  - 
+  - `extends`: syntax sugar for establishing the [[Prototype]] delegation link between two function prototypes.
+    - `Bar` extends `Foo`, means to link their [[Prototype]] ie `Bar.prototyp`e to `Foo.prototype`
+    - additionally, the actual `Bar()` class/function is linked to `Foo()` class/method. this is useful to static properties
+  - `super`: In the constructor, super automatically refers to the “parent constructor”. In methods, super means the parent's .prototype object.
+    - you cannot access `this` until super(..) has been called
+  - If no constructor is specified when a Child class extends a Parent, the Parent's constructor is called by default for the child constructor. ie a default constructor that calls the parent's constructor is placed there by default: `constructor() {super()}`
+  - If a Constructor is specified, you are required to call  super() explicilty.
+  - React-Redux: redux & react were built independently so the react-redux library helps us connect the two. That is, to seamlessly integrate redux’s state management into a React application. The 2 helpers provided by react-redux are the `<Provider />` Component & `connect` method.
+    - `<Provider />` is a React Component, that only serves the purpose of providing the store to it’s children (Your Application). The <Provider /> is given the store as a prop.
+    - connect method, connects a Component (within the <Provider /> of course) to Redux Store, so the component can modify data (by dispatching action creators) & retrieve data (by obtaining the current state of the store)
+  - Action Creators by default immediately return an action (an object) & the dispatch() function automatically sends the action to the reducers.
+    - Redux Thunk is a middleware in the redux library that gives control of the dispatch() function to us (the developer) if an action creator returns a function instead of an action object, so we can decide when to dispatch the action - usually after some Asynchronous code.
 - Challenges.
   - 
 - Thoughts
