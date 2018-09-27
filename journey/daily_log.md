@@ -34,9 +34,10 @@
   - 
 ### Wednesday
 - What i did
-  - 
+  - cont with TP: Handling Payments with Stripe, Talking aobut where to build the client side
 - What I learnt & Challenges
-  - 
+  - tried to start lessons on nodeJs Server: way too advanced at the moment & it deviates from my priority of building a full stack app. All I need to know atm is Node-Express, React, MongoDb.
+  - Stripe's API, client side & server-side libraries
 - Thoughts
   - 
 
