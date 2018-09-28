@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const cookieSession = require('cookie-session');
 const bodyParser = require('body-parser');
+const path = require('path');
 
-const authRoutes = require('./routes/auth');
-const billingRoutes = require('./routes/billing');
 const keys = require('./config/keys')
-require('./models/Users');
+require('./models/User');
+require('./models/Survey');
 require('./modules/auth');
 
 mongoose.connect(keys.mongoURI);
@@ -22,13 +22,14 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
-authRoutes(app);
-billingRoutes(app);
+require('./routes/auth')(app);
+require('./routes/billing')(app);
+require('./routes/survey')(app);
 
 if (process.env.NODE_ENV === 'production') {
 
   // Serve up Production Assets
-  app.use(static(__dirname + 'client/build'));
+  app.use(express.static('client/build'));
 
   // for any other routes (ie routes we've not defined in express), serve up the index.html file
   app.get('*', (req, res) => {
