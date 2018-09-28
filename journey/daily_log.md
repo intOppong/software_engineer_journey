@@ -34,7 +34,7 @@
   - 
 ### Wednesday
 - What i did
-  - cont with TP: Handling Payments with Stripe, Talking aobut where to build the client side
+  - cont with TP: Handling Payments with Stripe, Talking about where to build the client side: Deployment Options
 - What I learnt & Challenges
   - tried to start lessons on nodeJs Server: way too advanced at the moment & it deviates from my priority of building a full stack app. All I need to know atm is Node-Express, React, MongoDb.
   - Stripe's API, client side & server-side libraries
@@ -43,11 +43,21 @@
 
 ### Thursday
 - What i did
-  - 
+  - cont FCC React-Redux Tutorials
+  - cont with TP: Survey form database setup, Using Sendgrid as Email Provider,
 - What i learnt & Challenges
-  -
+  - Sending emails to clients using an email provider.
+  - Mongodb has a limit size of 4mb on each document. So even though you can nest related documents (like Comments `belongs to` Users), it's wise to separate them & link them using foreign keys. eg in mongoose you can add add relationship fields as such:
+    ```javascript
+      Comments({
+        content: String
+        date_created: Date
+        _user: {type: Schema.Type.ObjectId, ref: 'User'}  // a reference to the id field in the Users Collection
+      })
+    ```
 - Challenges
-  - 
+  - mapDispatchToProps() gives us access to the dispatch function so you can dispatch the action at any time you want (immediately or later after an async operation). so do we need reduxThunk middleware when we use mapDispatchToProps ()?
+ 
   
 
 
