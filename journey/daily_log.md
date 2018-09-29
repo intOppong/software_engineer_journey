@@ -63,9 +63,14 @@
 
 ### Friday
 - What i did
-  - 
-- What i learnt & Challenges
-  - 
+  - Finished FCC React-Redux Lessons
+  - Cont with TP: 
+    - Planning the Components Structure/Relationships for the survey form. 
+    - Using Redux-Forms to create & manage the state of the Forms
+- What i learnt & 
+  - Even when using redux, you can still give your Components local state as & when needed.
+- Challenges
+  - from the FCC lessons: I understand that we need a Container & Presentational Component but I didn't really understand why we defined a container component by assigning the return value of connecting the Presentational Component. ie `const Container = connect(mapStateToProps, mapDispatchToProps)(Presentational);`
  
   
  
