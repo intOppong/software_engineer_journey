@@ -22,25 +22,3 @@ class Payments extends Component {
 
 
 export default connect(null, actions)(Payments);
-
-/*
-- actions is an object
-- so the guess is that connect functions check the type of the mapDispatchToProps argument to make sure it's a
-function before executing it ie (), then map the object keys as component props
-  - if it's an object it will just do the mapping.
-*/
-/*
-
-// so my imported actions file that i use in place of mapDispatchToProps will be sth like this
-actions = {
-  fetchUser: () => {
-      return async function (dispatch) {
-        const res = await axios.get('/api/current_user');
-        dispatch({
-          type: FETCH_USER,
-          payload: res.data
-        })
-      }
-    }
-}
-*/
