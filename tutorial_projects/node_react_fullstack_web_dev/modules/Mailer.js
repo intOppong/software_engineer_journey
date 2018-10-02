@@ -20,7 +20,6 @@ class Mailer extends helper.Mail {
     this.addRecipients(); // add the recipients to the actual mail
 
     this.addClickTracking();  // Enable Click Tracking: allows sendgrid to replace all links with their custom links
-
   }
 
   formatAddresses(recipients) {

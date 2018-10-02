@@ -1,22 +1,24 @@
+/*
+===============================================
+- SurveyForm contains logic to render a single label & text input
+===============================================
+*/
+
+
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import { Link } from 'react-router-dom'
 import _ from 'lodash';
 
-
 import SurveyField from './SurveyField';
+import validateEmails from '../../utils/validateEmails';
+import formFields from './formFields';
 
-const FIELDS = [
-  { label: 'Survey Title', name: 'title'  },
-  { label: 'Subject Line', name: 'subject'  },
-  { label: 'Email Body', name: 'body'  },
-  { label: 'Recipient List', name: 'emails' }
-];
 
 class SurveyForm extends Component {
 
   renderFields() {
-    return _.map(FIELDS, ({ label, name }) => {
+    return _.map(formFields, ({ label, name }) => {
       return (
         <Field key={name} type='text' component={SurveyField} name={name} label={label} />
       )
@@ -25,12 +27,12 @@ class SurveyForm extends Component {
 
   render () {
     // same as renderFields method above: just for comparison
-    const fields = FIELDS.map(({ label, name }, indx) => {
+    const fields = formFields.map(({ label, name }, indx) => {
       return <Field key={indx} type='text' component={SurveyField} name={name} label={label} />
     });
 
     return (
-      <form onSubmit={this.props.handleSubmit(values => console.log(values))}>
+      <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
         {fields}
         <Link to='/surveys' className='red btn-flat white-text'>
           Cancel
@@ -47,8 +49,12 @@ class SurveyForm extends Component {
 function validate(values) {
   const errors = {}
 
-  FIELDS.forEach(({ name }) => {
-    values[name] ? null : errors[name] = `You must provide a value`;
+  errors.recipients = validateEmails(values.recipients || '');
+
+  formFields.forEach(({ name }) => {
+    if (!values[name]) {
+      errors[name] = `You must provide a value`;
+    }
   })
 
   return errors;
@@ -56,5 +62,6 @@ function validate(values) {
 
 export default reduxForm({
   form: 'surveyForm',
-  validate
+  validate,
+  destroyOnUnmount: false
 })(SurveyForm);

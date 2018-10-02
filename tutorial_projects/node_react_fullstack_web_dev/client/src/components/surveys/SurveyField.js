@@ -7,11 +7,11 @@
 
 import React from 'react';
 
-export default ({ input, meta: { error, touched },label }) => {
+export default ({ input, meta: { error, touched }, label }) => {
   return (
     <div>
       <label>{label}</label>
-      <input {...input} required style={{marginBottom: '5px'}}/>
+      <input {...input} style={{marginBottom: '5px'}}/>
       <div className='red-text' style={{ marginBottom: '20px'}}>
         {touched && error}
       </div>
