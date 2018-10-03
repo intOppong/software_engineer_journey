@@ -1,4 +1,4 @@
-const sendGrid = require('sendGrid');
+const sendGrid = require('sendgrid');
 
 const keys = require('../config/keys')
 
