@@ -33,10 +33,12 @@
   - 
 ### Wednesday
 - What i did
-  - 
+  - Reading MongoDB docs on Data Modeling
+  - Found a react based TP to follow.
 - What I learnt & Challenges
-  - 
-  - 
+  - Things to Consider when designing your data model (document structure) in mongodb. They include:
+    - Find out how the app is going to retrieve (read/access) data from the database. For example, Given a Users & Posts documents, use Embedded document structure if the app frequently retrieve a Post in the context of a User. However if the app retrieves Posts in it's own context, then use references.
+    - Embed fields that needs to be updated atomically.
 - Thoughts
   - 
 
