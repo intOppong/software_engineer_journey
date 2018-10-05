@@ -44,12 +44,13 @@
 
 ### Thursday
 - What i did
-  - 
-  - cont with TP: 
+  - reading MongoDB docs on Indexing
 - What i learnt & Challenges
-  - 
+  - Types of indexes.
+  - Indexing is basically sorting.
 - Challenges
-  - 
+  - felt frustrated with my learning method. I needed to know something about indexing but not everything. The docs was like a dump of knowledge I didn't need. And that quickly gets overwhelming & makes you feel like you can't do this, this is not for you.
+    - I think I need to learn only what I need to know at any point in time. I need to come up with questions & find the answers to just those questions ( ie learn).
  
   
 
