@@ -53,15 +53,27 @@
     - I think I need to learn only what I need to know at any point in time. I need to come up with questions & find the answers to just those questions ( ie learn).
  
   
-
-
 ### Friday
 - What i did
-  - 
+  - improved my learning method to focus only on learning what I need to learn about a topic. I do this by coming up with questions & answering (learning) just that & no more.
+  - Started following a TP based on teaching React
 - What i learnt & 
-  - 
+  - JSX is not valid JS so it gets compiled / converted to React.createElement() which is vanillar JS 
+   ```javascript
+   // JSX
+   const JSX = (
+      <div className="myDiv">
+        <h1>FCC</h1>
+      </div>
+    )
+    
+   // javascript
+   React.createElement('div', {className: 'myDiv'}, React.createElement('h1', null, 'FCC'))
+   ```
 - Challenges
-  - 
+  - Dont fully understand these yet
+    - You can use the arrow function syntax in a react Based Class but not in vanilla ES6 Classes. The assignment Operator throws a syntax error in vanilla ES6 classes.
+    - Also You don't have to bind an arrow function to the constructor of the class to use the class as it's "this" binding.
  
   
  
