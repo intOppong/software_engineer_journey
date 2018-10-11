@@ -28,9 +28,9 @@
   - 
 ### Wednesday
 - What i did
-  - 
+  - following React TP: Navigation Toolbar, Sidebar, SideDrawer
 - What I learnt & Challenges
-  - 
+  - started to appreciate why we use css modules. Don't know if it's necessary though
 - Thoughts
   - 
 
