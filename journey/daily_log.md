@@ -36,9 +36,9 @@
 
 ### Thursday
 - What i did
-  - 
+  - following React TP: Axios Config & using Instances, using Firebase as our preconfigured Database
 - What I learnt & Challenges
-  - 
+  - Axios - Interceptors: are functions defined globally that's executed for every request/response from & to your app regardless of where they were defined.
 - Challenges
   - 
  
