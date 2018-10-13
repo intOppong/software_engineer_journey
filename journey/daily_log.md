@@ -45,11 +45,11 @@
   
 ### Friday
 - What i did
-  - 
-- What i learnt & 
+  - following React TP: creating an axios error handler as a higher order component.
+- What I learnt & 
   - 
 - Challenges
-  - 
+  - was just a little more challenging
  
   
  
