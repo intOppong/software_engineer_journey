@@ -2,7 +2,7 @@
 
 ### Monday
 - What i did
-  - 
+  - getting my mindset back on track. figuring out what to do next after 1 week of absence.
 - What i learnt
   - 
 - Challenges
