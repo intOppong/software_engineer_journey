@@ -4,6 +4,7 @@
 - Week 1 summary: reading mongoDB docs on Indexing wasn't timely so I didn't really understand/like it. This lead me to adjust my learning method. Overall it was a consistent week regardless of my mood. This shows maturity & perseverance.
 - Week 2 summary: A developer’s life is all about googling/finding solutions to issues…thats how we all learn. don’t expect to be spoon-fed like the TPs show you.
 	- TP is taking too long, need to start working on my personal project. At the end thats what learning is all about to be able to build stuff on your own.
+- Week 3 summary: I was stressed & couldn't get over it which led to wasting the whole week. I need to work with others ASAP
 
 
 ### Week 1
@@ -75,12 +76,7 @@
 	
 ### Week 3
 - What i did:
-  - 
-- What I Learnt
-	- 
-- Challenges
-  - 
-- My Thoughts
+  - Nothing
 
 ### Week 4
 - What i did:
