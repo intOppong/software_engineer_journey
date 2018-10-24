@@ -12,7 +12,8 @@
 
 ### Tuesday
 - What i did
-  - 
+  - following react TP: working on forms & form validation
+  - started work on personal project: setup project & structuring directories
 - What i learnt
   - 
 - Challenges.
