@@ -13,7 +13,7 @@
 ### Tuesday
 - What i did
   - following react TP: working on forms & form validation
-  - started work on personal project: setup project & structuring directories
+  - started work on personal project: gh-crimes: setup project & structuring directories
 - What i learnt
   - 
 - Challenges.
@@ -22,9 +22,10 @@
   - 
 ### Wednesday
 - What i did
-  - 
+  - following react TP: working on forms & form validation
+  - working on gh-crimes: coding the Header Component
 - What I learnt & Challenges
-  
+  - Doing it alone without a Tutor is challenging & that's where the fun/learning really happens.
 - Thoughts
   - 
 
