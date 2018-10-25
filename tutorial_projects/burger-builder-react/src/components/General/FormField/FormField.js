@@ -7,16 +7,33 @@ const input = (props) => {
 
   switch (props.fieldType) {
     case 'input':
-      inputElement = <input className={classes.InputElement} {...props.attributes} />;
+      inputElement = <input
+        className={classes.FormField}
+        {...props.attributes}
+        onChange={props.changed} />;
       break;
     case ('textarea'):
-      inputElement = <textarea className={classes.InputElement} {...props.attributes} />;
+      inputElement = <textarea
+        className={classes.FormField}
+        {...props.attributes}
+        onChange={props.changed} />;
       break;
     case 'select':
-      inputElement = <select className={classes.InputElement} {...props.attributes} />;
+      inputElement = (
+        <select
+          className={classes.FormField}
+          value={props.attributes.value}
+          onChange={props.changed} >
+          {props.attributes.options.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.displayValue}
+            </option>
+          ))}
+        </select>
+      )
       break;
     default:
-      inputElement = <input className={classes.InputElement} {...props.attributes} />;
+      inputElement = <input className={classes.FormField} {...props.attributes} />;
   }
 
   return (

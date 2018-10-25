@@ -10,7 +10,7 @@
   margin-bottom: 8px;
 }
 
-.InputElement {
+.FormField {
   outline: none;
   border: 1px solid #ccc;
   background-color: white;
@@ -21,7 +21,7 @@
   box-sizing: border-box;
 }
 
-.InputElement:focus {
+.FormField:focus {
   outline: none;
   background-color: #ccc;
 }
