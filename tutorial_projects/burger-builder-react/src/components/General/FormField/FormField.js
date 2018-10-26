@@ -2,26 +2,31 @@ import React from 'react';
 
 import classes from './FormField.css'
 
-const input = (props) => {
-  let inputElement = null;
+const formField = (props) => {
+  let field = null;
+
+  const fieldClasses = [classes.FormField];
+  if (props.invalid) {
+    fieldClasses.push(classes.Invalid);
+  }
 
   switch (props.fieldType) {
     case 'input':
-      inputElement = <input
-        className={classes.FormField}
+      field = <input
+        className={fieldClasses.join(' ')}
         {...props.attributes}
         onChange={props.changed} />;
       break;
     case ('textarea'):
-      inputElement = <textarea
-        className={classes.FormField}
+      field = <textarea
+        className={fieldClasses.join(' ')}
         {...props.attributes}
         onChange={props.changed} />;
       break;
     case 'select':
-      inputElement = (
+      field = (
         <select
-          className={classes.FormField}
+          className={fieldClasses.join(' ')}
           value={props.attributes.value}
           onChange={props.changed} >
           {props.attributes.options.map(option => (
@@ -33,15 +38,15 @@ const input = (props) => {
       )
       break;
     default:
-      inputElement = <input className={classes.FormField} {...props.attributes} />;
+      field = <input className={classes.FormField} {...props.attributes} />;
   }
 
   return (
     <div className={classes.Input} >
       <label className={classes.Label}>{props.label}</label>
-      {inputElement}
+      {field}
     </div>
   )
 }
 
-export default input;
+export default formField;
