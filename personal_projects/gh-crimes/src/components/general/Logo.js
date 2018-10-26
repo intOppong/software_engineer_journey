@@ -1,12 +1,8 @@
 import React from 'react';
 
 const logo = (props) => (
-
-  <div className="container">
-    <div className="row no-gutters">
-      <div className="col">column</div>
-      <div className="col">column</div>
-    </div>
+  <div className='col-12 p-0 my-2'>
+    <h1 className="h3">Ghana Crimes</h1>
   </div>
 )
 
