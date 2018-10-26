@@ -31,7 +31,8 @@
 
 ### Thursday
 - What i did
-  - 
+  - following react TP: working on forms & form validation
+  - working on gh-crimes: coding the Home-page Components: News Component
 - What I learnt & Challenges
   - 
 - Challenges
