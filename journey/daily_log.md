@@ -41,9 +41,10 @@
   
 ### Friday
 - What i did
-  -  
+  - following react TP: done with form & form validation
+  - working on gh-crimes: coding the Home-page Components: Social Media Icons Component, User Info Component
 - What I learnt & 
-  - 
+  - Information only turns into knowledge when you can apply it - Building out the components on my own is more difficult than I expected.
 - Challenges
   - 
  
