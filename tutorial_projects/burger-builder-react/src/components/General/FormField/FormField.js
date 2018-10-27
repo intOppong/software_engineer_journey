@@ -6,7 +6,7 @@ const formField = (props) => {
   let field = null;
 
   const fieldClasses = [classes.FormField];
-  if (props.invalid) {
+  if (props.invalid && props.touched) {
     fieldClasses.push(classes.Invalid);
   }
 

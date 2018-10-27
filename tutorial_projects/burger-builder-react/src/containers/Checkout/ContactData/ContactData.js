@@ -21,7 +21,8 @@ class ContactData extends Component {
         validation: {
           required: true,
           valid: false
-        }
+        },
+        touched: false
       },
       street: {
         fieldType: 'input',
@@ -33,7 +34,8 @@ class ContactData extends Component {
         validation: {
           required: true,
           valid: false
-        }
+        },
+        touched: false
       },
       zipCode: {
         fieldType: 'input',
@@ -47,7 +49,8 @@ class ContactData extends Component {
           minLength: 5,
           maxLength: 5,
           valid: false
-        }
+        },
+        touched: false
       },
       country: {
         fieldType: 'input',
@@ -59,7 +62,8 @@ class ContactData extends Component {
         validation: {
           required: true,
           valid: false
-        }
+        },
+        touched: false
       },
       email: {
         fieldType: 'input',
@@ -71,7 +75,8 @@ class ContactData extends Component {
         validation: {
           required: true,
           valid: false
-        }
+        },
+        touched: false
       },
       deliveryMethod: {
         fieldType: 'select',
@@ -82,12 +87,10 @@ class ContactData extends Component {
           ],
           value: ''
         },
-        validation: {
-          required: true,
-          valid: false
-        }
+        validation: {valid: true}
       },
     },
+    formIsValid: false,
     loading: false
   }
 
@@ -137,10 +140,17 @@ class ContactData extends Component {
 
     const { attributes, validation } = updatedForm[field];
     validation.valid = this.validate(attributes.value, validation)
-    console.log(validation)
+    updatedForm[field].touched = true;
+
+    let formIsValid = true;
+    for (let field in updatedForm) {
+      const { validation } = updatedForm[field];
+      formIsValid = validation.valid && formIsValid;
+    }
 
     this.setState({
-      orderForm: updatedForm
+      orderForm: updatedForm,
+      formIsValid: formIsValid
     })
   }
 
@@ -153,8 +163,6 @@ class ContactData extends Component {
       })
     }
 
-    console.log(formFieldsArray);
-
     let form = (
       <form onSubmit={this.orderHandler}>
         {formFieldsArray.map( (ele) => (
@@ -163,9 +171,10 @@ class ContactData extends Component {
             fieldType={ele.config.fieldType}
             attributes={ele.config.attributes}
             invalid={!ele.config.validation.valid}
+            touched={ele.config.touched}
             changed={(e) => this.changedHandler(e, ele.id)} />
         ))}
-        <Button btnType='Success'>ORDER</Button>
+        <Button btnType='Success' disabled={!this.state.formIsValid}>ORDER</Button>
       </form>
     )
     if (this.state.loading) {
