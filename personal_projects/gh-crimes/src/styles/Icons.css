@@ -47,11 +47,6 @@ HEADER - SEARCH
 ========================================
 */
 
-.icons-search i {
-	color: black;
-	padding: 10px;
-	opacity: 0.6;
-}
 
 .icons-search i:hover {
 	cursor: pointer;
@@ -64,15 +59,26 @@ FOOTER - SOCIAL MEDIA
 ========================================
 */
 .icons-footer i {
-	text-decoration: none;
 	color: white;
+	text-decoration: none;
+	margin-left: 2px;
 	text-align: center;
-	padding: 10px;
+	padding: 5px;
   font-size: 20px;
 }
 
 .icons-footer i:hover {
 	opacity: 0.8;
+}
+
+.icons-footer .fa-facebook {
+	color: #3B5998;
+}
+.icons-footer .fa-twitter {
+	color: #55ACEE;
+}
+.icons-footer .fa-instagram {
+	color: #fb3958;
 }
 
 

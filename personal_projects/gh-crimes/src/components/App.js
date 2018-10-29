@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-import Header from './fixed/Header/Header';
+import Header from 'components/fixed/header/Header';
+import MainNav from 'components/fixed/navigation/mainNav/MainNav';
+import SecondaryNav from 'components/fixed/navigation/secondaryNav/SecondaryNav';
 import NewsCards from './home-page/newsCards/NewsCards';
 import Icons from './general/Icons/Icons';
 import Footer from './fixed/Footer';
@@ -12,11 +14,15 @@ class App extends Component {
     const socialIcons = ['facebook', 'twitter', 'instagram'];
     return (
       <Wrapper>
-        <div className="container-fluid">
-          <Icons type='icons-primary' items={socialIcons} link/>
+        <Icons type='icons-primary' items={socialIcons} link/>
+        <div class="container">
           <Header />
+          <MainNav />
+          <SecondaryNav />
+      	</div>
+        <main role="main" class="container">
           <NewsCards />
-        </div>
+        </main>
         <Footer />
       </Wrapper>
     );

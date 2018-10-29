@@ -1,8 +1,9 @@
 import React from 'react';
 
+import 'styles/Logo.css'
 const logo = (props) => (
     <div className='Logo'>
-      <h1 className="h3">Ghana Crimes</h1>
+      <a href="/">Gh Crimes</a>
     </div>
 )
 
