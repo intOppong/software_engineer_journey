@@ -80,10 +80,16 @@
 
 ### Week 4
 - What i did:
-  - 
+  - getting my mindset back on track. figuring out what to do next after 1 week of absence.
+  - following Burger-Builder [react TP](https://github.com/intOppong/software_engineer_journey/tree/dev/tutorial_projects):
+    - done with forms & form validation
+  - Working on personal project: gh-crimes: 
+    - setup project & structuring directories
+    - coding the Header Component: Social Media Icons Component, User Info Component
+    - coding the Home-page Components: News Component, 
 - What I Learnt
-	- 
+	- Information only turns into knowledge when you can apply it - Building out the components on my own is more difficult than I expected.
 - Challenges
-  - 
+  - Doing it alone without a Tutor is challenging & that's where the fun/learning really happens.
 - My Thoughts
 
