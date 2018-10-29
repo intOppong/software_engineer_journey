@@ -13,9 +13,9 @@ class App extends Component {
     return (
       <Wrapper>
         <div className="container-fluid">
+          <Icons type='icons-primary' items={socialIcons} link/>
           <Header />
           <NewsCards />
-          <Icons type='icons-primary' items={socialIcons} link/>
         </div>
         <Footer />
       </Wrapper>
