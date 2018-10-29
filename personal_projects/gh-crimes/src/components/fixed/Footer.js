@@ -8,9 +8,8 @@ const footer = (props) => {
 
   return (
     <footer className='Footer'>
-    	<div className="row mx-auto">
-    		<Icons type='icons-footer' items={socialIcons} link/>
-    	</div>
+  		<Icons type='icons-footer' items={socialIcons} link/>
+      <p><a href="/">Back to top</a></p>
     </footer>
   )
 }
