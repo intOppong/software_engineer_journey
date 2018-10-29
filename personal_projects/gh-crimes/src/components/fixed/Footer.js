@@ -9,7 +9,7 @@ const footer = (props) => {
   return (
     <footer className='Footer'>
     	<div className="row mx-auto">
-    		<Icons type='icons-footer' items={socialIcons} />
+    		<Icons type='icons-footer' items={socialIcons} link/>
     	</div>
     </footer>
   )

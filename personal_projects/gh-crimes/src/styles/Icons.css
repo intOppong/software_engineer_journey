@@ -71,6 +71,10 @@ FOOTER - SOCIAL MEDIA
   font-size: 20px;
 }
 
+.icons-footer i:hover {
+	opacity: 0.8;
+}
+
 
 
 @media (min-width: 1140px) {
