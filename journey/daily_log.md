@@ -13,7 +13,8 @@
 
 ### Tuesday
 - What i did
-  - 
+  - following Medium Clone TP: done with backend
+  - Working on project: database model/schema, article CRUD
 - What i learnt
   - 
 - Challenges.
