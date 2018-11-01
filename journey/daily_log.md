@@ -15,7 +15,7 @@
 - What i did
   - following Medium Clone TP: done with backend
   - Working on project: database model/schema, article CRUD
-- What i learnt
+- What I learnt
   - 
 - Challenges.
   - 
@@ -23,9 +23,10 @@
   - 
 ### Wednesday
 - What i did
-  -  
+  - following Medium Clone TP: 
+  - decided to use my previous code for the frontend
 - What I learnt & Challenges
-  - 
+  - The medium Clone TP is a lot of copy & paste code, which makes it difficult to understand. it's not well explained. But it's a good clone.
 - Thoughts
   - 
 
