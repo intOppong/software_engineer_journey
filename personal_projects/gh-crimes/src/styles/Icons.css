@@ -1,0 +1,90 @@
+
+/*
+========================================
+PRIMARY - SOCIAL MEDIA
+========================================
+*/
+.icons-primary {
+	display:none;
+}
+
+.icons-primary {
+	position: fixed;
+	top: 30%;
+	left: 15px;
+}
+
+.icons-primary a {
+	text-decoration: none;
+}
+.icons-primary i:hover {
+	opacity: 0.85;
+
+}
+.icons-primary i {
+	color: white;
+	text-align: center;
+	width: 50px;
+	padding: 10px;
+  font-size: 20px;
+	border-radius: 7%;
+	margin-bottom: 5px;
+	display: block;
+}
+.icons-primary .fa-facebook {
+	background: #3B5998;
+}
+.icons-primary .fa-twitter {
+	background: #55ACEE;
+}
+.icons-primary .fa-instagram {
+	background: #fb3958;
+}
+
+/*
+========================================
+HEADER - SEARCH
+========================================
+*/
+
+
+.icons-search i:hover {
+	cursor: pointer;
+	color: #ff8f00;
+}
+
+/*
+========================================
+FOOTER - SOCIAL MEDIA
+========================================
+*/
+.icons-footer i {
+	color: white;
+	text-decoration: none;
+	margin-left: 2px;
+	text-align: center;
+	padding: 5px;
+  font-size: 20px;
+}
+
+.icons-footer i:hover {
+	opacity: 0.8;
+}
+
+.icons-footer .fa-facebook {
+	color: #3B5998;
+}
+.icons-footer .fa-twitter {
+	color: #55ACEE;
+}
+.icons-footer .fa-instagram {
+	color: #fb3958;
+}
+
+
+
+@media (min-width: 1140px) {
+	.icons-primary {
+		display: block;
+	}
+}
