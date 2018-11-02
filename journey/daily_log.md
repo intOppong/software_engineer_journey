@@ -32,7 +32,7 @@
 
 ### Thursday
 - What i did
-  - 
+  - working on project: working on Article page UI
 - What I learnt & Challenges
   - 
 - Challenges
