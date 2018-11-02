@@ -16,13 +16,22 @@ const icon = (props) => {
     case 'search':
       classes = 'fas fa-search';
       break;
+    case 'like':
+      classes = 'far fa-thumbs-up';
+      break;
+    case 'dislike':
+      classes = 'far fa-thumbs-down'
+      break;
+    case 'reply':
+      classes = 'fas fa-reply';
+      break;
     default:
       classes = '';
   }
 
   return (
     <Wrapper>
-      {(props.link) && <a href="/"><i className={classes}></i></a>}
+      {(props.link) && <a href="/" className={props.linkClasses}><i className={classes}></i>{props.text}</a>}
       {(!props.link) && <i
         className={classes}
         onClick={props.clicked} ></i>}
