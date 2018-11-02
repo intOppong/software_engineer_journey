@@ -1,0 +1,22 @@
+.Aside .media img {
+  width: 50px;
+  height: 50px;
+  background: grey;
+  border-radius: 5px;
+
+}
+.Aside .media {
+  margin-top: 10px;
+
+}
+.Aside .media-body p {
+  font-size: .8rem;
+}
+
+.Aside .media a {
+  text-decoration: none;
+  color: inherit;
+}
+.Aside .media a:hover {
+  opacity: 0.8;
+}

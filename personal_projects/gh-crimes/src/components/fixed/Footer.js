@@ -8,7 +8,7 @@ const footer = (props) => {
 
   return (
     <footer className='Footer'>
-  		<Icons type='icons-footer' items={socialIcons} link/>
+  		<Icons classes='icons-footer' items={socialIcons} link/>
       <p><a href="/">Back to top</a></p>
     </footer>
   )

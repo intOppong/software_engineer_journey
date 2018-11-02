@@ -1,0 +1,11 @@
+.Article .post {
+  margin-bottom: 5rem;
+}
+.Article .title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.Article .meta {
+  margin-bottom: 1.25rem;
+  color: #999;
+}
