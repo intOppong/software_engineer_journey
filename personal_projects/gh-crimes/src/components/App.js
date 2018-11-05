@@ -9,6 +9,7 @@ import Icons from './general/Icons/Icons';
 import Footer from './fixed/Footer';
 import Wrapper from 'hoc/Wrapper';
 import Article from './article-page/Article';
+import Editor from './editor-page/Editor';
 import 'styles/App.css';
 
 class App extends Component {
@@ -16,7 +17,7 @@ class App extends Component {
     const socialIcons = ['facebook', 'twitter', 'instagram'];
     return (
       <Wrapper>
-        <Icons classes='icons-primary' items={socialIcons} link />
+        <Icons wrapperClasses='icons-primary' items={socialIcons} link />
         <div class="container">
           <Header />
           <MainNav />
@@ -26,7 +27,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={NewsCards} />
             <Route path='/article/:id' component={Article} />
-            <Route exact path='/editor' render={() => (<div>Editor</div>)} />
+            <Route exact path='/editor' component={Editor} />
             <Route path='*' component={NewsCards} />
           </Switch>
         </main>

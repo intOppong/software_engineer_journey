@@ -6,7 +6,7 @@ const aside = (props) => {
 
   return (
     <aside className="Aside col-md-4">
-      <ul className="list-unstyled">
+      <ul className="list-unstyled shadow-sm">
         <li className="media">
           <a className='d-flex' href='/'>
             <img className="mr-3 border" src="https://i.imgur.com/8nR8qMK.png" alt="" />
