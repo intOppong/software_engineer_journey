@@ -93,3 +93,22 @@
   - Doing it alone without a Tutor is challenging & that's where the fun/learning really happens.
 - My Thoughts
 
+### Week 5
+- What i did:
+  - Working on personal project: gh-crimes: 
+    - restructured dir
+    - worked on database model/schema, article CRUD
+    - worked on Article Component
+    - worked on Editor Component
+  - decided to follow new [TP: Medium Clone](https://github.com/intOppong/software_engineer_journey/blob/dev/tutorial_projects/README.md) closely related to my project
+    - completed with backend
+    - frontend was a disaster for me.
+- What I Learnt
+  - got introduced & implemented to react-quill.
+- Challenges
+  - 
+- My Thoughts
+  - Following the Medium Clone TP was not the best decision for the front end & helped with me the backend
+  - The medium Clone TP is a lot of copy & paste code, which makes it difficult to understand. it's not well explained. But it's a good clone.
+
+
