@@ -8,12 +8,12 @@ const icons = (props) => {
     return <Icon key={name}
       name={name}
       link={props.link}
-      linkClasses={props.linkClasses}
+      classes={props.iconClasses}
       clicked={props.clicked}
       text={props.text}/>
   })
   return (
-    <div className={props.classes}>
+    <div className={props.wrapperClasses}>
       {iconList}
     </div>
   )

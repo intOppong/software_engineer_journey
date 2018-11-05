@@ -31,10 +31,13 @@ const icon = (props) => {
 
   return (
     <Wrapper>
-      {(props.link) && <a href="/" className={props.linkClasses}><i className={classes}></i>{props.text}</a>}
-      {(!props.link) && <i
-        className={classes}
-        onClick={props.clicked} ></i>}
+      {(props.link) && <a
+        href="/"
+        className={props.classes}
+        onClick={props.clicked}><i className={classes}></i>{props.text}</a>}
+      {(!props.link) && <span
+        className={props.classes}
+        onClick={props.clicked}><i className={classes} onClick={props.clicked} ></i>{props.text}</span>}
     </Wrapper>
   )
 }

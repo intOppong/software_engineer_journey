@@ -1,21 +1,18 @@
 .Comment {
-  
+  margin-bottom: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .Comment img {
   width: 50px;
   height: 50px;
 }
-.Comment {
-  margin-bottom: 1rem;
-}
-.reply {
-  margin-left: 66px;
-}
-.reply a {
-  margin-right: 1rem;
+.Comment .form-group {
+  margin-bottom: 0.5rem;
 }
 .replies {
   margin-top: 1rem;
+  margin-left: 66px;
 }
 .Comment .username {
   letter-spacing: .5px;

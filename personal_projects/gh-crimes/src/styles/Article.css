@@ -9,3 +9,9 @@
   margin-bottom: 1.25rem;
   color: #999;
 }
+
+.Article .showComments:hover {
+  border-width: 1.5px;
+  background-color: white;
+  color: #007bff;
+}
