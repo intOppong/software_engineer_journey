@@ -13,6 +13,6 @@ My goal is to be a software engineer. I see a Software Engineer as a programmer 
   * Pomodoro settings is __30mins work, 10mins break__
 
 ## Curriculum
-I'll refer to these Curriculums for projects
+I'll refer to these awesome Curriculums for projects
 - [FreeCodeCamp](https://learn.freecodecamp.org/)
-- [P1xt’s Guide](https://github.com/P1xt/p1xt-guides#computer-science-and-web-development---comprehensive): I will refer to this guide for books & courses and also other projects i might be interested in.
+- [P1xt’s Guide](https://github.com/P1xt/p1xt-guides#computer-science-and-web-development---comprehensive)
