@@ -22,4 +22,4 @@
 
 **Thoughts:** 
 
-**Link to work:** [Gh-crimes App](https://github.com/intOppong/software_engineer_journey/tree/dev/personal_projects/gh_crimes), [<sub>[commit]</sub>](https://github.com/intOppong/software_engineer_journey/commit/a8d1c245b39fcb3862014ea6e5b7308e11caa7ae)
+**Link to work:** [Gh-crimes App](https://github.com/intOppong/software_engineer_journey/tree/dev/personal_projects/gh_crimes), [<sub>[commit]</sub>](https://github.com/intOppong/software_engineer_journey/commit/ccefb89abe39a33797743517faeaebcec515c073)
