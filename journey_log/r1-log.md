@@ -30,4 +30,12 @@
 
 **Thoughts:** Been struggling with understanding the redux flow. mapDispatchToProps gave me hell today. Spent the whole time fixing redux errors & now I have to deal with more errors. 
 
-**Link to work:** [Gh-crimes App]
+**Link to work:** [Gh-crimes App](https://github.com/intOppong/software_engineer_journey/tree/dev/personal_projects/gh_crimes)
+
+### Day 5: November 12, 2018
+
+**Today's Progress**: Setting up github pages to host my portfolio site
+
+**Thoughts:** ...
+
+**Link to work:** [portfolio site](https://github.com/intOppong/software_engineer_journey/tree/master/docs)
