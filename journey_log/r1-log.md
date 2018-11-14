@@ -34,8 +34,17 @@
 
 ### Day 5: November 12, 2018
 
-**Today's Progress**: Setting up github pages to host my portfolio site
+**Today's Progress**: Setting up github pages to host my portfolio site. Got a Job at a  crypto startup (kubitX) with any interviews just my passion to work (PS: i'm working for free too at the moment - we all are). 
 
-**Thoughts:** ...
+**Thoughts:** I'm so thrilled & my routine is about to get overhauled 
 
 **Link to work:** [portfolio site](https://github.com/intOppong/software_engineer_journey/tree/master/docs)
+
+### Day 6: November 13, 2018
+
+**Today's Progress**: reviewing notes on how the internet works to grasp it better. Didn't do anything related to #100DaysOfCode
+
+**Thoughts:** I need to rethink my schedule
+
+**Link to work:** [tweet](https://twitter.com/int_oppong/status/1062585429210398720)
+
