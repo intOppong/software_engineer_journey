@@ -48,3 +48,13 @@
 
 **Link to work:** [tweet](https://twitter.com/int_oppong/status/1062585429210398720)
 
+### Day 7: November 14, 2018
+
+**Today's Progress**: read on DNS, FTP, STMP & other application layer protocols.
+
+**Thoughts:** My learning priorities are gonna be determined by needs at work (KubitX), so they'll change constantly 
+
+**Link to work:** 
+
+
+
