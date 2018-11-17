@@ -56,5 +56,11 @@
 
 **Link to work:** 
 
+### Day 8: November 15, 2018
 
+**Today's Progress**: went through FCC tutorials on ES6. 
+
+**Thoughts:**  
+
+**Link to work:** 
 
