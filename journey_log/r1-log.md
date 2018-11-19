@@ -64,11 +64,18 @@
 
 **Link to work:** 
 
-
 ### Day 9: November 16, 2018
 
 **Today's Progress**: reading YDKJS ES6, & refactored my code to be ES6 compliant. 
 
 **Thoughts:**  I kinda like the .then() approach to Promises. writing async in front of a function ‘catches()’ me off guard.
+
+**Link to work:** 
+
+### Day 10: November 19, 2018
+
+**Today's Progress**: revisited FCC lectures on regular expressions 
+
+**Thoughts:** 
 
 **Link to work:** 
