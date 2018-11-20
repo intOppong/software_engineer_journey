@@ -79,3 +79,11 @@
 **Thoughts:** 
 
 **Link to work:** 
+
+### Day 11: November 20, 2018
+
+**Today's Progress**: added personal project (gh-crimes) back to my schedule. worked on fixing the CORS bug. I understand the problem & i'm close to solving it. hopefully tomorrow
+
+**Thoughts:** I can get more done if I can be more organized & focused.
+
+**Link to work:** 
