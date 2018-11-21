@@ -6,7 +6,7 @@ import * as types from './types';
 
 export const fetchUser = () => dispatch => {
   console.log('FETCH_USER')
-  axios.get(`/auth/google`)
+  axios.get(`/api/auth/user`)
     .then( res => {
       console.log(res)
       dispatch({ type: types.FETCH_USER, payload: res.data })

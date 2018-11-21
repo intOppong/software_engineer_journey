@@ -4,7 +4,6 @@ const path = require('path');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const cookieSession = require('cookie-session');
-const cors = require('cors');
 
 const keys = require('./config/keys');
 const routes = require('./routes')
@@ -22,7 +21,6 @@ mongoose.connect(keys.mongoURI, {
 
 
 // MIDDLEWARE
-app.use(cors());
 app.use(bodyParser.json());
 app.use(cookieSession({
   maxAge: 30 * 24 * 60 * 60 * 1000,

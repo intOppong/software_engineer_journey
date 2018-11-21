@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div className="App">
         Welcome {this.props.auth.user.name}
-        {/*console.log(this.props.auth)*/}
+        <li><a href="/api/auth/google">Login with Google</a></li>;
       </div>
     );
   }

@@ -22,4 +22,8 @@ module.exports = router => {
     req.logout();
     res.redirect('/');
   })
+
+  router.get('/auth/user', (req, res) => {
+    res.send(req.user);
+  })
 }
