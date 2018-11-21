@@ -30,4 +30,60 @@
 
 **Thoughts:** Been struggling with understanding the redux flow. mapDispatchToProps gave me hell today. Spent the whole time fixing redux errors & now I have to deal with more errors. 
 
-**Link to work:** [Gh-crimes App]
+**Link to work:** [Gh-crimes App](https://github.com/intOppong/software_engineer_journey/tree/dev/personal_projects/gh_crimes)
+
+### Day 5: November 12, 2018
+
+**Today's Progress**: Setting up github pages to host my portfolio site. Got a Job at a  crypto startup (kubitX) with any interviews just my passion to work (PS: i'm working for free too at the moment - we all are). 
+
+**Thoughts:** I'm so thrilled & my routine is about to get overhauled 
+
+**Link to work:** [portfolio site](https://github.com/intOppong/software_engineer_journey/tree/master/docs)
+
+### Day 6: November 13, 2018
+
+**Today's Progress**: reviewing notes on how the internet works to grasp it better. Didn't do anything related to #100DaysOfCode
+
+**Thoughts:** I need to rethink my schedule
+
+**Link to work:** [tweet](https://twitter.com/int_oppong/status/1062585429210398720)
+
+### Day 7: November 14, 2018
+
+**Today's Progress**: read on DNS, FTP, STMP & other application layer protocols.
+
+**Thoughts:** My learning priorities are gonna be determined by needs at work (KubitX), so they'll change constantly 
+
+**Link to work:** 
+
+### Day 8: November 15, 2018
+
+**Today's Progress**: went through FCC tutorials on ES6. 
+
+**Thoughts:**  
+
+**Link to work:** 
+
+### Day 9: November 16, 2018
+
+**Today's Progress**: reading YDKJS ES6, & refactored my code to be ES6 compliant. 
+
+**Thoughts:**  I kinda like the .then() approach to Promises. writing async in front of a function ‘catches()’ me off guard.
+
+**Link to work:** 
+
+### Day 10: November 19, 2018
+
+**Today's Progress**: revisited FCC lectures on regular expressions 
+
+**Thoughts:** 
+
+**Link to work:** 
+
+### Day 11: November 20, 2018
+
+**Today's Progress**: added personal project (gh-crimes) back to my schedule. worked on fixing the CORS bug. I understand the problem & i'm close to solving it. hopefully tomorrow
+
+**Thoughts:** I can get more done if I can be more organized & focused.
+
+**Link to work:** 
