@@ -87,3 +87,13 @@
 **Thoughts:** I can get more done if I can be more organized & focused.
 
 **Link to work:** 
+
+### Day 12: November 21, 2018
+
+**Today's Progress**: fixed CORS error bug - authentication is now working. on to the Components
+
+**Thoughts:** 
+
+**Link to work:** [Gh-crimes App](https://github.com/intOppong/software_engineer_journey/tree/dev/personal_projects/gh_crimes), [<sub>[commit]</sub>](https://github.com/intOppong/software_engineer_journey/commit/77a1e15a5634261bde2b9549b103663e906a84c9)
+
+
