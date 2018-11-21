@@ -18,7 +18,12 @@ module.exports = router => {
     });
 
   router.get('/logout', (req, res) => {
+    console.log('backend')
     req.logout();
     res.redirect('/');
+  })
+
+  router.get('/auth/user', (req, res) => {
+    res.send(req.user);
   })
 }
