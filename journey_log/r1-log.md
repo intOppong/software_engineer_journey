@@ -96,4 +96,10 @@
 
 **Link to work:** [Gh-crimes App](https://github.com/intOppong/software_engineer_journey/tree/dev/personal_projects/gh_crimes), [<sub>[commit]</sub>](https://github.com/intOppong/software_engineer_journey/commit/77a1e15a5634261bde2b9549b103663e906a84c9)
 
+### Day 13: November 21, 2018
 
+**Today's Progress**: planned the component sturcture. working on the header component for the frontend. 
+
+**Thoughts:** I’m not so psyched about the frontend like the backend & data. maybe it’s because CSS bugs freak me out.
+
+**Link to work:** 
