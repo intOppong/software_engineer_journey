@@ -103,3 +103,13 @@
 **Thoughts:** I’m not so psyched about the frontend like the backend & data. maybe it’s because CSS bugs freak me out.
 
 **Link to work:** 
+
+### Day 14: November 21, 2018
+
+**Today's Progress**: added a modal to allow users to sign in with google. Next is to get user information from db & display the profile image. 
+
+**Thoughts:** 
+
+**Link to work:** 
+
+
