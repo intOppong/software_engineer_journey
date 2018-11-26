@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchUser } from 'redux/actions';
+import Wrapper from 'hoc/Wrapper';
+import Header from './header/Header';
 import 'styles/App.css';
 
 class App extends Component {
@@ -12,18 +14,17 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        Welcome {this.props.auth.user.name}
-        <li><a href="/api/auth/google">Login with Google</a></li>;
-      </div>
+      <Wrapper>
+        <div class="container">
+          <Header />
+        </div>
+        {/*<li><a href="/api/auth/google">Login with Google</a></li>;*/}
+        <main role="main" class="container">
+
+        </main>
+      </Wrapper>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    auth: state.auth
-  }
-}
-
-export default connect(mapStateToProps, { fetchUser })(App);
+export default connect(null, { fetchUser })(App);
