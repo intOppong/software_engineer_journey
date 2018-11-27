@@ -112,7 +112,7 @@
 
 **Link to work:** 
 
-### Day 14: November 26, 2018
+### Day 15: November 26, 2018
 
 **Today's Progress**: Retrieved user data from db & displayed profile image of user
 
@@ -120,4 +120,11 @@
 
 **Link to work:** [Gh-crimes App](https://github.com/intOppong/software_engineer_journey/tree/dev/personal_projects/gh_crimes), [<sub>[commit]</sub>](https://github.com/intOppong/software_engineer_journey/commit/844016ccb37495691351d07995ebea76669ebd70)
 
+### Day 16: November 27, 2018
+
+**Today's Progress**: coming up with article schema.
+
+**Thoughts:** don't know how to implement the Wysysig well enough
+
+**Link to work:** 
 
