@@ -128,3 +128,11 @@
 
 **Link to work:** 
 
+### Day 17: November 30, 2018
+
+**Today's Progress**: checking out a few wysywig editors including tinyMCE & react-quill to decide which one to use in my project.
+
+**Thoughts:** so I missed 2 days, not going to hang myself, just get back on the grind & be better.
+
+**Link to work:** 
+
