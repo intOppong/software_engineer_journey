@@ -136,3 +136,11 @@
 
 **Link to work:** 
 
+### Day 18: December 03, 2018
+
+**Today's Progress**: installed tinyMCE wysysig package & working on integrating it with the frontend
+
+**Thoughts:** 
+
+**Link to work:** 
+
