@@ -144,3 +144,11 @@
 
 **Link to work:** 
 
+### Day 19: December 04, 2018
+
+**Today's Progress**: watched youtube video on tinyMCE & reading docs to familiarize with it
+
+**Thoughts:** 
+
+**Link to work:** 
+
