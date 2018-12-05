@@ -152,3 +152,10 @@
 
 **Link to work:** 
 
+### Day 19: December 04, 2018
+
+**Today's Progress**: fully integrated wysiwyg editor to the frontend. Just realized empty paragraphs are added to the html code by the editor so I have clean it before saving it to the database.
+
+**Thoughts:** 
+
+**Link to work:** 
