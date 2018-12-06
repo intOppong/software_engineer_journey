@@ -152,9 +152,18 @@
 
 **Link to work:** 
 
-### Day 19: December 04, 2018
+### Day 20: December 05, 2018
 
 **Today's Progress**: fully integrated wysiwyg editor to the frontend. Just realized empty paragraphs are added to the html code by the editor so I have clean it before saving it to the database.
+
+**Thoughts:** 
+
+**Link to work:** [Gh-crimes App](https://github.com/intOppong/software_engineer_journey/tree/dev/personal_projects/gh_crimes), [<sub>[commit]</sub>](https://github.com/intOppong/software_engineer_journey/commit/15fa6b73359592ca8f6ef59c1b35b5b261751495)
+
+
+### Day 21: December 06, 2018
+
+**Today's Progress**: little tricky accessing event data in tinyMCE, sent the data over to the backend & cleaned it up using regex to replace all occurrences of empty paragraphs.
 
 **Thoughts:** 
 
