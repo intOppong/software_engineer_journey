@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Switch, Route } from 'react-router-dom';
 
-import { fetchUser } from 'redux/actions';
 import Wrapper from 'hoc/Wrapper';
 import Header from './header/Header';
+import Editor from './editor-page/Editor';
+import { fetchUser } from 'redux/actions';
 import 'styles/App.css';
 
 class App extends Component {
@@ -18,9 +20,13 @@ class App extends Component {
         <div class="container">
           <Header />
         </div>
-        {/*<li><a href="/api/auth/google">Login with Google</a></li>;*/}
         <main role="main" class="container">
-
+          <Switch>
+            {/*<Route exact path='/' component={NewsCards} />*/}
+            {/*<Route path='/article/:id' component={Article} />*/}
+            <Route exact path='/editor' component={Editor} />
+            {/*<Route path='*' component={NewsCards} />*/}
+          </Switch>
         </main>
       </Wrapper>
     );
