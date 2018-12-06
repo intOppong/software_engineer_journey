@@ -7,7 +7,7 @@ const UserSchema = new Schema({
   profile_img: String,
   provider: String,
   provider_id: String,
-  role: String
+  role: {type: String, default: 'Member'}
 })
 
 mongoose.model('Users', UserSchema);

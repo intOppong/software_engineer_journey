@@ -8,7 +8,7 @@ const cookieSession = require('cookie-session');
 const keys = require('./config/keys');
 const routes = require('./routes')
 require('./models/User');
-require('./modules/auth');
+require('./services/auth');
 
 const app = express();
 const router = express.Router();
