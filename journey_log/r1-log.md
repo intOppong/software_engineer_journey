@@ -168,3 +168,12 @@
 **Thoughts:** 
 
 **Link to work:** 
+
+
+### Day 22: December 07, 2018
+
+**Today's Progress**: improved the regex to match empty paragraphs which might have attributes eg <p class=‘one’>&nbsp;</p>. I then created the article & comments schemas. Now working on saving it to the database.
+
+**Thoughts:** 
+
+**Link to work:** 
