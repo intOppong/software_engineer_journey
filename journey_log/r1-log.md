@@ -177,3 +177,19 @@
 **Thoughts:** 
 
 **Link to work:** 
+
+### Day 23: December 11, 2018
+
+**Today's Progress**: Started an SQL course using postgreSQL
+
+**Thoughts:** There’s this interest in data analysis/science that i can’t shake.
+
+**Link to work:** 
+
+### Day 24: December 12, 2018
+
+**Today's Progress**: Completed SQL course
+
+**Thoughts:** 
+
+**Link to work:** 
