@@ -193,3 +193,11 @@
 **Thoughts:** 
 
 **Link to work:** 
+
+### Day 25: December 13, 2018
+
+**Today's Progress**: I’m taking Udacity’s intro to data analysis course. Today I  installed anaconda for managing packages & environment. I created separate environment for both Python 2 and 3 as a best practice. Now learning about Jupyter Notebooks.
+
+**Thoughts:** 
+
+**Link to work:** 
