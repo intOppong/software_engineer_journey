@@ -201,3 +201,12 @@
 **Thoughts:** 
 
 **Link to work:** 
+
+
+### Day 26: December 13, 2018
+
+**Today's Progress**: spent the time playing with jupyter notebooks to get familiar. Learnt various keyboard shortcuts, learnt about magic keywords, slideshows & also creating environments from an [environment].yaml file
+
+**Thoughts:** 
+
+**Link to work:** 
