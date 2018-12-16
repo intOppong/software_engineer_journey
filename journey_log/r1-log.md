@@ -203,10 +203,21 @@
 **Link to work:** 
 
 
-### Day 26: December 13, 2018
+### Day 26: December 14, 2018
 
 **Today's Progress**: spent the time playing with jupyter notebooks to get familiar. Learnt various keyboard shortcuts, learnt about magic keywords, slideshows & also creating environments from an [environment].yaml file
 
 **Thoughts:** 
 
 **Link to work:** 
+
+
+### Day 27: December 15, 2018
+
+**Today's Progress**: Day 27: #100DaysOfCode got introduced to csv in python & wrote a script to retrieve all the rows into a list of dictionary rows using the unicodecsv module.
+
+**Thoughts:** 
+
+**Link to work:** 
+
+
