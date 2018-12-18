@@ -214,7 +214,24 @@
 
 ### Day 27: December 15, 2018
 
-**Today's Progress**: Day 27: #100DaysOfCode got introduced to csv in python & wrote a script to retrieve all the rows into a list of dictionary rows using the unicodecsv module.
+**Today's Progress**: got introduced to csv in python & wrote a script to retrieve all the rows into a list of dictionary rows using the unicodecsv module.
+
+**Thoughts:** 
+
+**Link to work:** 
+
+
+### Day 28: December 16, 2018
+
+**Today's Progress**: Learning the Data Analysis Process: Next after acquiring data is to fix any issues with the data types. I converted strings into appropriate data types after loading data from csv file. 
+
+**Thoughts:** 
+
+**Link to work:** 
+
+### Day 29: December 17, 2018
+
+**Today's Progress**: Spent the time practicing sql join statements.
 
 **Thoughts:** 
 
