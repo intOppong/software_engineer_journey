@@ -237,4 +237,12 @@
 
 **Link to work:** 
 
+### Day 30: December 18, 2018
+
+**Today's Progress**: learning python data types. some terms are quite different from other programming Languages like Javascript. If I’m right lists corresponds to arrays & dictionaries to objects 
+
+**Thoughts:** 
+
+**Link to work:** 
+
 
