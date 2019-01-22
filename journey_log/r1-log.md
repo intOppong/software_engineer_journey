@@ -245,4 +245,6 @@
 
 **Link to work:** 
 
+### NOTE:
+*I've stopped recording this log because I was too inconsistent to continue. Also moving from web dev to Data analysis meant I didn't have a clear goal at the beginning. I'm starting a new one solely focused on Data Analysis*
 
