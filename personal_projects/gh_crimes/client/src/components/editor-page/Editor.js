@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { Editor as Tinymce } from '@tinymce/tinymce-react';
 
+import axios from 'axios';
+
 class Editor extends Component {
   state = {
     title: '',
-    body: '',
-    post: {}
+    body: ''
   }
 
   handleTitleChange = (e) => {
     this.setState({ title: e.target.value })
   }
   handleBodyChange = (e) => {
-    this.setState({ body: e })
+    this.setState({ body: e.target.getContent() })
   }
   handleSubmit = (e) => {
     e.preventDefault();
@@ -20,8 +21,12 @@ class Editor extends Component {
       title: this.state.title,
       body: this.state.body
     }
-    console.log(post.body)
-    this.setState({post: post})
+    console.log(post.body);
+    axios.post('/api/article/create', post)
+      .then( res => {
+        console.log(res.status);
+      })
+      .catch( err => console.log('AXIOS:', err))
   }
 
   render () {
@@ -52,15 +57,15 @@ return (
             removeformat  | fontsizeselect | blockquote | emoticons | code`,
           menubar: false,
         }}
-        onChange={this.handleEditorChange}
+        onChange={this.handleBodyChange}
         />
     </div>
     <button className='btn btn-primary'>Create</button>
   </form>
   <div >
-    <h1>{this.state.post.title}</h1>
+    {/*<h1>{this.state.post.title}</h1>*/}
 
-    <div class='Content'>{this.state.post.body}</div>
+    {/*<div class='Content'>{this.state.post.body}</div>*/}
   </div>
 </div>
     )
