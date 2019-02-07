@@ -3,15 +3,18 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
 const passport = require('passport');
-const cookieSession = require('cookie-session')
+const cookieSession = require('cookie-session');
 
 const keys = require('./config/keys');
-const routes = require('./routes')
+
 require('./models/User');
-require('./modules/auth');
+require('./models/Comment');
+require('./models/Article');
+require('./services/auth');
 
 const app = express();
 const router = express.Router();
+const routes = require('./routes')
 
 // DB CONNECTION
 mongoose.connect(keys.mongoURI, {

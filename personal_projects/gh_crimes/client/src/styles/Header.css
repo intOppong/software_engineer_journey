@@ -1,0 +1,24 @@
+
+.Header {
+  line-height: 1;
+}
+
+.Header .profile-img {
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+}
+
+.Header img {
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+  cursor: pointer;
+}
+.Header .search {
+  opacity: .7
+}
+.Header .search:hover {
+  color: #ff8f00;
+  cursor: pointer;
+}

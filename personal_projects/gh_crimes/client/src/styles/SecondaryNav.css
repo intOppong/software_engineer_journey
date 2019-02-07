@@ -1,0 +1,7 @@
+.SecondaryNav .nav-link {
+  font-weight: 600;
+  color: red;
+}
+.SecondaryNav .nav-link:hover {
+  color: #b71c1c;
+}

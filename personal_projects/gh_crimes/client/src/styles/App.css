@@ -1,32 +1,119 @@
-.App {
-  text-align: center;
+
+/*
+========================================
+Table of Content
+========================================
+- Grid
+- Typography
+- Navigation
+- Cards
+
+*/
+
+
+
+/* GRID */
+.container {
+  max-width: 1000px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+/* TYPOGRAPHY */
+
+
+
+
+/* NAVIGATION */
+
+.nav-link {
+  font-weight: 300;
+  color: black;
+  text-transform:uppercase;
+  font-size: .85em;
+  letter-spacing: 0.1em;
+}
+.nav-link:first-child {
+  padding-left: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* CARDS */
+
+.card-body {
+  padding: 10px;
+}
+.card-text {
+  margin-bottom: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+/* ICONS */
+
+  /* PRIMARY, SIGNIN */
+.icons-primary {
+	display:none;
+}
+.icons-primary {
+	position: fixed;
+	top: 30%;
+	left: 15px;
+}
+.icons-primary a, .icons-signin a {
+	text-decoration: none;
+}
+.icons-primary i:hover, .icons-signin i:hover {
+	opacity: 0.85;
+}
+.icons-primary i, .icons-signin i {
+	color: white;
+	text-align: center;
+	width: 50px;
+	padding: 10px;
+  font-size: 20px;
+	border-radius: 7%;
+	margin-bottom: 5px;
+	display: inline-table;
+}
+.icons-primary .fa-facebook {
+	background: #3B5998;
+}
+.icons-primary .fa-twitter {
+	background: #55ACEE;
+}
+.icons-primary .fa-instagram {
+	background: #fb3958;
+}
+.icons-signin .fa-google {
+	background: #ea4335;
+}
+@media (min-width: 1140px) {
+	.icons-primary {
+		display: block;
+	}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  /* HEADER - SEARCH */
+.icons-search i:hover {
+	cursor: pointer;
+	color: #ff8f00;
+}
+
+  /* FOOTER */
+.icons-footer i {
+	color: white;
+	text-decoration: none;
+	margin-left: 2px;
+	text-align: center;
+	padding: 5px;
+  font-size: 20px;
+}
+
+.icons-footer i:hover {
+	opacity: 0.8;
+}
+.icons-footer .fa-facebook {
+	color: #3B5998;
+}
+.icons-footer .fa-twitter {
+	color: #55ACEE;
+}
+.icons-footer .fa-instagram {
+	color: #fb3958;
 }
