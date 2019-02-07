@@ -1,4 +1,5 @@
-# My Journey to Become a Software Engineer
+# My Web Dev Journey 
+_before switching to Data Analysis/Science_
 
 
 ## My Goal
