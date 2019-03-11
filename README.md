@@ -1,5 +1,6 @@
 # My Web Dev Journey 
-_before switching to Data Analysis/Science_
+_Update: Some time in December 2018_
+- _I switching to Data Analysis/Science(Analytics). That's where my true Interest Lies - Finding Insight in the Numbers_
 
 
 ## My Goal
